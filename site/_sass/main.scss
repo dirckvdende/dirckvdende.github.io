@@ -3,18 +3,28 @@
     display: flex;
     width: 100%;
     flex-direction: row;
-    height: 10em;
+    min-height: 10em;
     border: 1px solid lightgray;
     border-radius: 6px;
     overflow: hidden;
-    align-items: center;
+    align-items: stretch;
+    margin: 1em 0;
     .image-card-image {
-        aspect-ratio: 1 / 1;
-        padding-right: 4em;
-        height: 100%;
+        width: 10em;
+        flex-shrink: 0;
+        @media screen and (max-width: 600px) {
+            display: none;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     }
     .image-card-text {
+        align-self: center;
         font-size: .9em;
+        padding: 1em 4em;
         .image-card-title {
             font-size: 1.8em;
             margin-bottom: .3em;
