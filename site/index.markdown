@@ -3,6 +3,14 @@ layout: home
 title: Home
 ---
 
+<h2 class="post-list-heading">About Me</h2>
+
+...
+
+...
+
+...
+
 <h2 class="post-list-heading">My Projects</h2>
 
 <div class="image-card">
