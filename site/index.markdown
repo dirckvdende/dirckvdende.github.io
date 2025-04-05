@@ -57,7 +57,7 @@ technologies:
     {%- endfor -%}
 </div>
 
-Both for university and in personal projects I make use of Python or C++, in addition to web development. Below are some of the technologies that I use very regularly.
+Both for university and in personal projects I make use of Python or C++, in addition to web development. Below are some of the technologies that I use regularly.
 <ul class="icon-listing">
     {%- for name in page.technologies.regular -%}
         <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/{{name | escape}}/{{name | escpae}}-original.svg" title="{{name | escape}}"></li>
@@ -92,7 +92,7 @@ I've listed some of the technologies I've worked with in the past below. These a
 ## Blog
 
 <div>
-    {%- for post in site.posts -%}
+    {%- for post in site.posts limit: 3 -%}
         <div class="image-card">
             {%- assign date_format = "%B %-d, %Y" -%}
             <div class="image-card-text">

@@ -21,9 +21,7 @@
 title: Dirck van den Ende
 # email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Hi! I'm Dirck van den Ende. I'm a developer studying Computer Science at
-  Leiden University. I currently have a bachelor's in Mathematics and in
-  Computer Science. I post hobby projects on an irregular basis.
+  Computer Science Master student at Leiden University
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
