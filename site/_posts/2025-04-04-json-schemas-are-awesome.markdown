@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "JSON Schemas are Awesome!"
-date: 2025-04-05 15:50:00 +0200
+date: 2025-04-04 21:50:00 +0200
 categories: blog
 ---
 
