@@ -102,6 +102,9 @@ ul.icon-listing {
             flex-shrink: 0;
             opacity: 0;
             transition: opacity .3s;
+            span {
+                font-size: .9em;
+            }
         }
         &:hover .milestone-meta {
             opacity: 1;
@@ -115,7 +118,7 @@ ul.icon-listing {
                 padding: 0 2em;
             }
             .milestone-title {
-                font-size: 1.111em;
+                font-size: 1em;
                 margin-bottom: .3em;
                 display: block;
                 color: darken($effect-color, 10%);
@@ -132,7 +135,7 @@ ul.icon-listing {
             box-sizing: border-box;
             transform: translate(-50%, -50%);
             position: absolute;
-            top: 1em;
+            top: .8em;
             left: 1.2em;
             border-radius: 50%;
             z-index: 1;
@@ -164,6 +167,9 @@ ul.icon-listing {
         padding-bottom: 1em;
         .milestone-meta {
             opacity: 1;
+            span {
+                font-size: 1em;
+            }
         }
         .milestone-text {
             .milestone-title {

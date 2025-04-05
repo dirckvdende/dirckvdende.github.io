@@ -117,7 +117,7 @@ I've listed some of the technologies I've worked with in the past below. These a
                 <h2 class="milestone-title">{{ milestone.title | escape }}</h2>
                 <p>{{ milestone.description }}</p>
             </div>
-            <div class="milestone-meta">{{ milestone.date | date: date_format }}</div>
+            <div class="milestone-meta"><span>{{ milestone.date | date: date_format }}</span></div>
             {%- if milestone.major -%}
                 <div class="timepoint-major"></div>
             {%- else -%}

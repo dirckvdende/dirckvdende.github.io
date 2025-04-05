@@ -1,6 +1,11 @@
 
 # Milestones are displayed on the home screen in reverse order
 
+- title: Finished VWO
+  date: 2019-06-12
+  description: Attained a VWO (Atheneum; pre university education) diploma at the Christelijk Lyceum Delft.
+  major: true
+
 - title: Propedeuse Computer Science
   date: 2020-08-27
   description: Completed the first year of Computer Science at Leiden University.
