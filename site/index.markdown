@@ -45,19 +45,13 @@ technologies:
 
 ## About Me
 
-...
-
-...
-
-...
-
-Both for university and in personal projects I make use of Python or C++, in addition to web development. Below are some of the technologies that I use regularly.
+Hi! My name is Dirck. I'm a Computer Science Master student at Leiden Univerity. I also work on hobby projects on an irregular basis. Some of which you can find below! Both for university and for personal projects I make use of Python or C++. I also make websites sometimes. Below are some of the technologies that I use regularly.
 <ul class="icon-listing">
     {%- for name in page.technologies.regular -%}
         <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/{{name | escape}}/{{name | escpae}}-original.svg" title="{{name | escape}}"></li>
     {%- endfor -%}
 </ul>
-I've listed some of the technologies I've worked with in the past below. These are ordered from most to least familiarity.
+I've listed some of the technologies I've worked with in the past below, ordered from most to least familiarity.
 <ul class="icon-listing">
     {%- for name in page.technologies.other -%}
         <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/{{name | escape}}/{{name | escpae}}-original.svg" title="{{name | escape}}"></li>
