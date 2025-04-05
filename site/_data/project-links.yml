@@ -1,4 +1,7 @@
 
+# First 3 projects are displayed on home page
+# Projects on the project page are given the same order as below
+
 - title: Daily Puzzles
   description: A daily puzzle web-app that has a different type of puzzle for every day of the week. Puzzles are randomly generated.
   url: https://dirckvdende.github.io/daily-puzzle/
@@ -13,3 +16,13 @@
   description: I finished my bachlor in Computer Science and my bachelor in Mathematics at Leiden Univeristy by doing a joint thesis on partial differential equation simulation on analog computers.
   url: https://theses.liacs.nl/2706
   img: assets/img/thesis-preview.png
+
+- title: Adversarial Drawing App
+  description: For the course Computational Creativity, I collaborated with two others to create a drawing app that removes strokes when the drawing becomes too similar to the prompt.
+  url: https://dirckvdende.github.io/Adversarial-Drawing-App/
+  img: assets/img/adversarial-drawing-app.png
+
+- title: layout-image
+  description: A small Python package for creating basic images with XML layouts
+  url: https://pypi.org/project/layout-image/
+  img: assets/img/layout-image.png
