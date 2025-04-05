@@ -13,6 +13,8 @@
     .image-card-image {
         width: 10em;
         flex-shrink: 0;
+        overflow: hidden;
+        position: relative;
         @media screen and (max-width: 600px) {
             display: none;
         }
@@ -20,12 +22,13 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            position: absolute;
         }
     }
     .image-card-meta {
         color: grey;
         box-sizing: border-box;
-        padding: 2.8em 2em 2em 1em;
+        padding: 1.7em 2em 2em 1em;
     }
     .image-card-text {
         align-self: center;
@@ -44,4 +47,21 @@
 
 h2 {
     font-size: 28px;
+}
+
+ul.icon-listing {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: .5em;
+    li {
+        display: flex;
+        flex-direction: row;
+        height: 2.2em;
+        margin: .4em;
+        img {
+            height: 100%;
+        }
+    }
 }
