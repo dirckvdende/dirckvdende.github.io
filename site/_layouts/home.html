@@ -2,27 +2,25 @@
 layout: default
 ---
 <div class="home">
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
   {{ content }}
   {%- if site.posts.size > 0 -%}
     <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
     <ul class="post-list">
       {%- for post in site.posts -%}
-      <li>
+      <li class="image-card">
         {%- assign date_format = "%B %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
+        <div class="image-card-text">
+          <a class="image-card-title" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+          {%- if site.show_excerpts -%}
+            <p>{{ post.excerpt }}</p>
+          {%- endif -%}
+        </div>
+        <div class="image-card-meta">{{ post.date | date: date_format }}</div>
       </li>
       {%- endfor -%}
     </ul>
   {%- endif -%}
+  {%- for p in site.hello -%}
+    <h1>{{ post.title }}</h1>
+  {%- endfor -%}
 </div>

@@ -8,6 +8,7 @@
     border-radius: 6px;
     overflow: hidden;
     align-items: stretch;
+    justify-content: space-between;
     margin: 1em 0;
     .image-card-image {
         width: 10em;
@@ -21,14 +22,26 @@
             object-fit: cover;
         }
     }
+    .image-card-meta {
+        color: grey;
+        box-sizing: border-box;
+        padding: 2.8em 2em 2em 1em;
+    }
     .image-card-text {
         align-self: center;
         font-size: .9em;
         padding: 1em 4em;
+        @media screen and (max-width: 600px) {
+            padding: 1em 2em;
+        }
         .image-card-title {
             font-size: 1.8em;
             margin-bottom: .3em;
             display: block;
         }
     }
+}
+
+h2 {
+    font-size: 28px;
 }
