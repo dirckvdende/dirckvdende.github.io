@@ -1,0 +1,15 @@
+
+- title: Daily Puzzles
+  description: A daily puzzle web-app that has a different type of puzzle for every day of the week. Puzzles are randomly generated.
+  url: https://dirckvdende.github.io/daily-puzzle/
+  img: assets/img/daily-puzzle.png
+
+- title: Programming Competition Reference
+  description: I participated in the BAPC and NWERC programming contests in 2022, 2023, and 2024. In these competitions a document of at most 25 pages can be used as reference material.
+  url: https://github.com/dirckvdende/competition-reference/blob/main/reference.pdf
+  img: assets/img/reference-doc.png
+
+- title: Bachelor's Thesis on PDEs and Analog Computers
+  description: I finished my bachlor in Computer Science and my bachelor in Mathematics at Leiden Univeristy by doing a joint thesis on partial differential equation simulation on analog computers.
+  url: https://theses.liacs.nl/2706
+  img: assets/img/thesis-preview.png
