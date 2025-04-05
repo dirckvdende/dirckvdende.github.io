@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2025-04-05T23:07:54+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dirck van den Ende</title><subtitle>Computer Science Master student at Leiden University</subtitle><entry><title type="html">Confusing Color Names</title><link href="http://localhost:4000/blog/2025/04/05/confusing-color-names.html" rel="alternate" type="text/html" title="Confusing Color Names" /><published>2025-04-05T21:00:00+02:00</published><updated>2025-04-05T21:00:00+02:00</updated><id>http://localhost:4000/blog/2025/04/05/confusing-color-names</id><content type="html" xml:base="http://localhost:4000/blog/2025/04/05/confusing-color-names.html"><![CDATA[<p>I want to complain about something: Color names in programming languages. Because these are really confusing to me. And to make it even worse: There are dozens of different standards!</p>
+
+<p>It all started while trying to set up the website you’re reading this on: I had an element with a <code class="language-plaintext highlighter-rouge">grey</code> color and wanted to make it darker. So what do I do? I change the color to <code class="language-plaintext highlighter-rouge">darkgrey</code>. And what do you know? The color becomes lighter! Yeah, really. I’ve put the colors next to each other below:</p>
+<div style="display: flex; flex-direction: row; justify-content: center; margin: 1.5em 0;">
+    <div style="width: 5em;">
+        <div style="width: 5em; height: 5em; background-color: grey; border-radius: .3em;"></div>
+        <div style="text-align: center; margin-top: .3em;">grey</div>
+    </div>
+    <div style="width: 5em; margin-left: 1em;">
+        <div style="width: 5em; height: 5em; background-color: darkgrey; border-radius: .3em;"></div>
+        <div style="text-align: center; margin-top: .3em;">darkgrey</div>
+    </div>
+</div>
+<p>So, why? Well it turns out that grey is reserved as the color <code class="language-plaintext highlighter-rouge">rgb(128, 128, 128)</code>, exactly halfway between <code class="language-plaintext highlighter-rouge">rgb(0, 0, 0)</code> (black) and <code class="language-plaintext highlighter-rouge">rgb(255, 255, 255)</code> (white). However, the dark grey color was included from X11, which has grey defined as <code class="language-plaintext highlighter-rouge">rgb(190, 190, 190)</code> and dark grey defined as <code class="language-plaintext highlighter-rouge">rgb(169, 169, 169)</code>. Also, by the way, both standards write it as <code class="language-plaintext highlighter-rouge">gray</code>, which we have America to thank for. Luckily both spellings are allowed in CSS now. And I already complain: If you’re writing “grey”, shouldn’t you also use “colour”? Well, I’ve got nothing to say about that do I.</p>
+
+<p>You know where you can’t write “grey”? In Minecraft. Yes we’re talking Minecraft now. Although the forced “gray” spelling is confusing, there is something I’m annoyed by a lot more: Minecraft does not have the color <code class="language-plaintext highlighter-rouge">purple</code>. It only has <code class="language-plaintext highlighter-rouge">dark_purple</code> and <code class="language-plaintext highlighter-rouge">light_purple</code>. And now you can think to yourself: Well then remember to just use the light and dark prefixes everywhere, right? Wrong! Because purple is the only color with a “light” variant. All of the other colors have a base variant and a darker variant, so <code class="language-plaintext highlighter-rouge">green</code> and <code class="language-plaintext highlighter-rouge">dark_green</code>. Except for black, white, and yellow for some reason. The darker version of yellow is called <code class="language-plaintext highlighter-rouge">gold</code>, but looks orange not gold. And by the way: neither green nor dark green has an actual pure green color, because green has is the color <code class="language-plaintext highlighter-rouge">rgb(85, 255, 85)</code> and dark green is <code class="language-plaintext highlighter-rouge">rgb(0, 170, 0)</code>, while in reality a pure green color is <code class="language-plaintext highlighter-rouge">rgb(0, 255, 0)</code>. It’s right there in the name: Red, Green, Blue. Are you confused yet? Because I am.</p>
+
+<div style="display: flex; flex-direction: row; justify-content: center; margin: 1.5em 0;">
+    <div style="width: 5em;">
+        <div style="width: 5em; height: 5em; background-color: #FF55FF; border-radius: .3em;"></div>
+        <div style="text-align: center; margin-top: .3em;">light_purple</div>
+    </div>
+    <div style="width: 5em; margin-left: 1em;">
+        <div style="width: 5em; height: 5em; background-color: #AA00AA; border-radius: .3em;"></div>
+        <div style="text-align: center; margin-top: .3em;">dark_purple</div>
+    </div>
+    <div style="width: 5em; margin-left: 1em;">
+        <div style="width: 5em; height: 5em; background-color: #FFFF55; border-radius: .3em;"></div>
+        <div style="text-align: center; margin-top: .3em;">gold</div>
+    </div>
+    <div style="width: 5em; margin-left: 1em;">
+        <div style="width: 5em; height: 5em; background-color: #FFAA00; border-radius: .3em;"></div>
+        <div style="text-align: center; margin-top: .3em;">yellow</div>
+    </div>
+    <div style="width: 5em; margin-left: 1em;">
+        <div style="width: 5em; height: 5em; background-color: #55FF55; border-radius: .3em;"></div>
+        <div style="text-align: center; margin-top: .3em;">green</div>
+    </div>
+    <div style="width: 5em; margin-left: 1em;">
+        <div style="width: 5em; height: 5em; background-color: #00AA00; border-radius: .3em;"></div>
+        <div style="text-align: center; margin-top: .3em;">dark_green</div>
+    </div>
+</div>
+
+<h2 id="my-proposed-solution">My Proposed Solution</h2>
+
+<p>I see all of these confusing standards and want to do my part in solving this terrible problem. That’s why I’m proposing a new standard to replace all of the existing standards. And I’m not just talking about programming: We need to replace <em>everything</em>. Written language, spoken language, everything.</p>
+
+<p>How do we do this? Well we use an already existing, very strong, standard: Hexadecimal codes. In CSS you can write a color as three hexadecimal digits. For example, the color blue is <code class="language-plaintext highlighter-rouge">#00F</code>, while the color grey is <code class="language-plaintext highlighter-rouge">#777</code>, which is exactly between <code class="language-plaintext highlighter-rouge">#000</code> (black) and <code class="language-plaintext highlighter-rouge">#FFF</code> (white). So we have 16 options for each of the three digits. Then we just match 16 different syllables with each of the digits:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Digit</th>
+      <th>Syllable</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">0</code></td>
+      <td>a</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">2</code></td>
+      <td>be</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">3</code></td>
+      <td>le</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">4</code></td>
+      <td>la</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">5</code></td>
+      <td>pa</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">6</code></td>
+      <td>pi</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">7</code></td>
+      <td>ge</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">8</code></td>
+      <td>te</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">9</code></td>
+      <td>ma</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">A</code></td>
+      <td>ta</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">B</code></td>
+      <td>we</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">C</code></td>
+      <td>bi</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">D</code></td>
+      <td>o</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">E</code></td>
+      <td>re</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">F</code></td>
+      <td>ze</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>To make a color, just put three syllables together. So grey will be gegege, and red will be reaa. Black will be aaa (like the screams you make when someone turns off the light and you step into a lego) and the Minecraft dark green will be ataa. Just like that we’ve created 4096 color names! And you can remember them all by remembering 16 syllables. Problem solved!</p>]]></content><author><name></name></author><category term="blog" /><summary type="html"><![CDATA[I want to complain about something: Color names in programming languages. Because these are really confusing to me. And to make it even worse: There are dozens of different standards!]]></summary></entry><entry><title type="html">JSON Schemas are Awesome!</title><link href="http://localhost:4000/blog/2025/04/04/json-schemas-are-awesome.html" rel="alternate" type="text/html" title="JSON Schemas are Awesome!" /><published>2025-04-04T21:50:00+02:00</published><updated>2025-04-04T21:50:00+02:00</updated><id>http://localhost:4000/blog/2025/04/04/json-schemas-are-awesome</id><content type="html" xml:base="http://localhost:4000/blog/2025/04/04/json-schemas-are-awesome.html"><![CDATA[<p>While I was working on my Master’s thesis, for the millionth time now, I had to come up with some input format. Of course, I go for the easiest solution and use JSON files as input. With one line of Python code the file contents can be converted to a dictionary, list, etc. However: What happens if a user does not follow the format I carefully came up with? Well, for that you need to write lots code to check there are no extra items, missing items, incorrect types, incorrect list lengths, … <em>sigh</em>. This could be made so much easier right? Well it turns out there is a very nice solution to my problem: JSON schemas.</p>
+
+<p>How I never came across JSON schemas I don’t know, but I do know I’ll use them <em>a lot</em> in future projects! How does it work you ask? We define a JSON format using more JSON. Let’s look at a simple example: We want to check some username and password, which are supplied using JSON like so:</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fluffy_cat"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hello_world"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+<p>In Python we could parse this using the following code:</p>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">json</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="p">.</span><span class="n">loads</span><span class="p">(</span><span class="n">raw_text</span><span class="p">)</span>
+</code></pre></div></div>
+<p>Easy enough. But if the user supplies a number as the password field it still loads everything, or worse: The password field could be left out! Now we’re relying on the code after load to handle all of these cases properly. This can quickly lead to messy code and bugs.</p>
+
+<h2 id="how-json-schemas-work">How JSON Schemas Work</h2>
+
+<p>For our simple JSON format we want to validate that the user supplies a JSON string with the two fields <code class="language-plaintext highlighter-rouge">username</code> and <code class="language-plaintext highlighter-rouge">password</code>, both of which are strings. A JSON schema for this would look something like this:</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"required"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"username"</span><span class="p">,</span><span class="w"> </span><span class="s2">"password"</span><span class="p">],</span><span class="w">
+    </span><span class="nl">"additionalProperties"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"username"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">},</span><span class="w">
+        </span><span class="nl">"password"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+<p>Then in the Python code we would add an extra check using the <a href="https://pypi.org/project/jsonschema/">jsonschema</a> library:</p>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">jsonschema</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="p">.</span><span class="n">loads</span><span class="p">(</span><span class="n">raw_text</span><span class="p">)</span>
+<span class="n">jsonschema</span><span class="p">.</span><span class="n">validate</span><span class="p">(</span><span class="n">instance</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">schema</span><span class="o">=</span><span class="n">schema_raw_text</span><span class="p">)</span>
+</code></pre></div></div>
+<p>If there is something wrong with the input, an exception is thrown. Useful, isn’t it? And you can do much more with JSON schemas, such as defining types of list items, optional properties, and more! But my favorite thing about JSON schemas is its support in VSCode, the editor I use most of the time. It has built in support for schemas with autocompletions. You can indicate which JSON schema a file follows by adding a <code class="language-plaintext highlighter-rouge">$schema</code> property to the root. For example:</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"$schema"</span><span class="p">:</span><span class="w"> </span><span class="s2">"schema_file.json"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fluffy_cat"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hello_world"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+<p>This does give an error though, since before we required that there were no additional properties to the root, and now there is a property <code class="language-plaintext highlighter-rouge">$schema</code>. To fix this, add an optional property <code class="language-plaintext highlighter-rouge">$shema</code>. In addition we can also add a <code class="language-plaintext highlighter-rouge">$schema</code> property to the schema file itself, which indicates the schema standard used. This way we get autocompletions for our schema files as well! The final schema file will look something like this:</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"$schema"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://json-schema.org/draft-07/schema#"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"required"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"username"</span><span class="p">,</span><span class="w"> </span><span class="s2">"password"</span><span class="p">],</span><span class="w">
+    </span><span class="nl">"additionalProperties"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"schema"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">},</span><span class="w">
+        </span><span class="nl">"username"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">},</span><span class="w">
+        </span><span class="nl">"password"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+<p>For an overview of everything you can do with JSON schemas, check out <a href="https://json-schema.org/">json-schema.org</a>.</p>]]></content><author><name></name></author><category term="blog" /><summary type="html"><![CDATA[While I was working on my Master’s thesis, for the millionth time now, I had to come up with some input format. Of course, I go for the easiest solution and use JSON files as input. With one line of Python code the file contents can be converted to a dictionary, list, etc. However: What happens if a user does not follow the format I carefully came up with? Well, for that you need to write lots code to check there are no extra items, missing items, incorrect types, incorrect list lengths, … sigh. This could be made so much easier right? Well it turns out there is a very nice solution to my problem: JSON schemas.]]></summary></entry></feed>
