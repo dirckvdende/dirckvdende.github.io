@@ -51,12 +51,6 @@ technologies:
 
 ...
 
-<div>
-    {%- for x in site.data.project-links.hello -%}
-        <b>{{ x }}</b>
-    {%- endfor -%}
-</div>
-
 Both for university and in personal projects I make use of Python or C++, in addition to web development. Below are some of the technologies that I use regularly.
 <ul class="icon-listing">
     {%- for name in page.technologies.regular -%}
@@ -107,4 +101,28 @@ I've listed some of the technologies I've worked with in the past below. These a
 </div>
 <div class="center-link-button">
     <a href="/blog/" class="center-link-button">View all posts</a>
+</div>
+
+## Milestones
+
+<div class="milestones">
+    {%- for milestone in site.data.milestones reversed -%}
+        {%- assign date_format = "%B %-d, %Y" -%}
+        {%- if milestone.major -%}
+        <div class="milestone milestone-major">
+        {%- else -%}
+        <div class="milestone">
+        {%- endif -%}
+            <div class="milestone-text">
+                <h2 class="milestone-title">{{ milestone.title | escape }}</h2>
+                <p>{{ milestone.description }}</p>
+            </div>
+            <div class="milestone-meta">{{ milestone.date | date: date_format }}</div>
+            {%- if milestone.major -%}
+                <div class="timepoint-major"></div>
+            {%- else -%}
+                <div class="timepoint-minor"></div>
+            {%- endif -%}
+        </div>
+    {%- endfor -%}
 </div>

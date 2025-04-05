@@ -2,7 +2,7 @@
 # First 3 projects are displayed on home page
 # Projects on the project page are given the same order as below
 
-- title: Daily Puzzles
+- title: Daily Puzzle
   description: A daily puzzle web-app that has a different type of puzzle for every day of the week. Puzzles are randomly generated.
   url: https://dirckvdende.github.io/daily-puzzle/
   img: assets/img/daily-puzzle.png
