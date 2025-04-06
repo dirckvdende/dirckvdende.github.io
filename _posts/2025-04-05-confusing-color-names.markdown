@@ -58,19 +58,20 @@ How do we do this? Well we use an already existing, very strong, standard: Hexad
 | Digit | Syllable |
 | --- | --- |
 | `0` | a |
-| `2` | be |
+| `1` | be |
+| `2` | bi |
 | `3` | le |
-| `4` | la |
-| `5` | pa |
+| `4` | li |
+| `5` | la |
 | `6` | pi |
-| `7` | ge |
-| `8` | te |
-| `9` | ma |
+| `7` | pa |
+| `8` | ge |
+| `9` | te |
 | `A` | ta |
-| `B` | we |
-| `C` | bi |
+| `B` | ma |
+| `C` | we |
 | `D` | o |
 | `E` | re |
 | `F` | ze |
 
-To make a color, just put three syllables together. So grey will be gegege, and red will be reaa. Black will be aaa and the Minecraft dark green will be ataa. Just like that we've created 4096 color names! And you can remember them all by remembering 16 syllables. Problem solved!
+To make a color, just put three syllables together. So grey will be gegege, and red will be zeaa. Black will be aaa and the Minecraft dark green will be ataa. Just like that we've created 4096 color names! And you can remember them all by remembering 16 syllables. Problem solved!
