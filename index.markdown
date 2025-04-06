@@ -2,7 +2,7 @@
 layout: home
 ---
 
-Hi, I'm Dirck. I'm a Computer Science Master student at Leiden Univerity. On this website you can find some of the projects I've worked on, as well as the occational blog post. Read more about me [here](/me/).
+Hi, I'm Dirck. I'm a Computer Science Master student at Leiden Univerity. On this website you can find some of the projects I've worked on, as well as the occasional blog post. Read more about me [here](/me/).
 
 ## My Projects
 

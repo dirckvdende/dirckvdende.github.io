@@ -45,7 +45,7 @@ technologies:
         - opencv
 ---
 
-I'm a Computer Science Master student at Leiden Univerity. On this website you can find some of the projects I've worked on, as well as the occational blog post. I also work on hobby projects on an irregular basis. Some of which you can find below! Both for university and for personal projects I make use of Python or C++. I also make websites sometimes. Below are some of the technologies that I use regularly.
+I'm a Computer Science Master student at Leiden Univerity. On this website you can find some of the projects I've worked on, as well as the occasional blog post. I also work on hobby projects on an irregular basis. Some of which you can find below! Both for university and for personal projects I make use of Python or C++. I also make websites sometimes. Below are some of the technologies that I use regularly.
 <ul class="icon-listing">
     {%- for name in page.technologies.regular -%}
         <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/{{name | escape}}/{{name | escpae}}-original.svg" title="{{name | escape}}"></li>
