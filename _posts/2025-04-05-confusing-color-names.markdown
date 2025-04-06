@@ -33,11 +33,11 @@ You know where you can't write "grey"? In Minecraft. Yes we're talking Minecraft
     </div>
     <div style="width: 5em; margin-left: 1em;">
         <div style="width: 5em; height: 5em; background-color: #FFFF55; border-radius: .3em;"></div>
-        <div style="text-align: center; margin-top: .3em;">gold</div>
+        <div style="text-align: center; margin-top: .3em;">yellow</div>
     </div>
     <div style="width: 5em; margin-left: 1em;">
         <div style="width: 5em; height: 5em; background-color: #FFAA00; border-radius: .3em;"></div>
-        <div style="text-align: center; margin-top: .3em;">yellow</div>
+        <div style="text-align: center; margin-top: .3em;">gold</div>
     </div>
     <div style="width: 5em; margin-left: 1em;">
         <div style="width: 5em; height: 5em; background-color: #55FF55; border-radius: .3em;"></div>
@@ -73,4 +73,4 @@ How do we do this? Well we use an already existing, very strong, standard: Hexad
 | `E` | re |
 | `F` | ze |
 
-To make a color, just put three syllables together. So grey will be gegege, and red will be reaa. Black will be aaa (like the screams you make when someone turns off the light and you step into a lego) and the Minecraft dark green will be ataa. Just like that we've created 4096 color names! And you can remember them all by remembering 16 syllables. Problem solved!
+To make a color, just put three syllables together. So grey will be gegege, and red will be reaa. Black will be aaa and the Minecraft dark green will be ataa. Just like that we've created 4096 color names! And you can remember them all by remembering 16 syllables. Problem solved!
