@@ -8,12 +8,12 @@ categories: blog
 I want to complain about something: Color names in programming languages. Because these are really confusing to me. And to make it even worse: There are dozens of different standards!
 
 It all started while trying to set up the website you're reading this on: I had an element with a `grey` color and wanted to make it darker. So what do I do? I change the color to `darkgrey`. And what do you know? The color becomes lighter! Yeah, really. I've put the colors next to each other below:
-<div style="display: flex; flex-direction: row; justify-content: center; margin: 1.5em 0;">
+<div style="display: flex; flex-direction: row; justify-content: center; margin: 1.5em 0; width: 100%; flex-wrap: wrap; gap: 1em;">
     <div style="width: 5em;">
         <div style="width: 5em; height: 5em; background-color: grey; border-radius: .3em;"></div>
         <div style="text-align: center; margin-top: .3em;">grey</div>
     </div>
-    <div style="width: 5em; margin-left: 1em;">
+    <div style="width: 5em;">
         <div style="width: 5em; height: 5em; background-color: darkgrey; border-radius: .3em;"></div>
         <div style="text-align: center; margin-top: .3em;">darkgrey</div>
     </div>
@@ -22,28 +22,28 @@ So, why? Well it turns out that grey is reserved as the color `rgb(128, 128, 128
 
 You know where you can't write "grey"? In Minecraft. Yes we're talking Minecraft now. Although the forced "gray" spelling is confusing, there is something I'm annoyed by a lot more: Minecraft does not have the color `purple`. It only has `dark_purple` and `light_purple`. And now you can think to yourself: Well then remember to just use the light and dark prefixes everywhere, right? Wrong! Because purple is the only color with a "light" variant. All of the other colors have a base variant and a darker variant, so `green` and `dark_green`. Except for black, white, and yellow for some reason. The darker version of yellow is called `gold`, but looks orange not gold. And by the way: neither green nor dark green has an actual pure green color, because green is the color `rgb(85, 255, 85)` and dark green is `rgb(0, 170, 0)`, while in reality a pure green color is `rgb(0, 255, 0)`. It's right there in the name: Red, *Green*, Blue. Are you confused yet? Because I am.
 
-<div style="display: flex; flex-direction: row; justify-content: center; margin: 1.5em 0;">
+<div style="display: flex; flex-direction: row; justify-content: center; margin: 1.5em 0; width: 100%; flex-wrap: wrap; gap: 1em;">
     <div style="width: 5em;">
         <div style="width: 5em; height: 5em; background-color: #FF55FF; border-radius: .3em;"></div>
         <div style="text-align: center; margin-top: .3em;">light_purple</div>
     </div>
-    <div style="width: 5em; margin-left: 1em;">
+    <div style="width: 5em;">
         <div style="width: 5em; height: 5em; background-color: #AA00AA; border-radius: .3em;"></div>
         <div style="text-align: center; margin-top: .3em;">dark_purple</div>
     </div>
-    <div style="width: 5em; margin-left: 1em;">
+    <div style="width: 5em;">
         <div style="width: 5em; height: 5em; background-color: #FFFF55; border-radius: .3em;"></div>
         <div style="text-align: center; margin-top: .3em;">yellow</div>
     </div>
-    <div style="width: 5em; margin-left: 1em;">
+    <div style="width: 5em;">
         <div style="width: 5em; height: 5em; background-color: #FFAA00; border-radius: .3em;"></div>
         <div style="text-align: center; margin-top: .3em;">gold</div>
     </div>
-    <div style="width: 5em; margin-left: 1em;">
+    <div style="width: 5em;">
         <div style="width: 5em; height: 5em; background-color: #55FF55; border-radius: .3em;"></div>
         <div style="text-align: center; margin-top: .3em;">green</div>
     </div>
-    <div style="width: 5em; margin-left: 1em;">
+    <div style="width: 5em;">
         <div style="width: 5em; height: 5em; background-color: #00AA00; border-radius: .3em;"></div>
         <div style="text-align: center; margin-top: .3em;">dark_green</div>
     </div>
