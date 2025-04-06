@@ -22,7 +22,7 @@ title: Programming Unicorns
 author: Dirck van den Ende
 # email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Computer Science Master student at Leiden University
+  Projects and occasional blogs by Dirck van den Ende
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
