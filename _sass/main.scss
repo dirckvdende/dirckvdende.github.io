@@ -25,13 +25,18 @@
             width: 6em;
         }
         @media screen and (max-width: 450px) {
-            display: none;
+            width: 100%;
+            height: 3em;
+            & + .image-card-text {
+                padding-top: .6em;
+            }
         }
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             position: absolute;
+            filter: brightness(97%);
         }
     }
     .image-card-meta {
