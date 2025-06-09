@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://dirckvdende.github.io/sitemap.xml
