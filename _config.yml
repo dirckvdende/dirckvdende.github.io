@@ -37,6 +37,24 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
 
+# Pages listed in the header
+header_pages:
+  - title: Hello
+    url: hello
+  - title: Test 2
+    url: test2
+
+# Social media links
+socials:
+  - name: GitHub
+    username: dirckvdende
+    logo: /assets/minima-social-icons.svg#github
+    url: https://github.com/dirckvdende
+  - name: LinkedIn
+    username: dirck
+    logo: /assets/minima-social-icons.svg#linkedin
+    url: https://www.linkedin.com/in/dirck
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

@@ -1,0 +1,17 @@
+<footer>
+    <div class="container">
+        <h2>{{ site.title | escape }}</h2>
+        <div class="footer-columns">
+            <div>
+                I make fun projects and write occusial blogs here. I'm currently studying a Master in Computer Science at Leiden University.
+            </div>
+            <div>
+                <ul class="socials">
+                    {%- for social in site.socials -%}
+                        <li><a href="{{ social.url | escape }}"><svg class="icon" viewBox="0 0 16 16"><use xlink:href="{{ social.logo | relative_url }}"></use></svg> <span>{{ social.username | escape }}</span></a></li>
+                    {%- endfor -%}
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>

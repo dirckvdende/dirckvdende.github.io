@@ -1,0 +1,10 @@
+<header>
+    <a class="site-title">{{ site.title | escape }}</a>
+    <nav class="site-nav">
+        <div class="nav-items">
+            {%- for page in site.header_pages -%}
+                <a href="{{ page.url | relative_url }}"><span>{{ page.title | escape }}</span></a>
+            {%- endfor -%}
+        </div>
+    </nav>
+</header>
