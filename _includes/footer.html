@@ -2,9 +2,7 @@
     <div class="container">
         <h2>{{ site.title | escape }}</h2>
         <div class="footer-columns">
-            <div>
-                I make fun projects and write occusial blogs here. I'm currently studying a Master in Computer Science at Leiden University.
-            </div>
+            <div>{{ site.footer.description }}</div>
             <div>
                 <ul class="socials">
                     {%- for social in site.socials -%}

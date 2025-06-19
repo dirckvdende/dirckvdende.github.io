@@ -10,8 +10,18 @@ footer {
     width: 100%;
     min-height: 300px;
 
-    @media screen and (max-width: 600px) {
+    a {
+        color: inherit;
+        text-decoration: underline;
+    }
+
+    a:active {
+        color: inherit;
+    }
+
+    @media screen and (max-width: 750px) {
         padding: 3em 2.5em;
+        font-size: .8em;
     }
 
     .container {
@@ -30,7 +40,7 @@ footer {
                 margin-left: 6em;
             }
 
-            @media screen and (max-width: 600px) {
+            @media screen and (max-width: 750px) {
                 flex-direction: column;
                 align-items: stretch;
                 justify-content: flex-start;

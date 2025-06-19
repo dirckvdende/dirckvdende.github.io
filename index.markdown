@@ -2,7 +2,25 @@
 layout: home
 ---
 
-Hi, I'm Dirck. I'm a Computer Science Master student at Leiden Univerity. On this website you can find some of the projects I've worked on, as well as the occasional blog post. Read more about me [here](/me/).
+<h2 class="center-title">Projects</h2>
+
+<div class="image-card-container">
+    <a class="image-card-more-button invisible"><span>+</span></a>
+    {%- for project in site.data.project-links limit:5 -%}
+        <a class="image-card" href="{{ project.url }}">
+            <div class="image-card-image">
+                <img src="{{ project.img }}">
+            </div>
+            <div class="image-card-text">
+                <h2 class="image-card-title">{{ project.title }}</h2>
+                <p>{{ project.description }}</p>
+            </div>
+        </a>
+    {%- endfor -%}
+    <a class="image-card-more-button" href="/projects"><span>+</span></a>
+</div>
+
+<!-- Hi, I'm Dirck. I'm a Computer Science Master student at Leiden Univerity. On this website you can find some of the projects I've worked on, as well as the occasional blog post. Read more about me [here](/me/).
 
 ## My Projects
 
@@ -41,4 +59,4 @@ Hi, I'm Dirck. I'm a Computer Science Master student at Leiden Univerity. On thi
 </div>
 <div class="center-link-button">
     <a href="/blog/" class="center-link-button">View all posts</a>
-</div>
+</div> -->
