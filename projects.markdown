@@ -5,7 +5,7 @@ permalink: /projects/
 ---
 
 <div class="image-card-container wrapped">
-    {%- for project in site.data.project-links limit:5 -%}
+    {%- for project in site.data.project-links -%}
         <a class="image-card" href="{{ project.url }}">
             <div class="image-card-image">
                 <img src="{{ project.img | relative_url }}">
