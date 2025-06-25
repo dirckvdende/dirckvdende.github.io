@@ -45,7 +45,10 @@ technologies:
         - opencv
 ---
 
-I'm a Computer Science Master student at Leiden Univerity. On this website you can find some of the projects I've worked on, as well as the occasional blog post. I also work on hobby projects on an irregular basis. Some of which you can find below! Both for university and for personal projects I make use of Python or C++. I also make websites sometimes.
+I'm a Computer Science Master student at Leiden Univerity. On this website you can find some of the projects I've worked on, as well as the occasional blog post. I also work on hobby projects on an irregular basis. Some of which you can find below! Both for university and for personal projects I often make use of Python or C++.
+
+I've also done a Bachelor in Mathetics, mainly focusing on analysis. By Bachelor thesis was about partial differential equations and analog computer. You can read it <a href="https://theses.liacs.nl/2706">here</a>. I'm currently working on methods to perform matrix operations using model counters.
+
 <h2 class="center-title">Stuff I use regularly</h2>
 <ul class="large-icon-listing">
     {%- for name in page.technologies.regular -%}

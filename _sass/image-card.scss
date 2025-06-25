@@ -22,6 +22,7 @@ div.image-card-container {
         box-sizing: border-box;
         min-height: 20em;
         transition: transform .2s, border .2s, box-shadow .2s;
+        opacity: 1;
 
         @media screen and (max-width: 750px) {
             margin: .4em;

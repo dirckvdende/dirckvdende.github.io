@@ -11,7 +11,7 @@ layout: home
     </div>
 </div>
 
-<blockquote class="center-quote">Hi, I'm Dirck! I'm a Master Computer Science student at Leiden University. I also work on a lot of projects outside of university. I love solving (and making) difficult puzzles. Occasionally I'll also write a blog about something interesting :)</blockquote>
+<blockquote class="center-quote">Hi, I'm Dirck! I'm a Computer Science Master student at Leiden University. I have a bachelor in Mathematics and a bachelor in Computer Science. I also work on a lot of projects outside of university. I love solving (and making) difficult puzzles. I occasially write blogs here :) Read more about me <a href="/me">here</a>.</blockquote>
 
 <div class="vspace-empty"></div>
 
@@ -49,7 +49,7 @@ layout: home
     <a class="image-card-more-button" href="/blog"><span>+</span></a>
 </div>
 
-<h2 class="center-title">Contact Me</h2>
+<h2 class="center-title">Find Me Here</h2>
 
 <ul class="large-contact-list">
     {%- for social in site.socials -%}

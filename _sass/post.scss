@@ -13,6 +13,7 @@ time.time-published {
 
     @media screen and (max-width: 750px) {
         font-size: .8em;
+        transform: translateY(-1em);
     }
 }
 
@@ -27,6 +28,7 @@ time.time-published {
         max-width: none !important;
         line-height: 150% !important;
         font-size: 1.2em !important;
+        text-align: justify;
     }
     
     h2 {
@@ -36,7 +38,7 @@ time.time-published {
     }
 
     @media screen and (max-width: 750px) {
-        font-size: .8em;
+        font-size: .7em;
     }
 
     .center-image {
@@ -46,17 +48,6 @@ time.time-published {
         object-position: center;
         max-height: 300px;
         margin: 1em 0;
-    }
-
-    a {
-        color: inherit;
-        text-decoration: underline;
-    }
-    a:active {
-        color: inherit;
-    }
-    a:hover {
-        opacity: .6;
     }
 
 }
