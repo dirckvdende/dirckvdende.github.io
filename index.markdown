@@ -11,7 +11,7 @@ layout: home
     </div>
 </div>
 
-<blockquote class="center-quote">Hi, I'm Dirck! I'm a Master Computer Science student at Leiden University. I work on a lot of projects outside of university as well. Occasionally I'll write a blog about something interesting :)</blockquote>
+<blockquote class="center-quote">Hi, I'm Dirck! I'm a Master Computer Science student at Leiden University. I also work on a lot of projects outside of university. I love solving (and making) difficult puzzles. Occasionally I'll also write a blog about something interesting :)</blockquote>
 
 <div class="vspace-empty"></div>
 
