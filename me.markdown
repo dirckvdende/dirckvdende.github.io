@@ -63,7 +63,7 @@ I'm a Computer Science Master student at Leiden Univerity. On this website you c
 
 <div class="milestones">
     {%- for milestone in site.data.milestones reversed -%}
-        {%- assign date_format = "%B %-d, %Y" -%}
+        {%- assign date_format = "%B %Y" -%}
         {%- if milestone.major -%}
         <div class="milestone milestone-major">
         {%- else -%}
@@ -73,7 +73,7 @@ I'm a Computer Science Master student at Leiden Univerity. On this website you c
                 <h2 class="milestone-title">{{ milestone.title | escape }}</h2>
                 <p>{{ milestone.description }}</p>
             </div>
-            <div class="milestone-meta"><span>{{ milestone.date | date: date_format }}</span></div>
+            <div class="milestone-meta"><span>{{ milestone.date | date: date_format }}{%- if milestone.end_date -%}&nbsp;&mdash;&nbsp;{{milestone.end_date | date: date_format }}{%- endif -%}</span></div>
             {%- if milestone.major -%}
                 <div class="timepoint-major"></div>
             {%- else -%}

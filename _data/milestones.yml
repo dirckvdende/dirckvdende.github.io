@@ -1,5 +1,5 @@
 
-# Milestones are displayed on the home screen in reverse order
+# Milestones are displayed in reverse order
 
 - title: Propedeuse Computer Science
   date: 2020-08-27
@@ -9,6 +9,11 @@
   date: 2020-08-27
   description: Completed the first year of Mathematics at Leiden University.
   major: true
+
+- title: Student Assistant Complex Analysis
+  date: 2022-02-01
+  end_date: 2022-06-30
+  description: Job as a student assistant for the second year Bachelor course "Complex Analysis" for the Mathematical Institute at Leiden University.
 
 - title: Placed 1st at Leidsch Kampioenschap Programmeren
   date: 2022-10-01
@@ -20,6 +25,20 @@
   date: 2022-11-27
   description: Placed 72nd at Northwestern Europe Regional Contest (NWERC) in Delft. Teams consisted of three members.
 
+- title: Student Assistant Automata Theory
+  date: 2022-09-01
+  end_date: 2023-01-31
+  description: Job as a student assistant for the second year Bachelor course "Automata Theory" for the Leiden Institute of Advanced Computer Science at Leiden University.
+- title: Student Assistant Computer Architecture
+  date: 2022-09-01
+  end_date: 2023-01-31
+  description: Job as a student assistant for the second year Bachelor course "Computer Architecture" for the Leiden Institute of Advanced Computer Science at Leiden University.
+
+- title: Student Assistant Dynamics and Chaos
+  date: 2023-02-01
+  end_date: 2023-06-30
+  description: Job as a student assistant for the elective Bachelor course "Dynamics and Chaos" for the Mathematical Institute at Leiden University.
+
 - title: Bachelor Computer Science
   date: 2023-07-31
   description: Graduated summa cum laude for a Bachelor in Computer Science at Leiden University.
@@ -28,6 +47,15 @@
   date: 2023-07-31
   description: Graduated cum laude for a Bachelor in Mathematics at Leiden University.
   major: true
+
+- title: Student Assistant Automata Theory
+  date: 2023-09-01
+  end_date: 2024-01-31
+  description: Job as a student assistant for the second year Bachelor course "Automata Theory" at the Leiden Institute of Advanced Computer Science at Leiden University.
+- title: Student Assistant Compiler Construction
+  date: 2023-09-01
+  end_date: 2024-01-31
+  description: Job as a student assistant for the elective Bachelor course "Compiler Construction" at the Leiden Institute of Advanced Computer Science at Leiden University.
 
 - title: Placed 1st at Leidsch Kampioenschap Programmeren
   date: 2023-09-30
@@ -39,6 +67,16 @@
   date: 2023-11-26
   description: Placed 57th at Northwestern Europe Regional Contest (NWERC) in Delft. Teams consisted of three members.
 
+- title: Student Assistant Program Correctness
+  date: 2024-02-01
+  end_date: 2024-06-30
+  description: Job as a student assistant for the elective Bachelor course "Program Correctness" at the Leiden Institute of Advanced Computer Science at Leiden University.
+
+- title: Student Assistant Automata Theory
+  date: 2024-09-01
+  end_date: 2025-01-31
+  description: Job as a student assistant for the elective Bachelor course "Automata Theory" at the Leiden Institute of Advanced Computer Science at Leiden University.
+
 - title: Placed 1st at Leidsch Kampioenschap Programmeren
   date: 2024-09-28
   description: Won the Leidsch Kampioenschap Programmeren, which is the BAPC preliminary competition at Leiden University. Teams consisted of three members.
@@ -48,3 +86,12 @@
 - title: Placed 40th at Northwestern Europe Regional Contest
   date: 2024-11-24
   description: Placed 40th at Northwestern Europe Regional Contest (NWERC) in Delft. Teams consisted of three members.
+
+- title: Student Assistant Program Correctness
+  date: 2025-02-01
+  end_date: 2025-06-30
+  description: Job as a student assistant for the elective Bachelor course "Program Correctness" at the Leiden Institute of Advanced Computer Science at Leiden University.
+- title: Student Assistant Algorithms
+  date: 2025-02-01
+  end_date: 2025-06-30
+  description: Job as a student assistant for the first year Bachelor course "Algorithms" at the Leiden Institute of Advanced Computer Science at Leiden University.
