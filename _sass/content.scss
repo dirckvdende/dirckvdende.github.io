@@ -10,6 +10,13 @@ main.page-content {
         margin-top: 4em;
     }
 
+    p {
+        width: 90%;
+        max-width: 800px;
+        font-size: 1.2em;
+        line-height: 140%;
+    }
+
     h1.page-title {
         width: 100%;
         display: block;
@@ -20,6 +27,10 @@ main.page-content {
         font-size: 3.5em;
         font-weight: lighter;
         color: #333;
+
+        @media screen and (max-width: 750px) {
+            margin-top: 8em;
+        }
     }
 
     h2.center-title {
