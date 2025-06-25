@@ -22,7 +22,17 @@
   url: https://dirckvdende.github.io/Adversarial-Drawing-App/
   img: assets/img/adversarial-drawing-app.png
 
+- title: Ladybug-lang
+  description: Minimalistic programming language with a TypeScript interface. No IO by default means it's fully self-contained.
+  url: https://github.com/dirckvdende/ladybug-lang
+  img: assets/img/ladybug.jpg
+
+- title: Image Stacker
+  description: A sall web-app to stack images vertically or horizontally.
+  url: https://dirckvdende.github.io/image-stacker/
+  img: assets/img/image-stacker.png
+
 - title: layout-image
-  description: A small Python package for creating basic images with XML layouts
+  description: A small Python package for creating basic images with XML layouts.
   url: https://pypi.org/project/layout-image/
   img: assets/img/layout-image.png
