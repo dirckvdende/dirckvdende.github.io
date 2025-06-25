@@ -48,6 +48,17 @@ time.time-published {
         margin: 1em 0;
     }
 
+    a {
+        color: inherit;
+        text-decoration: underline;
+    }
+    a:active {
+        color: inherit;
+    }
+    a:hover {
+        opacity: .6;
+    }
+
 }
 
 .post-title {
