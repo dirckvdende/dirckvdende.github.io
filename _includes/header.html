@@ -1,10 +1,22 @@
 <header>
     <a class="site-title" href="/">{{ site.title | escape }}</a>
     <nav class="site-nav">
-        <div class="nav-items">
+        <div class="nav-toggle" id="nav-toggle"><span class="material-symbols-outlined">menu</span></div>
+        <div class="nav-items" id="nav-items">
             {%- for page in site.header_pages -%}
                 <a href="{{ page.url | relative_url }}"><span>{{ page.title | escape }}</span></a>
             {%- endfor -%}
         </div>
     </nav>
 </header>
+<script>
+    let navToggle = document.getElementById("nav-toggle");
+    let navItems = document.getElementById("nav-items");
+    let className = "nav-items-active";
+    navToggle.addEventListener("click", () => {
+        if (navItems.classList.contains(className))
+            navItems.classList.remove(className);
+        else
+            navItems.classList.add(className);
+    });
+</script>

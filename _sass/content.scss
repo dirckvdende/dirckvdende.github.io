@@ -139,6 +139,10 @@ main.page-content {
             & + li {
                 margin-left: 3em;
             }
+
+            @media screen and (max-width: 750px) {
+                font-size: .7em;
+            }
             
             a {
                 text-decoration: none;
