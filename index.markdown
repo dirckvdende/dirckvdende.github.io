@@ -2,6 +2,19 @@
 layout: home
 ---
 
+<div class="profile-container">
+    <div class="profile-picture-container">
+        <img src="assets/img/profile-picture.jpg">
+    </div>
+    <div class="profile-name-container">
+        <h1>Dirck van den Ende</h1>
+    </div>
+</div>
+
+<blockquote class="center-quote">Hi, I'm Dirck! I'm a Master Computer Science student at Leiden University. I work on a lot of projects outside of university as well. Occasionally I'll write a blog about something interesting :)</blockquote>
+
+<div class="vspace-empty"></div>
+
 <h2 class="center-title">Projects</h2>
 
 <div class="image-card-container">
@@ -18,6 +31,22 @@ layout: home
         </a>
     {%- endfor -%}
     <a class="image-card-more-button" href="/projects"><span>+</span></a>
+</div>
+
+<h2 class="center-title">Blog</h2>
+
+<div class="image-card-container">
+    <a class="image-card-more-button invisible"><span>+</span></a>
+    {%- for post in site.posts limit:5 -%}
+        <a class="image-card" href="{{ post.url }}">
+            <div class="image-card-text">
+                <p class="image-card-date">{{ post.date | date: "%B %-d, %Y" }}</p>
+                <h2 class="image-card-title">{{ post.title | escape }}</h2>
+                <p>{{ post.content | strip_html | escape | truncatewords: 70 }}</p>
+            </div>
+        </a>
+    {%- endfor -%}
+    <a class="image-card-more-button" href="/blog"><span>+</span></a>
 </div>
 
 <!-- Hi, I'm Dirck. I'm a Computer Science Master student at Leiden Univerity. On this website you can find some of the projects I've worked on, as well as the occasional blog post. Read more about me [here](/me/).

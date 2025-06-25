@@ -21,9 +21,16 @@ div.image-card-container {
         text-decoration: none;
         box-sizing: border-box;
         min-height: 20em;
+        transition: transform .2s, border .2s, box-shadow .2s;
 
         @media screen and (max-width: 750px) {
             margin: .4em;
+        }
+
+        &:hover {
+            transform: translateY(-4px);
+            border-color: transparent;
+            box-shadow: 0px 7px 20px -7px rgba(0,0,0,0.4);
         }
 
         &:active {
@@ -58,6 +65,17 @@ div.image-card-container {
             p {
                 color: grey;
                 font-size: 0.8em;
+            }
+
+            p.image-card-date {
+                color: grey;
+                font-style: italic;
+                font-size: 0.9em;
+                margin: 1.7em 0 0 0;
+            }
+
+            p.image-card-date + h2 {
+                margin-top: .3em;
             }
         }
     }
@@ -122,7 +140,7 @@ div.image-card-container {
     
     @media screen and (max-width: 750px) {
         a.image-card-more-button {
-            margin-left: .4em;
+            margin-right: 1em;
         }
         overflow-x: auto;
         justify-content: flex-start;
