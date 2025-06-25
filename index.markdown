@@ -49,6 +49,14 @@ layout: home
     <a class="image-card-more-button" href="/blog"><span>+</span></a>
 </div>
 
+<h2 class="center-title">Contact Me</h2>
+
+<ul class="large-contact-list">
+    {%- for social in site.socials -%}
+        <li><a href="{{ social.url | escape }}"><svg class="icon" viewBox="0 0 16 16"><use xlink:href="{{ social.logo | relative_url }}"></use></svg> <span>{{ social.username | escape }}</span></a></li>
+    {%- endfor -%}
+</ul>
+
 <!-- Hi, I'm Dirck. I'm a Computer Science Master student at Leiden Univerity. On this website you can find some of the projects I've worked on, as well as the occasional blog post. Read more about me [here](/me/).
 
 ## My Projects

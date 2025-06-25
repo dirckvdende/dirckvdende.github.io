@@ -121,4 +121,43 @@ main.page-content {
             }
         }
     }
+
+    ul.large-contact-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 1.5em 0;
+        padding: 0;
+
+        li {
+            display: block;
+            list-style-type: none;
+            padding: 0;
+            margin: 1em;
+            & + li {
+                margin-left: 3em;
+            }
+            
+            a {
+                text-decoration: none;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                font-size: 1.7em;
+                color: #444;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+
+                svg {
+                    fill: #444;
+                    height: 2.4em;
+                    margin-right: 1em;
+                }
+            }
+        }
+    }
 }
