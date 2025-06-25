@@ -33,7 +33,7 @@ header {
         }
     }
 
-    nav.site-nav {
+    nav.nav-bar {
         height: 100%;
 
         div.nav-items {
@@ -69,7 +69,7 @@ header {
 
         }
         
-        div.nav-toggle {
+        div.nav-toggler {
             display: none;
         }
 
@@ -110,7 +110,7 @@ header {
                 }
             }
 
-            div.nav-toggle {
+            div.nav-toggler {
                 display: flex;
                 height: 100%;
                 flex-direction: row;
@@ -119,7 +119,7 @@ header {
                 cursor: pointer;
                 user-select: none;
             }
-            div.nav-toggle:hover {
+            div.nav-toggler:hover {
                 background-color: #f1f1f1;
             }
         }
