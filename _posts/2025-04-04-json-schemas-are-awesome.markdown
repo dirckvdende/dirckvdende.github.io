@@ -3,6 +3,7 @@ layout: post
 title: "JSON Schemas are Awesome!"
 date: 2025-04-04 21:50:00 +0200
 categories: blog
+summary: JSOOOOOON
 ---
 
 While I was working on my Master's thesis, for the millionth time now, I had to come up with some input format. Of course, I go for the easiest solution and use JSON files as input. With one line of Python code the file contents can be converted to a dictionary, list, etc. However: What happens if a user does not follow the format I carefully came up with? Well, for that you need to write lots code to check there are no extra items, missing items, incorrect types, incorrect list lengths, ... *sigh*. This could be made so much easier right? Well it turns out there is a very nice solution to my problem: JSON schemas.

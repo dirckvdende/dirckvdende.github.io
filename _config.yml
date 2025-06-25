@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Programming Unicorns
+title: Dirck van den Ende
 author: Dirck van den Ende
 # email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
@@ -36,6 +36,32 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+
+# Pages listed in the header
+header_pages:
+  - title: About Me
+    url: /me
+  - title: Projects
+    url: /projects
+  - title: Blog
+    url: /blog
+
+# Social media links
+socials:
+  - name: GitHub
+    username: dirckvdende
+    logo: /assets/minima-social-icons.svg#github
+    url: https://github.com/dirckvdende
+  - name: LinkedIn
+    username: dirck
+    logo: /assets/minima-social-icons.svg#linkedin
+    url: https://www.linkedin.com/in/dirck
+
+footer:
+  description: >-
+    I make fun projects and write occasional blogs here. I'm currently
+    studying a Master in Computer Science at Leiden University. Read more
+    about me <a href="/me">here</a>.
 
 # Exclude from processing.
 # The following items will not be processed, by default.

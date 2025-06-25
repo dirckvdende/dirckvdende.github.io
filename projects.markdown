@@ -4,16 +4,16 @@ title: Projects
 permalink: /projects/
 ---
 
-<div>
-    {%- for project in site.data.project-links -%}
-        <div class="image-card">
+<div class="image-card-container wrapped">
+    {%- for project in site.data.project-links limit:5 -%}
+        <a class="image-card" href="{{ project.url }}">
             <div class="image-card-image">
                 <img src="{{ project.img | relative_url }}">
             </div>
             <div class="image-card-text">
-                <a class="image-card-title" href="{{ project.url | relative_url }}">{{ project.title }}</a>
+                <h2 class="image-card-title">{{ project.title }}</h2>
                 <p>{{ project.description }}</p>
             </div>
-        </div>
+        </a>
     {%- endfor -%}
 </div>

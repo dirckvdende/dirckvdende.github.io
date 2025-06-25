@@ -4,17 +4,19 @@ title: Blog
 permalink: /blog/
 ---
 
-<div>
+<div class="image-card-container wrapped">
     {%- for post in site.posts -%}
-        <div class="image-card">
-            {%- assign date_format = "%B %-d, %Y" -%}
+        <a class="image-card" href="{{ post.url }}">
+            {%- if post.img -%}
+                <div class="image-card-image">
+                    <img src="{{ post.img }}">
+                </div>
+            {%- endif -%}
             <div class="image-card-text">
-                <a class="image-card-title" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-                {%- if site.show_excerpts -%}
-                    <p>{{ post.excerpt }}</p>
-                {%- endif -%}
+                <p class="image-card-date">{{ post.date | date: "%B %-d, %Y" }}</p>
+                <h2 class="image-card-title">{{ post.title | escape }}</h2>
+                <p>{{ post.content | strip_html | escape | truncatewords: 70 }}</p>
             </div>
-            <div class="image-card-meta">{{ post.date | date: date_format }}</div>
-        </div>
+        </a>
     {%- endfor -%}
 </div>
