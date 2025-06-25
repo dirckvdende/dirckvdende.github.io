@@ -175,4 +175,15 @@ main.page-content {
             }
         }
     }
+
+    a {
+        color: inherit;
+        text-decoration: underline;
+    }
+    a:active {
+        color: inherit;
+    }
+    a:hover {
+        opacity: .6;
+    }
 }
