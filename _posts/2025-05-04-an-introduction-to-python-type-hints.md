@@ -157,7 +157,7 @@ b = f("bar", 3.2) # b has type float
 
 ## Function Overloads
 
-In a statically typed language like C++ it's possible to have multiple functions with the same, but with different type signatures. Because Python doesn't use the type hints at runtime, it's not possible to give two completely separate implementations, but it is possible to specify different type signatures. For this we use the `overload` decorator, imported from `typing`.
+In a statically typed language like C++ it's possible to have multiple functions with the same name, but with different type signatures. Because Python doesn't use the type hints at runtime, it's not possible to give two completely separate implementations, but it is possible to specify different type signatures. For this we use the `overload` decorator, imported from `typing`.
 
 As an example we will define a function that either adds two floats or concatenates two strings. First you define the different signatures that the function accepts, then you specify the actual implementation:
 ```py
