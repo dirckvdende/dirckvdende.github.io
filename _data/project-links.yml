@@ -5,34 +5,56 @@
 - title: Daily Puzzle
   description: A daily puzzle web-app that has a different type of puzzle for every day of the week. Puzzles are randomly generated.
   url: https://dirckvdende.github.io/daily-puzzle/
-  img: assets/img/daily-puzzle.png
+  img: /assets/img/projects/daily-puzzle_1200.jpg
+  imgset: >-
+    /assets/img/projects/daily-puzzle_300.jpg,
+    /assets/img/projects/daily-puzzle_600.jpg 2x,
+    /assets/img/projects/daily-puzzle_1200.jpg 4x
 
 - title: Programming Competition Reference
   description: I participated in the BAPC and NWERC programming contests in 2022, 2023, and 2024. In these competitions a document of at most 25 pages can be used as reference material.
   url: https://github.com/dirckvdende/competition-reference/blob/main/reference.pdf
-  img: assets/img/reference-doc.png
+  img: /assets/img/projects/reference-doc_600.jpg
+  imgset: >-
+    /assets/img/projects/reference-doc_300.jpg,
+    /assets/img/projects/reference-doc_600.jpg 2x
 
 - title: Bachelor's Thesis on PDEs and Analog Computers
   description: I finished my bachlor in Computer Science and my bachelor in Mathematics at Leiden Univeristy by doing a joint thesis on partial differential equation simulation on analog computers.
   url: https://theses.liacs.nl/2706
-  img: assets/img/thesis-preview.png
+  img: /assets/img/projects/thesis-preview.jpg
+  imgset: >-
+    /assets/img/projects/thesis-preview_300.jpg,
+    /assets/img/projects/thesis-preview_600.jpg 2x
 
 - title: Adversarial Drawing App
   description: For the course Computational Creativity, I collaborated with two others to create a drawing app that removes strokes when the drawing becomes too similar to the prompt.
   url: https://dirckvdende.github.io/Adversarial-Drawing-App/
-  img: assets/img/adversarial-drawing-app.png
+  img: /assets/img/projects/adversarial-drawing-app_600.jpg
+  imgset: >-
+    /assets/img/projects/adversarial-drawing-app_300.jpg,
+    /assets/img/projects/adversarial-drawing-app_600.jpg 2x
 
 - title: Ladybug-lang
   description: Minimalistic programming language with a TypeScript interface. No IO by default means it's fully self-contained.
   url: https://github.com/dirckvdende/ladybug-lang
-  img: assets/img/ladybug.jpg
+  img: /assets/img/projects/ladybug_600.jpg
+  imgset: >-
+    /assets/img/projects/ladybug_300.jpg,
+    /assets/img/projects/ladybug_600.jpg 2x
 
 - title: Image Stacker
   description: A sall web-app to stack images vertically or horizontally.
   url: https://dirckvdende.github.io/image-stacker/
-  img: assets/img/image-stacker.png
+  img: /assets/img/projects/image-stacker_1200.jpg
+  imgset: >-
+    /assets/img/projects/image-stacker_300.jpg,
+    /assets/img/projects/image-stacker_600.jpg 2x,
+    /assets/img/projects/image-stacker_1200.jpg 4x
 
 - title: layout-image
   description: A small Python package for creating basic images with XML layouts.
   url: https://pypi.org/project/layout-image/
-  img: assets/img/layout-image.png
+  img: /assets/img/projects/layout-image_300.jpg
+  imgset: >-
+    /assets/img/projects/layout-image_300.jpg

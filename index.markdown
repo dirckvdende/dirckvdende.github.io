@@ -4,7 +4,10 @@ layout: home
 
 <div class="profile-container">
     <div class="profile-picture-container">
-        <img src="assets/img/profile-picture.jpg" alt="Profile picture">
+        <img
+            srcset="assets/img/profile-picture_200.jpg, assets/img/profile-picture_400.jpg 2x, assets/img/profile-picture_800.jpg 4x"
+            src="assets/img/profile-picture_800.jpg"
+            alt="Profile picture">
     </div>
     <div class="profile-name-container">
         <h1>Dirck van den Ende</h1>
@@ -22,7 +25,14 @@ layout: home
     {%- for project in site.data.project-links limit:5 -%}
         <a class="image-card" href="{{ project.url }}">
             <div class="image-card-image">
-                <img src="{{ project.img }}" alt="{{ project.title | escape }}">
+                {%- if project.imgset -%}
+                    <img
+                        srcset="{{ project.imgset }}"
+                        src="{{ project.img }}"
+                        alt="{{ project.title | escape }}">
+                {%- else -%}
+                    <img src="{{ project.img }}" alt="{{ project.title | escape }}">
+                {%- endif -%}
             </div>
             <div class="image-card-text">
                 <h2 class="image-card-title">{{ project.title }}</h2>
