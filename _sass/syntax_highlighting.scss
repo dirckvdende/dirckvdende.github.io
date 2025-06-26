@@ -12,6 +12,12 @@ $yellow: #ecca4f;
 
 $err-red: red;
 
+code {
+    font-size: 1.1em;
+    background-color: #ddd;
+    padding: .1em .2em;
+}
+
 /**
  * Syntax highlighting styles
  */
@@ -32,6 +38,9 @@ $err-red: red;
         text-wrap: wrap;
         word-break: break-word;
         line-height: 130%;
+        font-size: 1em;
+        background-color: transparent;
+        padding: 0;
     }
 
     .c     { color: $comment-color; font-style: italic; } // Comment
