@@ -14,7 +14,7 @@ layout: home
     </div>
 </div>
 
-<blockquote class="center-quote">Hi, I'm Dirck! I'm a Computer Science Master student at Leiden University. I have a bachelor in Mathematics and a bachelor in Computer Science. I also work on a lot of projects outside of university. I love solving (and making) difficult puzzles. I occasially write blogs here :) Read more about me <a href="/me">here</a>.</blockquote>
+<blockquote class="center-quote">Hi, I'm Dirck! I'm a Computer Science Master student at Leiden University. I have a bachelor in Mathematics and a bachelor in Computer Science. I also work on a lot of projects outside of university. I love solving (and making) difficult puzzles. I occasially write blogs here :) <a href="/me">Read more about me</a></blockquote>
 
 <div class="vspace-empty"></div>
 
