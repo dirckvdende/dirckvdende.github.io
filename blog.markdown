@@ -9,7 +9,7 @@ permalink: /blog/
         <a class="image-card" href="{{ post.url }}">
             {%- if post.img -%}
                 <div class="image-card-image">
-                    <img src="{{ post.img }}">
+                    <img src="{{ post.img }}" alt="{{ post.title | escape }}">
                 </div>
             {%- endif -%}
             <div class="image-card-text">

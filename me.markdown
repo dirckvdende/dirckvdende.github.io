@@ -52,13 +52,13 @@ I've also done a Bachelor in Mathetics, mainly focusing on analysis. By Bachelor
 <h2 class="center-title">Stuff I use regularly</h2>
 <ul class="large-icon-listing">
     {%- for name in page.technologies.regular -%}
-        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/{{name | escape}}/{{name | escape}}-original.svg" title="{{name | escape}}"></li>
+        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/{{name | escape}}/{{name | escape}}-original.svg" title="{{name | escape}}" alt="{{ name | escape }}"></li>
     {%- endfor -%}
 </ul>
 <h2 class="center-title">Stuff I have experience with</h2>
 <ul class="large-icon-listing">
     {%- for name in page.technologies.other -%}
-        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/{{name | escape}}/{{name | escape}}-original.svg" title="{{name | escape}}"></li>
+        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/{{name | escape}}/{{name | escape}}-original.svg" title="{{name | escape}}" alt="{{ name | escape }}"></li>
     {%- endfor -%}
 </ul>
 

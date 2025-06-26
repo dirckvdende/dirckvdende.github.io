@@ -4,14 +4,17 @@ layout: home
 
 <div class="profile-container">
     <div class="profile-picture-container">
-        <img src="assets/img/profile-picture.jpg">
+        <img
+            srcset="assets/img/profile-picture_200.jpg, assets/img/profile-picture_400.jpg 2x, assets/img/profile-picture_800.jpg 4x"
+            src="assets/img/profile-picture_800.jpg"
+            alt="Profile picture">
     </div>
     <div class="profile-name-container">
         <h1>Dirck van den Ende</h1>
     </div>
 </div>
 
-<blockquote class="center-quote">Hi, I'm Dirck! I'm a Computer Science Master student at Leiden University. I have a bachelor in Mathematics and a bachelor in Computer Science. I also work on a lot of projects outside of university. I love solving (and making) difficult puzzles. I occasially write blogs here :) Read more about me <a href="/me">here</a>.</blockquote>
+<blockquote class="center-quote">Hi, I'm Dirck! I'm a Computer Science Master student at Leiden University. I have a bachelor in Mathematics and a bachelor in Computer Science. I also work on a lot of projects outside of university. I love solving (and making) difficult puzzles. I occasially write blogs here :) <a href="/me">Read more about me</a></blockquote>
 
 <div class="vspace-empty"></div>
 
@@ -22,7 +25,14 @@ layout: home
     {%- for project in site.data.project-links limit:5 -%}
         <a class="image-card" href="{{ project.url }}">
             <div class="image-card-image">
-                <img src="{{ project.img }}">
+                {%- if project.imgset -%}
+                    <img
+                        srcset="{{ project.imgset }}"
+                        src="{{ project.img }}"
+                        alt="{{ project.title | escape }}">
+                {%- else -%}
+                    <img src="{{ project.img }}" alt="{{ project.title | escape }}">
+                {%- endif -%}
             </div>
             <div class="image-card-text">
                 <h2 class="image-card-title">{{ project.title }}</h2>
@@ -56,44 +66,3 @@ layout: home
         <li><a href="{{ social.url | escape }}"><svg class="icon" viewBox="0 0 16 16"><use xlink:href="{{ social.logo | relative_url }}"></use></svg> <span>{{ social.username | escape }}</span></a></li>
     {%- endfor -%}
 </ul>
-
-<!-- Hi, I'm Dirck. I'm a Computer Science Master student at Leiden Univerity. On this website you can find some of the projects I've worked on, as well as the occasional blog post. Read more about me [here](/me/).
-
-## My Projects
-
-<div>
-    {%- for project in site.data.project-links limit:3 -%}
-        <div class="image-card">
-            <div class="image-card-image">
-                <img src="{{ project.img }}">
-            </div>
-            <div class="image-card-text">
-                <a class="image-card-title" href="{{ project.url }}">{{ project.title }}</a>
-                <p>{{ project.description }}</p>
-            </div>
-        </div>
-    {%- endfor -%}
-</div>
-<div class="center-link-button">
-    <a href="/projects/" class="center-link-button">View all projects</a>
-</div>
-
-## Blog
-
-<div>
-    {%- for post in site.posts limit: 3 -%}
-        <div class="image-card">
-            {%- assign date_format = "%B %-d, %Y" -%}
-            <div class="image-card-text">
-                <a class="image-card-title" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-                {%- if site.show_excerpts -%}
-                    <p>{{ post.excerpt }}</p>
-                {%- endif -%}
-            </div>
-            <div class="image-card-meta">{{ post.date | date: date_format }}</div>
-        </div>
-    {%- endfor -%}
-</div>
-<div class="center-link-button">
-    <a href="/blog/" class="center-link-button">View all posts</a>
-</div> -->

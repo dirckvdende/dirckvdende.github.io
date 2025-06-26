@@ -1,5 +1,5 @@
 
-$background-color: #111;
+$background-color: #2d2d2d;
 $base-color: #ddd;
 
 $purple: #c583f1;
@@ -8,7 +8,7 @@ $light-blue: #54c6c0;
 $comment-color: #777;
 $green: #a7d690;
 $orange: #fab75a;
-$yellow: #ecca4f;
+$yellow: #efd931;
 
 $err-red: red;
 
@@ -49,7 +49,7 @@ code {
     .c1    { color: $comment-color; font-style: italic; } // Comment.Single
     .cs    { color: $comment-color; font-weight: bold; font-style: italic; } // Comment.Special
 
-    .err   { background-color: $err-red; } // Error
+    .err   { background-color: $err-red; color: white; } // Error
 
     .o     { color: $purple; } // Operator
     .ow    { @extend .o; } // Operator.Word
@@ -92,11 +92,11 @@ code {
     .ne    { color: $light-blue; } // Name.Exception
     .nf    { color: $blue; } // Name.Function
     .nn    { @extend .n; } // Name.Namespace
-    .nt    { color: $light-blue } // Name.Tag
+    .nt    { color: $light-blue; } // Name.Tag
     .nv    { @extend .n; } // Name.Variable
-    .bp    { @extend .nv; } // Name.Builtin.Pseudo
+    .bp    { color: $orange; } // Name.Builtin.Pseudo
     .vc    { @extend .nv; } // Name.Variable.Class
-    .vg    { @extend .nv; } // Name.Variable.Global
+    .vg    { color: $orange; } // Name.Variable.Global
     .vi    { @extend .nv; } // Name.Variable.Instance
     
 }

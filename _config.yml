@@ -60,8 +60,8 @@ socials:
 footer:
   description: >-
     I make fun projects and write occasional blogs here. I'm currently
-    studying a Master in Computer Science at Leiden University. Read more
-    about me <a href="/me">here</a>.
+    studying a Master in Computer Science at Leiden University.
+    <a href="/me">Read more about me</a>
 
 # Exclude from processing.
 # The following items will not be processed, by default.
