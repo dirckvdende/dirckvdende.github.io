@@ -1,5 +1,7 @@
 <header>
-    <a class="site-title" href="/">{{ site.title | escape }}</a>
+    <div class="logo-container">
+        {% if site.logo %}<img src="{{ site.logo | relative_url }}" alt="logo">{% endif %}
+    </div>
     <nav class="nav-bar">
         <div class="nav-toggler" id="nav-toggler"><span class="material-symbols-outlined">menu</span></div>
         <div class="nav-items" id="nav-items">
@@ -12,11 +14,6 @@
 <script>
     let navToggle = document.getElementById("nav-toggler");
     let navItems = document.getElementById("nav-items");
-    let className = "nav-items-active";
-    navToggle.addEventListener("click", () => {
-        if (navItems.classList.contains(className))
-            navItems.classList.remove(className);
-        else
-            navItems.classList.add(className);
-    });
+    navToggle.addEventListener("click", () =>
+    navItems.classList.toggle("nav-items-active"));
 </script>
