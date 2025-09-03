@@ -2,7 +2,7 @@
 <a
     href="{{ include.url | default: '' }}"
     class="card"
-    style="background-color: color-mix(in srgb, {{ accent_color }}, transparent 50%)">
+    style="background-color: color-mix(in srgb, {{ accent_color }}, transparent 30%)">
     {% if include.imgset %}
         {% include imgset.html imgset=include.imgset title=include.title classes="preview-image" %}
     {% endif %}
