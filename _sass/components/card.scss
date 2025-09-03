@@ -1,0 +1,54 @@
+
+$card-border-color: #bbb;
+
+.card-container {
+    width: 100%;
+    margin: .5em 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .card {
+        margin: .5em;
+        border-radius: .6em;
+        display: flex;
+        width: 16em;
+        height: 24em;
+        flex-direction: column;
+        align-items: stretch;
+        flex-shrink: 0;
+        overflow: hidden;
+        
+        .preview-image {
+            width: 100%;
+            height: 10em;
+            object-fit: cover;
+        }
+
+        .text {
+            padding: 1em 1.5em;
+            background-color: color-mix(in srgb, #fee2be, transparent 50%);
+            flex-grow: 1;
+
+            .title {
+                margin: 0;
+                font-size: 1.2em;
+                font-weight: normal;
+                color: color-mix(in srgb, #fee2be, black 65%);
+            }
+        
+            .description {
+                margin-bottom: 0;
+                color: color-mix(in srgb, #fee2be, black 30%);
+                font-size: .8em;
+                line-height: 120%;
+                display: -webkit-box;
+                -webkit-line-clamp: 7;
+                line-clamp: 7;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+        }
+    }
+}

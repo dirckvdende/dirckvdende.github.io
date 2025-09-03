@@ -21,10 +21,12 @@
             alt="{{ include.title | default: 'Project image' }}"
             class="preview-image">
     {% endif %}
-    {% if include.title %}
-        <h2 class="card-title">{{ include.title }}</h2>
-    {% endif %}
-    {% if include.description %}
-        <p class="card-description">{{ include.description }}</p>
-    {% endif %}
+    <div class="text">
+        {% if include.title %}
+            <h2 class="title">{{ include.title }}</h2>
+        {% endif %}
+        {% if include.description %}
+            <p class="description">{{ include.description }}</p>
+        {% endif %}
+    </div>
 </div>
