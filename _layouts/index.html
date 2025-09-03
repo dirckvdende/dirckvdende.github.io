@@ -1,0 +1,18 @@
+---
+layout: default
+---
+<div class="home-container">
+    <h2>Theses</h2>
+    <div class="card-container">
+        {% for project in site.data.research %}
+            {% include card.html title=project.title description=project.description imgset=project.imgset %}
+        {% endfor %}
+    </div>
+    <h2>Projects</h2>
+    <div class="card-container">
+        {% for project in site.data.projects %}
+            {% include card.html title=project.title description=project.description imgset=project.imgset %}
+        {% endfor %}
+    </div>
+    <h2>Blog</h2>
+</div>

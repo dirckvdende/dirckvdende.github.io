@@ -1,5 +1,3 @@
 ---
-layout: post
+layout: index
 ---
-
-Hello World!
