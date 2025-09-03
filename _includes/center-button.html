@@ -1,7 +1,11 @@
 {% assign accent_color = include.accent_color | default: site.default_accent_color %}
 <div class="center-button">
     <a href="{{ include.href | relative_url }}" style="
-        background-color: color-mix(in srgb, {{ accent_color }}, transparent 20%);
-        color: color-mix(in srgb, {{ accent_color }}, black 65%);  
-    ">{{ include.text | xml_escape }}</a>
+        background-color: {{ accent_color }};
+        color: color-mix(in srgb, {{ accent_color }}, black 70%);  
+    ">
+        {%- if include.icon -%}
+            <span class="material-symbols-outlined">{{ include.icon }}</span>
+        {%- endif -%}
+        {{- include.text | xml_escape -}}</a>
 </div>

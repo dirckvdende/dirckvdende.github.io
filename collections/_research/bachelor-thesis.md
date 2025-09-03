@@ -9,7 +9,7 @@ front_image:
 
 I finished my bachlor in Computer Science and my bachelor in Mathematics at Leiden Univeristy by doing a joint thesis on partial differential equation simulation on analog computers.
 
-{% include center-button.html href="https://theses.liacs.nl/2706" text="View full thesis" %}
+{% include center-button.html href="https://theses.liacs.nl/2706" text="View full thesis" icon="link" %}
 
 ## Abstract
 
