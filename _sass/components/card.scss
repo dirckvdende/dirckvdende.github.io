@@ -9,7 +9,7 @@ $card-border-color: #bbb;
     justify-content: center;
     flex-wrap: wrap;
 
-    .card {
+    a.card {
         margin: .5em;
         border-radius: .6em;
         display: flex;
@@ -19,6 +19,10 @@ $card-border-color: #bbb;
         align-items: stretch;
         flex-shrink: 0;
         overflow: hidden;
+        text-decoration: none;
+        color: inherit;
+        cursor: pointer;
+        transition: box-shadow .1s, translate .1s;
         
         .preview-image {
             width: 100%;
@@ -28,19 +32,21 @@ $card-border-color: #bbb;
 
         .text {
             padding: 1em 1.5em;
-            background-color: color-mix(in srgb, #fee2be, transparent 50%);
             flex-grow: 1;
 
             .title {
                 margin: 0;
                 font-size: 1.2em;
                 font-weight: normal;
-                color: color-mix(in srgb, #fee2be, black 65%);
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
             }
         
             .description {
                 margin-bottom: 0;
-                color: color-mix(in srgb, #fee2be, black 30%);
                 font-size: .8em;
                 line-height: 120%;
                 display: -webkit-box;
@@ -48,6 +54,15 @@ $card-border-color: #bbb;
                 line-clamp: 7;
                 -webkit-box-orient: vertical;
                 overflow: hidden;
+            }
+        }
+
+        &:hover {
+            box-shadow: 0 .3em .6em -.3em #00000055;
+            translate: 0 -.2em;
+
+            .title {
+                text-decoration: underline;
             }
         }
     }

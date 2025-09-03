@@ -5,13 +5,13 @@ layout: default
     <h2>Theses</h2>
     <div class="card-container">
         {% for project in site.data.research %}
-            {% include card.html title=project.title description=project.description imgset=project.imgset %}
+            {% include card.html url=project.url title=project.title description=project.description imgset=project.imgset accent_color=project.accent_color %}
         {% endfor %}
     </div>
     <h2>Projects</h2>
     <div class="card-container">
         {% for project in site.data.projects %}
-            {% include card.html title=project.title description=project.description imgset=project.imgset %}
+            {% include card.html url=project.url title=project.title description=project.description imgset=project.imgset accent_color=project.accent_color %}
         {% endfor %}
     </div>
     <h2>Blog</h2>

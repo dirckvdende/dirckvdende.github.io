@@ -1,4 +1,8 @@
-<div class="card">
+{% assign accent_color = include.accent_color | default: "#fee2be" %}
+<a
+    href="{{ include.url | default: '' }}"
+    class="card"
+    style="background-color: color-mix(in srgb, {{ accent_color }}, transparent 50%)">
     {% if include.imgset %}
         <img
             srcset="
@@ -23,10 +27,10 @@
     {% endif %}
     <div class="text">
         {% if include.title %}
-            <h2 class="title">{{ include.title }}</h2>
+            <h2 class="title" style="color: color-mix(in srgb, {{ accent_color }}, black 65%);">{{ include.title }}</h2>
         {% endif %}
         {% if include.description %}
-            <p class="description">{{ include.description }}</p>
+            <p class="description" style="color: color-mix(in srgb, {{ accent_color }}, black 30%);">{{ include.description }}</p>
         {% endif %}
     </div>
-</div>
+</a>
