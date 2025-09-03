@@ -2,16 +2,13 @@
 layout: default
 ---
 
-<h1 class="page-title post-title">{{ page.title | escape}}</h1>
-<time class="time-published">{{ page.date | date: "%B %-d, %Y" }}</time>
-<div class="post-content">
-  {{ content }}
+<div class="post-container">
+    {% if page.banner %}
+        <img src="{{ page.banner | relative_url }}" alt="Page banner">
+    {% endif %}
+    <h1 class="page-title post-title">{{ page.title | escape}}</h1>
+    <time class="time-published">{{ page.date | date: "%B %-d, %Y" }}</time>
+    <div class="post-content">
+      {{ content }}
+    </div>
 </div>
-<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script>
-  window.MathJax = {
-    tex: {
-      inlineMath: [["$", "$"], ["\\(", "\\)"]]
-    }
-  };
-</script>
