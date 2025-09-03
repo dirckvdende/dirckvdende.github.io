@@ -46,6 +46,8 @@ header_pages:
   - title: Blog
     url: /blog
 
+logo: /assets/logo.png
+
 # Social media links
 socials:
   - name: GitHub
