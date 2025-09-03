@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Bachelor's Thesis on PDEs and Analog Computers
-front-image:
+front_image:
   - url: /assets/img/projects/thesis-preview_300.jpg
   - url: /assets/img/projects/thesis-preview_600.jpg
     scale: 2
@@ -9,7 +9,7 @@ front-image:
 
 I finished my bachlor in Computer Science and my bachelor in Mathematics at Leiden Univeristy by doing a joint thesis on partial differential equation simulation on analog computers.
 
-<a class="center-button" href="">Download full thesis</a>
+{% include center-button.html href="https://theses.liacs.nl/2706" text="View full thesis" %}
 
 ## Abstract
 

@@ -5,8 +5,8 @@ layout: default
     {% if page.title %}
         <h1 class="article-title">{{ page.title | xml_escape }}</h1>
     {% endif %}
-    {% if page.front-image %}
-        {% include imgset.html imgset=page.front-image classes="front-image" %}
+    {% if page.front_image %}
+        {% include imgset.html imgset=page.front_image classes="front-image" %}
     {% endif %}
     <div class="text">
         {{ content }}

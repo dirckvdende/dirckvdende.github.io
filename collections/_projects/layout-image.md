@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Layout-image
-front-image:
+front_image:
   - url: /assets/img/projects/layout-image_300.jpg
 ---
 

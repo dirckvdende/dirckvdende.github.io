@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Adversarial Drawing App
-front-image:
+front_image:
   - url: /assets/img/projects/adversarial-drawing-app_300.jpg
   - url: /assets/img/projects/adversarial-drawing-app_600.jpg
     scale: 2

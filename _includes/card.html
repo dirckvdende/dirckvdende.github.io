@@ -1,4 +1,4 @@
-{% assign accent_color = include.accent_color | default: "#fee2be" %}
+{% assign accent_color = include.accent_color | default: site.default_accent_color %}
 <a
     href="{{ include.url | default: '' }}"
     class="card"

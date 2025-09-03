@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Master's Thesis on Quantum Computation using WMC
-front-image:
+front_image:
   - url: /assets/img/projects/master-thesis.png
 accent_color: "#d8eddf"
 ---

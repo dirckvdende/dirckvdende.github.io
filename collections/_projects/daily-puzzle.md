@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Daily Puzzle
-front-image:
+front_image:
   - url: /assets/img/projects/daily-puzzle_300.jpg
   - url: /assets/img/projects/daily-puzzle_600.jpg
     scale: 2

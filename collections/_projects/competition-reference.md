@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Programming Competition Reference
-front-image:
+front_image:
   - url: /assets/img/projects/reference-doc_300.jpg
   - url: /assets/img/projects/reference-doc_600.jpg
     scale: 2

@@ -48,6 +48,8 @@ collections:
       - image-stacker.md
       - layout-image.md
 
+default_accent_color: "#fee2be"
+
 # Build settings
 # theme: minima
 plugins:

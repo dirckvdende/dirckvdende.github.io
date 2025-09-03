@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Image stacker
-front-image:
+front_image:
   - url: /assets/img/projects/image-stacker_300.jpg
   - url: /assets/img/projects/image-stacker_600.jpg
     scale: 2

@@ -8,8 +8,8 @@ layout: default
     {% if page.date %}
         <p class="article-date">{{ page.date | date: "%B %e, %Y" }}</p>
     {% endif %}
-    {% if page.front-image %}
-        {% include imgset.html imgset=page.front-image classes="front-image" %}
+    {% if page.front_image %}
+        {% include imgset.html imgset=page.front_image classes="front-image" %}
     {% endif %}
     <div class="text">
         {{ content }}
