@@ -4,14 +4,16 @@ layout: default
 <div class="home-container">
     <h2>Theses</h2>
     <div class="card-container">
-        {% for project in site.data.research %}
-            {% include card.html url=project.url title=project.title description=project.description imgset=project.imgset accent_color=project.accent_color %}
+        {% for project in site.research %}
+            {% assign excerpt = project.excerpt | strip_html %}
+            {% include card.html url=project.url title=project.title description=excerpt imgset=project.front-image accent_color=project.accent_color %}
         {% endfor %}
     </div>
     <h2>Projects</h2>
     <div class="card-container">
-        {% for project in site.data.projects %}
-            {% include card.html url=project.url title=project.title description=project.description imgset=project.imgset accent_color=project.accent_color %}
+        {% for project in site.projects %}
+            {% assign excerpt = project.excerpt | strip_html %}
+            {% include card.html url=project.url title=project.title description=excerpt imgset=project.front-image accent_color=project.accent_color %}
         {% endfor %}
     </div>
     <h2>Blog</h2>

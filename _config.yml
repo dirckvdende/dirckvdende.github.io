@@ -31,6 +31,23 @@ linkedin_username: dirck
 show_excerpts: true
 lang: en
 
+collections_dir: collections
+collections:
+  research:
+    output: true
+    order:
+      - bachelor-thesis.md
+      - master-thesis.md
+  projects:
+    output: true
+    order:
+      - daily-puzzle.md
+      - competition-reference.md
+      - adversarial-drawing-app.md
+      - ladybug-lang.md
+      - image-stacker.md
+      - layout-image.md
+
 # Build settings
 # theme: minima
 plugins:

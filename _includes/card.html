@@ -4,26 +4,7 @@
     class="card"
     style="background-color: color-mix(in srgb, {{ accent_color }}, transparent 50%)">
     {% if include.imgset %}
-        <img
-            srcset="
-            {% assign max_size = 1 %}
-            {% assign max_url = include.imgset[0].url %}
-            {%- for img in include.imgset -%}
-                {{ img.url }} {% if img.scale -%}
-                    {{ img.scale }}x
-                    {%- if img.scale > max_size -%}
-                        {%- assign max_size = img.scale -%}
-                        {%- assign max_url = img.url -%}
-                    {%- endif -%}
-                {%- endif %}
-                {%- unless forloop.last -%}
-                    ,
-                {%- endunless -%}
-            {%- endfor -%}
-            "
-            src="{{ max_url }}"
-            alt="{{ include.title | default: 'Project image' }}"
-            class="preview-image">
+        {% include imgset.html imgset=include.imgset title=include.title classes="preview-image" %}
     {% endif %}
     <div class="text">
         {% if include.title %}
