@@ -1,7 +1,7 @@
 <header>
-    <div class="logo-container">
+    <a class="logo-container" href="{{ '/' | relative_url }}">
         {% if site.logo %}<img src="{{ site.logo | relative_url }}" alt="Logo">{% endif %}
-    </div>
+    </a>
     <nav class="nav-bar">
         <div class="nav-toggler" id="nav-toggler"><span class="material-symbols-outlined">menu</span></div>
         <div class="nav-items" id="nav-items">
@@ -10,9 +10,6 @@
             {%- endfor -%}
         </div>
     </nav>
-    <div class="wave">
-        <div style="background-image: url('{{ '/assets/img/wave.svg' | relative_url }}');"></div>
-    </div>
 </header>
 <script>
     let navToggle = document.getElementById("nav-toggler");

@@ -13,6 +13,8 @@ header {
     padding: 1em 3em;
     background-color: inherit;
     z-index: 1;
+    // box-shadow: 0 -.6em 1em 0 black;
+    border-bottom: .15em solid #eee;
 
     .logo-container {
         height: 100%;
@@ -21,6 +23,8 @@ header {
         flex-direction: row;
         justify-content: left;
         align-items: center;
+        text-decoration: none;
+        color: inherit;
 
         img {
             height: 100%;
