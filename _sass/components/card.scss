@@ -8,13 +8,14 @@ $card-border-color: #bbb;
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
+    max-width: 1600px;
 
     a.card {
         margin: .5em;
-        border-radius: .6em;
+        border-radius: .8em;
         display: flex;
         width: 16em;
-        height: 24em;
+        height: 26em;
         flex-direction: column;
         align-items: stretch;
         flex-shrink: 0;
@@ -22,8 +23,10 @@ $card-border-color: #bbb;
         text-decoration: none;
         color: inherit;
         cursor: pointer;
-        transition: box-shadow .1s, translate .1s;
-        
+        transition: box-shadow .1s, translate .1s, background-color .1s;
+        --accent-color: black; // Default, should be changed in style attribute
+        background-color: color-mix(in srgb, var(--accent-color), white 90%);
+
         .preview-image {
             width: 100%;
             height: 10em;
@@ -36,13 +39,14 @@ $card-border-color: #bbb;
 
             .title {
                 margin: 0;
-                font-size: 1.2em;
+                font-size: 1.4em;
                 font-weight: normal;
                 display: -webkit-box;
                 -webkit-line-clamp: 3;
                 line-clamp: 3;
                 -webkit-box-orient: vertical;
                 overflow: hidden;
+                color: color-mix(in srgb, var(--accent-color), black 65%);
             }
         
             .description {
@@ -50,19 +54,56 @@ $card-border-color: #bbb;
                 font-size: .8em;
                 line-height: 120%;
                 display: -webkit-box;
-                -webkit-line-clamp: 7;
-                line-clamp: 7;
+                -webkit-line-clamp: 6;
+                line-clamp: 6;
                 -webkit-box-orient: vertical;
                 overflow: hidden;
+                color: color-mix(in srgb, var(--accent-color), black 40%);
+            }
+
+            .tags {
+                margin-top: .5em;
+                font-size: .8em;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+
+                .tag {
+                    margin: .2em .2em .2em 0;
+                    padding: .2em .4em;
+                    color: white;
+                    border-radius: .2em;
+                    background-color: color-mix(in srgb, var(--accent-color), grey 30%);
+                    flex-shrink: 0;
+                    flex-grow: 0;
+                }
             }
         }
 
         &:hover {
-            box-shadow: 0 .3em .6em -.3em #00000055;
+            box-shadow: 0 .3em .6em -.3em #00000077;
             translate: 0 -.2em;
+            background-color: color-mix(in srgb, var(--accent-color), white 85%);
 
             .title {
                 text-decoration: underline;
+            }
+        }
+
+        &.has-no-tags .text .description {
+            -webkit-line-clamp: 8;
+            line-clamp: 8;
+
+            @media screen and (max-width: $small-width) {
+                -webkit-line-clamp: 3;
+                line-clamp: 3;
+            }
+        }
+
+        .text .description {
+            @media screen and (max-width: $small-width) {
+                -webkit-line-clamp: 3;
+                line-clamp: 3;
             }
         }
     }
@@ -76,7 +117,7 @@ $card-border-color: #bbb;
 
         a.card {
             flex-direction: row;
-            height: 9em;
+            height: 11em;
             width: 100%;
             margin-left: 0;
             margin-right: 0;
@@ -100,10 +141,12 @@ $card-border-color: #bbb;
 
                 .description {
                     flex-shrink: 0;
-                    -webkit-line-clamp: 3;
-                    line-clamp: 3;
                 }
             }
+
+            // &:not(.has-no-tags) .text .description {
+            //     display: none;
+            // }
         }
     }
 }

@@ -1,17 +1,27 @@
 {% assign accent_color = include.accent_color | default: site.default_accent_color %}
 <a
     href="{{ include.url | default: '' }}"
-    class="card"
-    style="background-color: color-mix(in srgb, {{ accent_color }}, transparent 30%)">
+    class="
+        card
+        {%- unless include.tags and include.tags != [] %} has-no-tags{%- endunless -%}
+    "
+    style="--accent-color: {{ accent_color }};">
     {% if include.imgset %}
         {% include imgset.html imgset=include.imgset title=include.title classes="preview-image" %}
     {% endif %}
     <div class="text">
         {% if include.title %}
-            <h2 class="title" style="color: color-mix(in srgb, {{ accent_color }}, black 65%);">{{ include.title }}</h2>
+            <h2 class="title">{{ include.title }}</h2>
         {% endif %}
         {% if include.description %}
-            <p class="description" style="color: color-mix(in srgb, {{ accent_color }}, black 40%);">{{ include.description }}</p>
+            <p class="description">{{ include.description }}</p>
+        {% endif %}
+        {% if include.tags and include.tags != [] %}
+            <div class="tags">
+                {% for tag in include.tags %}
+                    <span class="tag">{{ tag }}</span>
+                {% endfor %}
+            </div>
         {% endif %}
     </div>
 </a>
