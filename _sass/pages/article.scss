@@ -16,6 +16,26 @@
         color: grey;
         font-style: italic;
     }
+    
+    .tags {
+        --accent-color: black; // Default, should be replacing using style attribute
+        margin-top: 1em;
+        font-size: .8em;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+
+        .tag {
+            margin: .2em .2em .2em 0;
+            padding: .2em .4em;
+            color: white;
+            border-radius: .2em;
+            background-color: color-mix(in srgb, var(--accent-color), grey 30%);
+            flex-shrink: 0;
+            flex-grow: 0;
+        }
+    }
 
     .front-image {
         width: 100%;

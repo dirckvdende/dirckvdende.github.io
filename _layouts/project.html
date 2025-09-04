@@ -5,6 +5,13 @@ layout: default
     {% if page.title %}
         <h1 class="article-title">{{ page.title | xml_escape }}</h1>
     {% endif %}
+    {% if page.tags and page.tags != [] %}
+        <div class="tags" style="--accent-color: {{ page.accent_color | default: site.accent_color | default: 'black'}}">
+            {% for tag in page.tags %}
+                <span class="tag">{{ tag }}</span>
+            {% endfor %}
+        </div>
+    {% endif %}
     {% if page.front_image %}
         {% include imgset.html imgset=page.front_image classes="front-image" %}
     {% endif %}
