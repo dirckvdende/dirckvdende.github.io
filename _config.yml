@@ -48,7 +48,7 @@ collections:
       - image-stacker.md
       - layout-image.md
 
-default_accent_color: "#fee2be"
+default_accent_color: "#e6e6e6"
 
 # Build settings
 # theme: minima

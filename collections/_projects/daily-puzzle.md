@@ -7,6 +7,7 @@ front_image:
     scale: 2
   - url: /assets/img/projects/daily-puzzle_1200.jpg
     scale: 4
+accent_color: "#eddaf5"
 ---
 
 A daily puzzle web-app that has a different type of puzzle for every day of the week. Puzzles are randomly generated.
