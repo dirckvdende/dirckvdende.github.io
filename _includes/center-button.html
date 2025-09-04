@@ -1,4 +1,4 @@
-{% assign accent_color = include.accent_color | default: site.default_accent_color %}
+{% assign accent_color = include.accent_color | default: page.accent_color | default: site.default_accent_color %}
 <div class="center-button">
     <a href="{{ include.href | relative_url }}" style="
         background-color: {{ accent_color }};
