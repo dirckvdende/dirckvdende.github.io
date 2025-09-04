@@ -14,6 +14,9 @@ header {
     background-color: inherit;
     z-index: 1;
     border-bottom: .15em solid #eee;
+    @media screen and (max-width: $small-width) {
+        padding: 0 2em;
+    }
 
     .site-title-container {
         height: 100%;
