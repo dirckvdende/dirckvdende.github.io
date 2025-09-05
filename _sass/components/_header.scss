@@ -1,4 +1,6 @@
 
+@use "../constants";
+
 header {
     position: fixed;
     top: 0;
@@ -14,7 +16,7 @@ header {
     background-color: inherit;
     z-index: 1;
     border-bottom: .15em solid #eee;
-    @media screen and (max-width: $small-width) {
+    @media screen and (max-width: constants.$small-width) {
         padding: 0 2em;
     }
 
@@ -80,7 +82,7 @@ header {
             }
         }
 
-        @media screen and (max-width: $small-width) {
+        @media screen and (max-width: constants.$small-width) {
             .nav-toggler { display: flex; }
             .nav-items { display: none; }
         }

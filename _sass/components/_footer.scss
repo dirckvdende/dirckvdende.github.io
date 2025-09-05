@@ -1,3 +1,6 @@
+
+@use "../constants";
+
 $footer-text-color: whitesmoke;
 
 footer {
@@ -10,7 +13,7 @@ footer {
     width: 100%;
     margin-top: 5em;
 
-    @media screen and (max-width: $mobile-width) {
+    @media screen and (max-width: constants.$mobile-width) {
         font-size: .9em;
         padding: 3em 2em;
     }
@@ -34,7 +37,7 @@ footer {
             align-items: stretch;
             justify-content: space-between;
     
-            @media screen and (max-width: $small-width) {
+            @media screen and (max-width: constants.$small-width) {
                 flex-direction: column;
             }
 
@@ -43,7 +46,7 @@ footer {
                 font-size: .8em;
                 line-height: 150%;
 
-                @media screen and (max-width: $small-width) {
+                @media screen and (max-width: constants.$small-width) {
                     width: 100%;
                 }
             }
@@ -58,7 +61,7 @@ footer {
                 margin: 0;
                 padding: 0;
 
-                @media screen and (max-width: $small-width) {
+                @media screen and (max-width: constants.$small-width) {
                     width: 100%;
                     margin-top: 1em;
                 }

@@ -1,15 +1,7 @@
 
-@import "constants";
-@import
-    "components/card",
-    "components/header",
-    "components/footer",
-    "components/center-button";
-
-@import
-    "pages/index",
-    "pages/article",
-    "pages/listing";
+@use "./constants";
+@use "./components";
+@use "./pages";
 
 body {
     font-size: 18px;
@@ -31,7 +23,7 @@ body {
     flex-direction: column;
     align-items: center;
 
-    @media screen and (max-width: $mobile-width) {
+    @media screen and (max-width: constants.$mobile-width) {
         font-size: .85em;
         margin-top: 9em;
     }

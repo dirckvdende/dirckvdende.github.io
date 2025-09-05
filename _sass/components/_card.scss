@@ -1,4 +1,6 @@
 
+@use "../constants";
+
 $card-border-color: #bbb;
 
 .card-container {
@@ -94,14 +96,14 @@ $card-border-color: #bbb;
             -webkit-line-clamp: 8;
             line-clamp: 8;
 
-            @media screen and (max-width: $small-width) {
+            @media screen and (max-width: constants.$small-width) {
                 -webkit-line-clamp: 3;
                 line-clamp: 3;
             }
         }
 
         .text .description {
-            @media screen and (max-width: $small-width) {
+            @media screen and (max-width: constants.$small-width) {
                 -webkit-line-clamp: 3;
                 line-clamp: 3;
             }
@@ -109,7 +111,7 @@ $card-border-color: #bbb;
     }
 }
 
-@media screen and (max-width: $small-width) {
+@media screen and (max-width: constants.$small-width) {
     .card-container {
         flex-direction: column;
         align-items: stretch;
@@ -143,15 +145,11 @@ $card-border-color: #bbb;
                     flex-shrink: 0;
                 }
             }
-
-            // &:not(.has-no-tags) .text .description {
-            //     display: none;
-            // }
         }
     }
 }
 
-@media screen and (max-width: $mobile-width) {
+@media screen and (max-width: constants.$mobile-width) {
     .card-container {
         a.card {
             .preview-image {
