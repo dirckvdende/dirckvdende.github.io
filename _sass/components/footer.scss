@@ -2,98 +2,100 @@ $footer-text-color: whitesmoke;
 
 footer {
     background-color: #2e2e2e;
-    color: $footer-text-color;
-    margin: 5em 0 0 0;
+    color: #eee;
+    display: flex;
+    justify-content: center;
     box-sizing: border-box;
     padding: 3em 4em;
     width: 100%;
-    min-height: 300px;
+    margin-top: 5em;
 
-    a {
-        color: inherit;
-        text-decoration: underline;
-    }
-
-    a:active {
-        color: inherit;
-    }
-
-    @media screen and (max-width: 750px) {
-        padding: 3em 2.5em;
-        font-size: .8em;
+    @media screen and (max-width: $mobile-width) {
+        font-size: .9em;
+        padding: 3em 2em;
     }
 
     .container {
-        margin: 0 auto;
-        width: 100%;
-        max-width: 1200px;
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 1;
+        flex-grow: 0;
+        max-width: 50em;
+        align-items: stretch;
 
-        div.footer-columns {
+        & > h2 {
+            margin: 0;
+            margin-bottom: .5em;
+        }
+    
+        .footer-columns {
             display: flex;
             flex-direction: row;
+            align-items: stretch;
             justify-content: space-between;
-            width: 100%;
-            align-items: flex-start;
-            
-            & > div:not(:first-child) {
-                margin-left: 6em;
+    
+            @media screen and (max-width: $small-width) {
+                flex-direction: column;
             }
 
-            @media screen and (max-width: 750px) {
-                flex-direction: column;
-                align-items: stretch;
-                justify-content: flex-start;
+            .description {
+                width: 60%;
+                font-size: .8em;
+                line-height: 150%;
 
-                & > div:not(:first-child) {
-                    margin-top: 1em;
-                    margin-left: 0;
+                @media screen and (max-width: $small-width) {
+                    width: 100%;
                 }
             }
 
-            & > div {
-                flex-shrink: 1;
-                width: 100%;
-                max-width: 500px;
+            .socials {
+                margin-left: .5em;
+                width: calc(30% - 1em);
+                font-size: .9em;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 0;
+                padding: 0;
 
-                ul.socials {
-                    padding-left: 0;
-                    margin: 0;
+                @media screen and (max-width: $small-width) {
+                    width: 100%;
+                    margin-top: 1em;
+                }
 
-                    li {
-                        margin: 0.7em 0;
-                        list-style-type: none;
+                li {
+                    list-style: none;
+                    display: flex;
+                    width: 100%;
+                    margin-bottom: .3em;
 
-                        &:first-child {
-                            margin-top: 0;
+                    a {
+                        display: flex;
+                        flex-direction: row;
+                        height: 1.5em;
+                        align-items: center;
+                        text-decoration: none;
+                        color: inherit;
+
+                        .icon {
+                            flex-shrink: 0;
+                            flex-grow: 0;
+                            height: 100%;
+                            aspect-ratio: 1 / 1;
+                            margin-right: .5em;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            font-size: 1.2em;
                         }
-                        &:last-child {
-                            margin-bottom: 0;
-                        }
 
-                        a {
-                            color: inherit;
-                            text-decoration: none;
-
-                            &:active {
-                                color: inherit;
-                                text-decoration: none;
-                            }
-
-                            &:hover span {
-                                text-decoration: underline;
-                            }
-
-                            svg.icon {
-                                width: 1em;
-                                height: 1em;
-                                transform: translateY(0.15em);
-                                margin-right: 0.4em;
-                                fill: $footer-text-color;
-                            }
+                        &:hover .username {
+                            text-decoration: underline;
                         }
                     }
                 }
             }
         }
     }
+
 }
