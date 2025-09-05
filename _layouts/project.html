@@ -1,12 +1,12 @@
 ---
 layout: default
 ---
-<main class="article-content">
+<main class="article-content" style="--accent-color: {{ page.accent_color | default: site.accent_color | default: 'black'}}">
     {% if page.title %}
         <h1 class="article-title">{{ page.title | xml_escape }}</h1>
     {% endif %}
     {% if page.tags and page.tags != [] %}
-        <div class="tags" style="--accent-color: {{ page.accent_color | default: site.accent_color | default: 'black'}}">
+        <div class="tags">
             {% for tag in page.tags %}
                 <span class="tag">{{ tag }}</span>
             {% endfor %}
