@@ -26,7 +26,7 @@ As mentioned, there is a different type of puzzle for every day of the week. If 
 
 ### Monday: Light
 
-The Monday puzzle is the easiest puzzle. It requires the solver to place lamps on a grid, and match the required luminocity at some of the marked positions. The minimum number of moves is calculated using brute-force over all 376992 possible placements of 5 bulbs on a 6 by 6 grid. It could be further optimized by using backtracing, but I didn't implement this since the application was already fast enough.
+The Monday puzzle is the easiest puzzle. It requires the solver to place lamps on a grid, and match the required luminocity at some of the marked positions. The minimum number of moves is calculated using brute-force over all 376,992 possible placements of 5 bulbs on a 6 by 6 grid. It could be further optimized by using backtracing, but I didn't implement this since the application was already fast enough.
 
 ### Tuesday: Salesman
 
