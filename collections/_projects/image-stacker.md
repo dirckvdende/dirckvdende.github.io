@@ -13,4 +13,8 @@ tags:
   - Web app
 ---
 
-A small web-app to stack images vertically or horizontally.
+A small web-app to stack images vertically or horizontally. Built as a one-day project to easily combine multiple images into one.
+
+The project can be viewed by clicking below. The source code is publicly available on GitHub.
+
+{% include center-button.html href="https://dirckvdende.github.io/image-stacker/" text="Open image stacker" icon="link" %}
