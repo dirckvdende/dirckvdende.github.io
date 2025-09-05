@@ -16,9 +16,6 @@ code {
     font-size: 1em;
     background-color: #ddd;
     padding: .1em .2em;
-}
-
-p > code.language-plaintext {
     background-color: color-mix(in srgb, var(--accent-color), white 70%);
     color: color-mix(in srgb, var(--accent-color), black 70%);
 }
@@ -31,7 +28,6 @@ p > code.language-plaintext {
     box-sizing: border-box;
     width: 100%;
     padding: 1em 1.4em;
-    color: $base-color;
     font-size: .9em;
     line-height: 150%;
     margin: 1em 0;
@@ -48,6 +44,7 @@ p > code.language-plaintext {
         font-size: 1em;
         background-color: transparent;
         padding: 0;
+        color: $base-color;
     }
 
     .c     { color: $comment-color; font-style: italic; } // Comment
@@ -101,6 +98,7 @@ p > code.language-plaintext {
     .nn    { @extend .n; } // Name.Namespace
     .nt    { color: $light-blue; } // Name.Tag
     .nv    { @extend .n; } // Name.Variable
+    .nl    { @extend .s; }
     .bp    { color: $orange; } // Name.Builtin.Pseudo
     .vc    { @extend .nv; } // Name.Variable.Class
     .vg    { color: $orange; } // Name.Variable.Global
