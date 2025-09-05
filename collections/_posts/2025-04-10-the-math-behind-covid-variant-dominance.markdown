@@ -3,6 +3,8 @@ layout: post
 title: "The Math Behind COVID Variant Dominance"
 date: 2025-04-10 23:30:00 +0200
 categories: blog
+tags: Epidemics COVID Modeling ODEs
+accent_color: "#dc9212"
 ---
 
 It has been a while since the pandemic, but I would like to show you some interesting math behind the spread of the different COVID variants. During the pandemic one thing that everybody knew was that the future was unpredictable: At any point cases could go up, new measures needed to be taken, and new variants popped up all of the time. However, there is one thing that was surprisingly predictable, namely the spread of these variants. Or at least, the spread relative to the already existing variants. Epidemiologists could predict the moment at which a variant would become dominant often weeks before it happens. The question of course is: How did they do that?
