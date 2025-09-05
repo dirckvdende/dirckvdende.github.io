@@ -106,5 +106,16 @@
                 color: color-mix(in srgb, var(--accent-color), white 50%);
             }
         }
+
+        p > img {
+            @extend .front-image;
+            margin: 1em auto;
+            height: auto;
+            width: auto;
+            object-fit: unset;
+            max-width: 100%;
+            display: block;
+            max-height: 25em;
+        }
     }
 }
