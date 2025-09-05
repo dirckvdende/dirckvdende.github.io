@@ -18,6 +18,11 @@ code {
     padding: .1em .2em;
 }
 
+p > code.language-plaintext {
+    background-color: color-mix(in srgb, var(--accent-color), white 70%);
+    color: color-mix(in srgb, var(--accent-color), black 70%);
+}
+
 /**
  * Syntax highlighting styles
  */
