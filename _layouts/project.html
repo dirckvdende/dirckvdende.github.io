@@ -5,13 +5,13 @@ layout: default
     {% if page.title %}
         <h1 class="article-title">{{ page.title | xml_escape }}</h1>
     {% endif %}
-    {% if page.tags and page.tags != [] %}
+    {% unless page.tags.blank? %}
         <div class="tags">
             {% for tag in page.tags %}
                 <span class="tag">{{ tag }}</span>
             {% endfor %}
         </div>
-    {% endif %}
+    {% endunless %}
     {% if page.front_image %}
         {% include imgset.html imgset=page.front_image classes="front-image" %}
     {% endif %}
