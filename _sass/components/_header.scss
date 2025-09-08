@@ -84,7 +84,28 @@ header {
 
         @media screen and (max-width: constants.$small-width) {
             .nav-toggler { display: flex; }
-            .nav-items { display: none; }
+            .nav-items {
+                display: none;
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                translate: 0 calc(100% + .15em);
+                background-color: white;
+                flex-direction: column;
+                align-items: stretch;
+                height: auto;
+                
+                & > a {
+                    box-sizing: border-box;
+                    padding: .7em 2em;
+                    border-bottom: .15em solid #eee;
+                }
+            }
+
+            .nav-items.nav-items-active {
+                display: flex;
+            }
         }
     }
 
