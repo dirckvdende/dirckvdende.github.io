@@ -1,20 +1,29 @@
-<img
-    srcset="
-    {% assign max_size = 1 %}
-    {% assign max_url = include.imgset[0].url %}
-    {%- for img in include.imgset -%}
-        {{ img.url }} {% if img.scale -%}
-            {{ img.scale }}x
-            {%- if img.scale > max_size -%}
-                {%- assign max_size = img.scale -%}
-                {%- assign max_url = img.url -%}
-            {%- endif -%}
-        {%- endif %}
-        {%- unless forloop.last -%}
-            ,
-        {%- endunless -%}
-    {%- endfor -%}
-    "
-    src="{{ max_url }}"
-    alt="{{ include.title | default: '' }}"
-    class="{{ include.classes | default: '' }}">
+{% assign img = include.imgset | default: include.img %}
+{% if img.first %}
+    {% assign imgset = img %}
+    <img
+        srcset="
+        {% assign max_size = 1 %}
+        {% assign max_url = imgset[0].url %}
+        {%- for img in imgset -%}
+            {{ img.url }} {% if img.scale -%}
+                {{ img.scale }}x
+                {%- if img.scale > max_size -%}
+                    {%- assign max_size = img.scale -%}
+                    {%- assign max_url = img.url -%}
+                {%- endif -%}
+            {%- endif %}
+            {%- unless forloop.last -%}
+                ,
+            {%- endunless -%}
+        {%- endfor -%}
+        "
+        src="{{ max_url }}"
+        alt="{{ include.title | default: '' | escape }}"
+        class="{{ include.classes | default: '' | escape }}">
+{% else %}
+    <img
+        src="{{ img }}"
+        alt="{{ include.title | default: '' | escape }}"
+        class="{{ include.classes | default: '' | escape }}">
+{% endif %}

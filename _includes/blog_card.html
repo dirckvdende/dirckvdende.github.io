@@ -1,7 +1,6 @@
 {% assign post = include.post %}
 {% assign accent_color = include.post.accent_color | default: site.default_accent_color | default: "black" %}
 <a href="{{ post.url }}" class="horizontal-card" style="--accent-color: {{ accent_color }};">
-    <!-- TODO: Add preview images! -->
     <div class="image">
         <span class="material-symbols-outlined">article</span>
     </div>
