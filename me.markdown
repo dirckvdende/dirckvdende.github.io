@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: article
 title: About Me
 permalink: /me/
 technologies:
@@ -43,28 +43,32 @@ technologies:
         - unity
         - blender
         - opencv
+accent_color: "#3f8de0"
 ---
 
-I'm a Computer Science Master student at Leiden Univerity. On this website you can find some of the projects I've worked on, as well as the occasional blog post. I also work on hobby projects on an irregular basis. Some of which you can find below! Both for university and for personal projects I often make use of Python or C++.
+Hi! My name is Dirck. I recently completed a Master in Computer Science at Leiden University. On this website you can find of the projects I've worked, both for university and outside. I'll also post the occasional blog post here. Both for university and for personal projects I often make use of Python, C++, and TypeScript.
 
-I've also done a Bachelor in Mathetics, mainly focusing on analysis. By Bachelor thesis was about partial differential equations and analog computer. You can read it <a href="https://theses.liacs.nl/2706">here</a>. I'm currently working on methods to perform matrix operations using model counters.
+I've also done a Bachelor in Mathetics, mainly focusing on analysis. By Bachelor thesis was about partial differential equations and analog computer. You can read it [here](https://theses.liacs.nl/2706). My master thesis will be made available soon.
 
-<h2 class="center-title">Stuff I use regularly</h2>
-<ul class="large-icon-listing">
+## Stuff I use regularly
+
+<ul class="icon-listing">
     {%- for name in page.technologies.regular -%}
-        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/{{name | escape}}/{{name | escape}}-original.svg" title="{{name | escape}}" alt="{{ name | escape }}"></li>
+        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/{{name | escape}}/{{name | escape}}-original.svg" title="{{ name | escape }}" alt="{{ name | escape }}"></li>
     {%- endfor -%}
 </ul>
-<h2 class="center-title">Stuff I have experience with</h2>
-<ul class="large-icon-listing">
+
+## Stuff I have experience with
+
+<ul class="icon-listing">
     {%- for name in page.technologies.other -%}
-        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/{{name | escape}}/{{name | escape}}-original.svg" title="{{name | escape}}" alt="{{ name | escape }}"></li>
+        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/{{name | escape}}/{{name | escape}}-original.svg" title="{{ name | escape }}" alt="{{ name | escape }}"></li>
     {%- endfor -%}
 </ul>
 
-<h2 class="center-title">History</h2>
+## History & Experience
 
-<div class="milestones">
+<div class="milestones" style="--accent-color: {{ page.accent_color }};">
     {%- for milestone in site.data.milestones reversed -%}
         {%- assign date_format = "%B %Y" -%}
         {%- if milestone.major -%}
