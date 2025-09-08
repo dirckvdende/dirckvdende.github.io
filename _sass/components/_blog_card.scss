@@ -50,7 +50,6 @@
             flex-direction: row;
             flex-wrap: wrap;
             align-items: center;
-            row-gap: .5em;
             
             .post-date {
                 color: grey;
@@ -108,13 +107,13 @@
             }
 
             .post-info {
-                margin-top: .2em;
+                margin-top: 0;
+                margin-bottom: .2em;
                 font-size: .9em;
-                row-gap: 0;
-            }
 
-            .text-preview {
-                display: none;
+                .post-info-sep {
+                    width: 100%;
+                }
             }
         }
     }
