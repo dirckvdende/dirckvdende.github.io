@@ -16,6 +16,10 @@
             border-radius: 10em;
             padding: .5em 1em;
         }
+
+        &:first-of-type {
+            margin-top: 0;
+        }
     }
 
     .view-more {
