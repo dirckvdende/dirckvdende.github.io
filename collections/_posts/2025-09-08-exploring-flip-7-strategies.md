@@ -3,7 +3,9 @@ layout: post
 title: "Exploring Flip 7 Strategies"
 date: 2025-09-08 19:00:00 +0200
 tags: Game Strategy Simulation
-accent_color: "#eb3bb6"
+accent_color: "#cd2a9c"
+front_image: /assets/code/exploring-flip-7-strategies/flip_7.jpg
+thumbnail: /assets/code/exploring-flip-7-strategies/flip_7.jpg
 ---
 
 When a game has "the greatest card game of all time" on the box it has to be good, right? That was exactly my thought process when buying the game [Flip 7](https://boardgamegeek.com/boardgame/420087/flip-7), which is a card game released in 2024. The game involves players betting to gain as many points as possible without "busting", which happens when a player grabs two identical cards. Although the game mainly involves luck, there can be some interesting strategies.
@@ -37,11 +39,11 @@ To make our lives easier, we will simplify the game a bit. We'll remove any of t
 
 Now that we've simplified the game, let's start off with a simple strategy. One of the friends I've played flip 7 with suggested a strategy that would target 30 points. Once this thredhold was reached, he would pass and collect his points.
 
-So I ran some code to simulate his strategy on 10,000 games. And it turns out... The average score is only 17.0, which is a lot lower than I had expected. Surprisingly, using him strategy you would bust about 49.6% of the time. That's almost half the time! But... Is there a different number he could have chosen that would work better? Well I tried it, and put the results below.
+So I ran some code to simulate his strategy on 10,000 games. And it turns out... The average score is only 17.2, which is a lot lower than I had expected. Surprisingly, using him strategy you would bust about 49.0% of the time. That's almost half of the time! But... Is there a different number he could have chosen that would work better? Well I tried it, and put the results below.
 
 ![Targeting a specific score before passing](/assets/code/exploring-flip-7-strategies/target_n.png)
 
-As it turns out the target number of 30 is already pretty good, but it is slightly better to choose the lower target number of 22. Then you could expect an average score of 18.6, busting 28.5% of the time.
+As it turns out the target number of 30 is already pretty good, but it is slightly better to choose the lower target number of 21. Then you could expect an average score of 18.5, busting 25.2% of the time.
 
 However, I do feel like in the actual game his scores were better. This is likely due to the bonus and action cards being in play, and because he would not always abide by his "stop at 30" rule, taking the other players' actions into account. As it turns out, this game can be pretty complicated!
 
@@ -55,4 +57,25 @@ $$
     (1 - B) (S + A) > S
 $$
 
-Surely this must work pretty well, I thought. At every point in time we will see if we should continue or not, which is much smarter than taking a specific target number. Well... I was wrong. This strategy performed about the same as targeting a score of 22, with an average score 18.7 (0.1 higher) and a 30.3% bust rate.
+Surely this must work pretty well, I thought. At every point in time we will see if we should continue or not, which is much smarter than taking a specific target number. Well... I was wrong. This strategy performed about the same as targeting a score of 22, with an average score of 18.7 (0.1 higher) and a 30.3% bust rate.
+
+## ...Or Do They?!
+
+Despertate to justify my complicated strategy, I thought of one situation where it does work well: When there are very few cards left in play! The "stop at 21" strategy performs about the same when 70 out of the 79 cards are removed from the game:
+
+![Targeting a specific score before passing with 70 cards removed](/assets/code/exploring-flip-7-strategies/target_n_70_removed.png)
+
+The "Is the next card worth it?" strategy, however, peforms much better as the number of cards left decreases. There is more information to take advantage of in this situation!
+
+!["Is the next card worth it?" strategy with different numbers of cards removed](/assets/code/exploring-flip-7-strategies/is_next_move_worth_it.png)
+
+Even then... Most of the game you won't have a couple cards left in the deck, so the impact of this strategy won't be that big... *\*sigh\**
+
+## Conclusion
+
+So this is where my little experiment ends. There's clearly still much more to explore: New strategies, action cards, keeping track of other players, etc. But that's for you to explore :)
+
+Either way, it seems the "stop at 21" rule seems like an easy-to-remember and good enough strategy for most players. Every now and you can then adapt to the cards in play. Now you just have to deal with your opponents get luckier than you...
+
+If you'd like to look at the source code and run the experiments yourself, I've posted the code on GitHub:
+{% include center-button.html icon="link" text="Source code" href="https://github.com/dirckvdende/dirckvdende.github.io/tree/main/assets/code/exploring-flip-7-strategies" %}

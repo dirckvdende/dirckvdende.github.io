@@ -25,6 +25,15 @@ class SimplifiedFlip7:
         else:
             self.hand.append(card)
 
+    def remove_random_cards(self, amount: int) -> None:
+        cards = []
+        for value, count in enumerate(self.counts):
+            cards += [value] * count
+        random.shuffle(cards)
+        for card in cards[:amount]:
+            self.counts[card] -= 1
+            self.total -= 1
+
     @property
     def bust_chance(self) -> float:
         if self.busted:
