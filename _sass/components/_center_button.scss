@@ -1,0 +1,31 @@
+
+.center-button {
+    display: flex;
+    margin: 1em 0;
+    flex-direction: row;
+    justify-content: center;
+    --accent-color: black; // Default, should be changed be style attribute
+
+    & > a {
+        display: block;
+        text-decoration: none;
+        padding: .4em 1em;
+        border-radius: .3em;
+        font-weight: normal;
+        transition: box-shadow .1s, translate .1s;
+        background-color: color-mix(in srgb, var(--accent-color), white 50%);
+        color: color-mix(in srgb, var(--accent-color), black 70%);
+
+        &:hover {
+            text-decoration: underline;
+            box-shadow: 0 .15em .3em -.15em #00000077;
+            translate: 0 -.1em;
+        }
+
+        .material-symbols-outlined {
+            font-size: 1.1em;
+            translate: 0 .2em;
+            margin-right: .4em;
+        }
+    }
+}

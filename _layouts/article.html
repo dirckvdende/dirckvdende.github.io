@@ -5,16 +5,11 @@ layout: default
     {% if page.title %}
         <h1 class="article-title">{{ page.title | xml_escape }}</h1>
     {% endif %}
-    {% if page.date %}
+    {% assign show_date = page.show_date %}
+    {% if show_date == nil %}{% assign show_date = true %}{% endif %}
+    {% if page.date and show_date %}
         <p class="article-date">{{ page.date | date: "%B %e, %Y" }}</p>
     {% endif %}
-    {% unless page.tags.blank? %}
-        <div class="tags">
-            {% for tag in page.tags %}
-                <span class="tag">{{ tag }}</span>
-            {% endfor %}
-        </div>
-    {% endunless %}
     {% if page.front_image %}
         {% include imgset.html imgset=page.front_image classes="front-image" %}
     {% endif %}

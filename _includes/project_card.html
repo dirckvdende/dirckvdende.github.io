@@ -1,0 +1,26 @@
+{% assign page = include.page %}
+{% assign accent_color = page.accent_color | default: site.default_accent_color | default: "black" %}
+<a href="{{ page.url }}" class="horizontal-card" style="--accent-color: {{ accent_color }};">
+    <!-- TODO: Add preview images! -->
+    <div class="image">
+        {% assign thumbnail = page.thumbnail | default: page.front_image %}
+        {% if thumbnail %}
+            {% include imgset.html title=post.title img=thumbnail %}
+        {% else %}
+            <span class="material-symbols-outlined">emoji_objects</span>
+        {% endif %}
+    </div>
+    <div class="card-text">
+        <h2>{{ page.title | escape }}</h2>
+        {%- if page.tags -%}
+            <p class="info no-date">
+                {%- for tag in page.tags -%}
+                    <span class="tag">{{ tag | escape }}</span>
+                {%- endfor -%}
+            </p>
+        {%- endif -%}
+        <p class="text-preview">
+            {{- page.excerpt | strip_html | escape -}}
+        </p>
+    </div>
+</a>

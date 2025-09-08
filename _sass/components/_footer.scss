@@ -1,0 +1,104 @@
+
+@use "../constants";
+
+$footer-text-color: whitesmoke;
+
+footer {
+    background-color: #2e2e2e;
+    color: #eee;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 3em 4em;
+    width: 100%;
+    margin-top: 5em;
+
+    @media screen and (max-width: constants.$mobile-width) {
+        font-size: .9em;
+        padding: 3em 2em;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 1;
+        flex-grow: 0;
+        max-width: 50em;
+        align-items: stretch;
+
+        & > h2 {
+            margin: 0;
+            margin-bottom: .5em;
+        }
+    
+        .footer-columns {
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+            justify-content: space-between;
+    
+            @media screen and (max-width: constants.$small-width) {
+                flex-direction: column;
+            }
+
+            .description {
+                width: 60%;
+                font-size: .8em;
+                line-height: 150%;
+
+                @media screen and (max-width: constants.$small-width) {
+                    width: 100%;
+                }
+            }
+
+            .socials {
+                margin-left: .5em;
+                width: calc(30% - 1em);
+                font-size: .9em;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 0;
+                padding: 0;
+
+                @media screen and (max-width: constants.$small-width) {
+                    width: 100%;
+                    margin-top: 1em;
+                }
+
+                li {
+                    list-style: none;
+                    display: flex;
+                    width: 100%;
+                    margin-bottom: .3em;
+
+                    a {
+                        display: flex;
+                        flex-direction: row;
+                        height: 1.5em;
+                        align-items: center;
+                        text-decoration: none;
+                        color: inherit;
+
+                        .icon {
+                            flex-shrink: 0;
+                            flex-grow: 0;
+                            height: 100%;
+                            aspect-ratio: 1 / 1;
+                            margin-right: .5em;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            font-size: 1.2em;
+                        }
+
+                        &:hover .username {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,8 @@
+{% assign accent_color = include.accent_color | default: page.accent_color | default: site.default_accent_color %}
+<div class="center-button" style="--accent-color: {{ accent_color }};">
+    <a href="{{ include.href | relative_url }}" {% if include.download %}download{% endif %}>
+        {%- if include.icon -%}
+            <span class="material-symbols-outlined">{{ include.icon }}</span>
+        {%- endif -%}
+        {{- include.text | xml_escape -}}</a>
+</div>

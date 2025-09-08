@@ -1,0 +1,9 @@
+
+- text: About Me
+  url: /me
+- text: Theses
+  url: /research
+- text: Projects
+  url: /projects
+- text: Blog
+  url: /blog

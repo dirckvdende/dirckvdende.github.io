@@ -3,6 +3,8 @@ layout: post
 title: "An Introduction to Python Type Hints"
 date: 2025-05-04 20:15:00 +0200
 categories: blog
+tags: Python Types Explainer
+accent_color: "#7442e9"
 ---
 
 The Python programming language is ever-evolving. In recent times some very useful additions have been made that allow for static type analysis, which is undoubtedly welcomed by C++, Java, and Rust programmers alike. In this post I want to give you an introduction to Python type hints and mypy, along with an overview of some more advanced features like generics.

@@ -18,21 +18,41 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Dirck van den Ende
+title: dirck.dev
 author: Dirck van den Ende
 # email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   Projects and occasional blogs by Dirck van den Ende
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://dirckvdende.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://dirck.dev" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 github_username: dirckvdende
 linkedin_username: dirck
 show_excerpts: true
 lang: en
 
+collections_dir: collections
+collections:
+  research:
+    output: true
+    order:
+      - bachelor-thesis.md
+      - master-thesis.md
+  projects:
+    output: true
+    order:
+      - daily-puzzle.md
+      - competition-reference.md
+      - adversarial-drawing-app.md
+      - scoreboard-app.md
+      - ladybug-lang.md
+      - image-stacker.md
+      - layout-image.md
+
+default_accent_color: "#e6e6e6"
+
 # Build settings
-theme: minima
+# theme: minima
 plugins:
   - jekyll-feed
   - jekyll-sitemap
@@ -46,22 +66,24 @@ header_pages:
   - title: Blog
     url: /blog
 
+logo: /assets/logo.png
+
 # Social media links
 socials:
   - name: GitHub
     username: dirckvdende
-    logo: /assets/minima-social-icons.svg#github
+    logo: fa fa-github
     url: https://github.com/dirckvdende
   - name: LinkedIn
     username: dirck
-    logo: /assets/minima-social-icons.svg#linkedin
+    logo: fa fa-linkedin
     url: https://www.linkedin.com/in/dirck
 
 footer:
   description: >-
-    I make fun projects and write occasional blogs here. I'm currently
-    studying a Master in Computer Science at Leiden University.
-    <a href="/me">Read more about me</a>
+    I'm Dirck van den Ende. I recently graduated from Leiden University
+    as a Master in Computer Science. On this website I list my projects and
+    write occasional blogs. You can contact me through LinkedIn or GitHub.
 
 # Exclude from processing.
 # The following items will not be processed, by default.
