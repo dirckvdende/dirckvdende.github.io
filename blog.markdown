@@ -4,7 +4,7 @@ title: Blog
 permalink: /blog/
 ---
 
-<div class="blogs-card-container">
+<div class="horizontal-card-container">
     {%- for post in site.posts -%}
         {%- include blog_card.html post=post -%}
     {%- endfor -%}

@@ -1,13 +1,13 @@
 
 @use "../constants";
 
-.blog-card-container {
+.horizontal-card-container {
     display: flex;
     flex-direction: column;
     align-items: stretch;
 }
 
-.blog-card {
+.horizontal-card {
     margin: 1.5em 0;
     width: 100%;
     display: flex;
@@ -44,7 +44,7 @@
             margin-top: .5em;
         }
 
-        .post-info {
+        .info {
             margin: .5em 0;
             display: flex;
             flex-direction: row;
@@ -56,7 +56,7 @@
                 font-style: italic;
             }
 
-            .post-info-sep {
+            .info-sep {
                 width: 1em;
             }
 
@@ -106,12 +106,12 @@
                 margin-top: .2em;
             }
 
-            .post-info {
+            .info {
                 margin-top: 0;
                 margin-bottom: .2em;
                 font-size: .9em;
 
-                .post-info-sep {
+                .info-sep {
                     width: 100%;
                 }
             }
