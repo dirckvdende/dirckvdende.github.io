@@ -5,8 +5,8 @@
     <nav class="nav-bar">
         <div class="nav-toggler" id="nav-toggler"><span class="material-symbols-outlined">menu</span></div>
         <div class="nav-items" id="nav-items">
-            {%- for page in site.header_pages -%}
-                <a href="{{ page.url | relative_url }}"><span>{{ page.title | escape }}</span></a>
+            {%- for page in site.data.header_pages -%}
+                <a href="{{ page.url | relative_url }}"><span>{{ page.text | escape }}</span></a>
             {%- endfor -%}
         </div>
     </nav>
