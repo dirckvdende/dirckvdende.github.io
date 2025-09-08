@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Exploring Flip 7 Strategies"
-date: 2025-09-08 19:00:00 +0200
+date: 2025-09-08 23:00:00 +0200
 tags: Game Strategy Simulation
 accent_color: "#cd2a9c"
 front_image: /assets/code/exploring-flip-7-strategies/flip_7.jpg
