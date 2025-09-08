@@ -1,5 +1,6 @@
 ---
 layout: home
+title: Dirck van den Ende
 ---
 
 <div class="profile-container">
