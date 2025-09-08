@@ -10,7 +10,7 @@ layout: default
     </div>
     <h2 class="category"><span>Projects</span></h2>
     <div class="horizontal-card-container">
-        {% for page in site.projects | limit: 3 %}
+        {% for page in site.projects limit: 3 %}
             {% include project_card.html page=page %}
         {% endfor %}
         <div class="view-more">
@@ -22,7 +22,7 @@ layout: default
     </div>
     <h2 class="category"><span>Blogs</span></h2>
     <div class="horizontal-card-container">
-        {% for post in site.posts | limit: 3 %}
+        {% for post in site.posts limit: 3 %}
             {% include blog_card.html post=post %}
         {% endfor %}
         <div class="view-more">
