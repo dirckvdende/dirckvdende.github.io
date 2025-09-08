@@ -1,6 +1,8 @@
 
+@use "../constants";
+
 .article-content {
-    max-width: 700px;
+    max-width: constants.$article-width;
     padding: 0 1em;
     --accent-color: black; // Default, should be replaced using style attribute
 

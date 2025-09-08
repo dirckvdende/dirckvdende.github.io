@@ -1,4 +1,35 @@
 ---
 layout: default
 ---
-{{ content }}
+<div class="home-container">
+    <h2 class="category"><span>Theses</span></h2>
+    <div class="horizontal-card-container">
+        {% for page in site.research %}
+            {% include project_card.html page=page %}
+        {% endfor %}
+    </div>
+    <h2 class="category"><span>Projects</span></h2>
+    <div class="horizontal-card-container">
+        {% for page in site.projects | limit: 3 %}
+            {% include project_card.html page=page %}
+        {% endfor %}
+        <div class="view-more">
+            <a href="{{ '/projects' | relative_url }}">
+                <span class="icon material-symbols-outlined">add</span>
+                <span class="text">View all projects</span>
+            </a>
+        </div>
+    </div>
+    <h2 class="category"><span>Blogs</span></h2>
+    <div class="horizontal-card-container">
+        {% for post in site.posts | limit: 3 %}
+            {% include blog_card.html post=post %}
+        {% endfor %}
+        <div class="view-more">
+            <a href="{{ '/blog' | relative_url }}">
+                <span class="icon material-symbols-outlined">add</span>
+                <span class="text">View all posts</span>
+            </a>
+        </div>
+    </div>
+</div>
