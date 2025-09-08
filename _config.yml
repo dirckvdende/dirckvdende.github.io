@@ -24,7 +24,7 @@ author: Dirck van den Ende
 description: >- # this means to ignore newlines until "baseurl:"
   Projects and occasional blogs by Dirck van den Ende
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://dirckvdende.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://dirck.dev" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 github_username: dirckvdende
 linkedin_username: dirck
