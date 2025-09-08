@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% assign style_url = '/assets/main.css' | relative_url %}
     {% include stylesheet_link.html url=style_url %}
-    {% include stylesheet_link.html url='https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0' %}
-    {% include stylesheet_link.html url='https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap' %}
+    {% include stylesheet_link.html url='https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0' preload=true %}
+    {% include stylesheet_link.html url='https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap' preload=true %}
     <link rel="icon" type="image/x-icon" href="{{ '/assets/img/favicon.avif' | relative_url }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     {% if page.title %}
