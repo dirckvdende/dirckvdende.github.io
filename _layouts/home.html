@@ -32,4 +32,11 @@ layout: default
             </a>
         </div>
     </div>
+
+    <h2 class="category"><div class="line"></div><span>Contact</span><div class="line"></div></h2>
+    <ul class="socials-container">
+        {%- for social in site.data.socials -%}
+            <li><a href="{{ social.url | escape }}"><i class="icon {{ social.logo }}"></i><span class="username">{{ social.username | escape }}</span></a></li>
+        {%- endfor -%}
+    </ul>
 </div>
