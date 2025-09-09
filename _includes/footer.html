@@ -2,9 +2,9 @@
     <div class="container">
         <h2>{{ site.title | escape }}</h2>
         <div class="footer-columns">
-            <div class="description">{{ site.footer.description }}</div>
+            <div class="description">{{ site.data.footer.description }}</div>
             <ul class="socials">
-                {%- for social in site.socials -%}
+                {%- for social in site.data.socials -%}
                     <li><a href="{{ social.url | escape }}"><i class="icon {{ social.logo }}"></i><span class="username">{{ social.username | escape }}</span></a></li>
                 {%- endfor -%}
             </ul>

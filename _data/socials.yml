@@ -1,0 +1,8 @@
+- name: GitHub
+  username: dirckvdende
+  logo: fa fa-github
+  url: https://github.com/dirckvdende
+- name: LinkedIn
+  username: dirck
+  logo: fa fa-linkedin
+  url: https://www.linkedin.com/in/dirck
