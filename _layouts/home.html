@@ -14,6 +14,11 @@ layout: default
         </div>
     </div>
     <p class="profile-text">{{ site.data.home.profile_text }}</p>
+    {% if site.data.home_notifications %}
+        {% for notification in site.data.home_notifications %}
+            {% include notification_card.html text=notification.text color=notification.color icon=notification.icon %}
+        {% endfor %}
+    {% endif %}
     <h2 class="category"><div class="line"></div><span>Theses</span><div class="line"></div></h2>
     <div class="horizontal-card-container">
         {% for page in site.research %}
