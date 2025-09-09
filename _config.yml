@@ -35,11 +35,13 @@ collections_dir: collections
 collections:
   research:
     output: true
+    permalink: /research/:name
     order:
       - bachelor-thesis.md
       - master-thesis.md
   projects:
     output: true
+    permalink: /projects/:name
     order:
       - daily-puzzle.md
       - competition-reference.md
@@ -48,6 +50,15 @@ collections:
       - ladybug-lang.md
       - image-stacker.md
       - layout-image.md
+  posts:
+    output: true
+    permalink: /blog/:title
+
+defaults:
+  - scope:
+      path: assets/**/*
+    values:
+      sitemap: false
 
 default_accent_color: "#e6e6e6"
 

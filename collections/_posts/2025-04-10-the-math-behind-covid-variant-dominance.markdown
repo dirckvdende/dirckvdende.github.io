@@ -2,7 +2,6 @@
 layout: post
 title: "The Math Behind COVID Variant Dominance"
 date: 2025-04-10 23:30:00 +0200
-categories: blog
 tags: Epidemics COVID Modeling ODEs
 accent_color: "#dc9212"
 ---

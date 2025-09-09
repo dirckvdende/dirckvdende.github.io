@@ -2,7 +2,6 @@
 layout: post
 title: "Confusing Color Names"
 date: 2025-04-05 21:00:00 +0200
-categories: blog
 tags: Colors Programming Naming
 accent_color: "#37b8db"
 ---

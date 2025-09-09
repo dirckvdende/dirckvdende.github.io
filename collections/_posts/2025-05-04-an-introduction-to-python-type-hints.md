@@ -2,7 +2,6 @@
 layout: post
 title: "An Introduction to Python Type Hints"
 date: 2025-05-04 20:15:00 +0200
-categories: blog
 tags: Python Types Explainer
 accent_color: "#7442e9"
 ---
