@@ -19,6 +19,10 @@
             margin-top: 1.5em;
         }
 
+        @media screen and (max-width: constants.$mobile-width) {
+            font-size: 1.3em;
+        }
+
         & > span {
             color: white;
             background-color: #333;
@@ -76,6 +80,10 @@
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
+        
+        @media screen and (max-width: constants.$mobile-width) {
+            font-size: .8em;
+        }
 
         & > li {
             display: block;
