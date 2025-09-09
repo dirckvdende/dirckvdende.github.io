@@ -45,6 +45,7 @@ technologies:
         - opencv
 accent_color: "#3f8de0"
 front_image: /assets/img/nwerc-2024.jpg
+thumbnail: /assets/img/profile-picture_800.jpg
 ---
 
 Hi! I'm Dirck. I'm a recent Computer Science Master graduate from Leiden University. I love solving (and creating) puzzles. For university and my personal projects I often use Python, C++, and TypeScript, though I've worked with much more.
