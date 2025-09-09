@@ -2,6 +2,18 @@
 layout: default
 ---
 <div class="home-container">
+    <div class="profile-container">
+        <div class="profile-picture-container">
+            <img
+                srcset="assets/img/profile-picture_200.jpg, assets/img/profile-picture_400.jpg 2x, assets/img/profile-picture_800.jpg 4x"
+                src="assets/img/profile-picture_800.jpg"
+                alt="Profile picture">
+        </div>
+        <div class="profile-name-container">
+            <h1>{{ site.author | escape }}</h1>
+        </div>
+    </div>
+    <p class="profile-text">{{ site.data.home.profile_text }}</p>
     <h2 class="category"><div class="line"></div><span>Theses</span><div class="line"></div></h2>
     <div class="horizontal-card-container">
         {% for page in site.research %}
