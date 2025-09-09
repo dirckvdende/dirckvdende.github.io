@@ -3,14 +3,20 @@
 
 .home-container {
     max-width: constants.$article-width;
-    
+    padding: 0 1em;
+    line-height: 165%;
+
     h2.category {
         font-size: 1.5em;
         text-align: center;
-        margin: 4em 0 .5em 0;
+        margin: 3em 0 .5em 0;
         font-weight: normal;
         display: flex;
         align-items: center;
+
+        @media screen and (max-width: constants.$small-width) {
+            margin-top: 1.5em;
+        }
 
         & > span {
             color: white;
@@ -36,17 +42,17 @@
         width: 100%;
         display: flex;
         justify-content: center;
-        margin: .5em 0;
+        margin: 1em 0;
         
         & > a {
             display: flex;
             flex-direction: row;
             align-items: center;
             text-decoration: none;
-            color: grey;
+            color: #777;
             padding: .3em 1em;
             border-radius: 5em;
-            border: .15em solid #aaa;
+            border: .15em solid #999;
 
             .icon {
                 font-size: 1.2em;
