@@ -2,13 +2,13 @@
 layout: default
 ---
 <div class="home-container">
-    <h2 class="category"><span>Theses</span></h2>
+    <h2 class="category"><div class="line"></div><span>Theses</span><div class="line"></div></h2>
     <div class="horizontal-card-container">
         {% for page in site.research %}
             {% include project_card.html page=page %}
         {% endfor %}
     </div>
-    <h2 class="category"><span>Projects</span></h2>
+    <h2 class="category"><div class="line"></div><span>Projects</span><div class="line"></div></h2>
     <div class="horizontal-card-container">
         {% for page in site.projects limit: 3 %}
             {% include project_card.html page=page %}
@@ -20,7 +20,7 @@ layout: default
             </a>
         </div>
     </div>
-    <h2 class="category"><span>Blogs</span></h2>
+    <h2 class="category"><div class="line"></div><span>Blog</span><div class="line"></div></h2>
     <div class="horizontal-card-container">
         {% for post in site.posts limit: 3 %}
             {% include blog_card.html post=post %}
