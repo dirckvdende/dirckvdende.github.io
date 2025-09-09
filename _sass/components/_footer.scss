@@ -46,6 +46,14 @@ footer {
                 font-size: .8em;
                 line-height: 150%;
 
+                a {
+                    color: inherit;
+
+                    &:hover {
+                        opacity: .7;
+                    }
+                }
+
                 @media screen and (max-width: constants.$small-width) {
                     width: 100%;
                 }
