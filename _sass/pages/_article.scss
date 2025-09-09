@@ -47,6 +47,10 @@
         border-radius: .5em;
     }
 
+    h1.article-title + .text {
+        margin-top: 1em;
+    }
+
     .text {
         line-height: 165%;
         font-size: .95em;

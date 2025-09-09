@@ -1,0 +1,8 @@
+<div class="notification-card" style="--accent-color: {{ include.color | default: page.accent_color | default: site.default_accent_color | default: 'black' }}">
+    <div class="icon-container">
+        <span class="icon material-symbols-outlined">{{ include.icon | default: "info" }}</span>
+    </div>
+    <div class="text-container">
+        {{ include.text }}
+    </div>
+</div>
