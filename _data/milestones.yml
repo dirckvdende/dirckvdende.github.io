@@ -43,10 +43,12 @@
   date: 2023-07-31
   description: Graduated summa cum laude for a Bachelor in Computer Science at Leiden University.
   major: true
+  icon: license
 - title: Bachelor Mathematics
   date: 2023-07-31
   description: Graduated cum laude for a Bachelor in Mathematics at Leiden University.
   major: true
+  icon: license
 
 - title: Student Assistant Automata Theory
   date: 2023-09-01

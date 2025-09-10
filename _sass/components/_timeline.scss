@@ -8,54 +8,67 @@
 
     .milestone {
         margin-bottom: 1em;
-        padding: 0 3em;
+        padding: .7em 0;
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
 
-        .milestone-text {
+        .left {
+            flex-shrink: 0;
+            flex-grow: 0;
+            display: flex;
+            width: 5em;
+            flex-direction: column;
+            align-items: center;
 
-            p {
-                margin: .3em 0;
-                font-size: .8em;
-                display: none;
+            .line-top {
+
             }
-            
-            h2.milestone-title {
+
+            .line-bottom {
+
+            }
+
+            .line-top, .line-bottom {
+
+            }
+
+            .icon {
+                user-select: none;
+                font-size: 1.7em;
+                color: color-mix(in srgb, var(--accent-color), black 30%);
+
+                & > span {
+                    font-size: 1em;
+                }
+            }
+
+        }
+
+        .right {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+
+            .title {
                 margin: 0;
-                font-size: 1em;
+            }
+
+            .description {
+                margin: 0;
+                margin-top: .5em;
+                font-size: .9em;
+                line-height: 140%;
+            }
+
+            .date {
+                margin: 0;
+                margin-top: .5em;
+                font-size: .9em;
+                color: grey;
+                font-style: italic;
+                line-height: 140%;
             }
         }
-
-        .milestone-meta {
-            font-size: .9em;
-            font-style: italic;
-            color: grey;
-            margin-top: .2em;
-        }
-
     }
-
-    // .milestone-major {
-    //     background-color: color-mix(in srgb, var(--accent-color), black 30%);
-    //     color: white;
-    //     padding: 2em 3em;
-    //     border-radius: .5em;
-
-    //     .milestone-text {
-
-    //         p {
-    //             display: block;
-    //             font-size: 1em;
-    //             margin-bottom: .5em;
-    //         }
-
-    //         h2.milestone-title {
-    //             font-size: 1.7em;
-    //             margin-bottom: .3em;
-    //         }
-    //     }
-
-    //     .milestone-meta {
-    //         color: white;
-    //         opacity: .8;
-    //     }
-    // }
 }
