@@ -41,6 +41,7 @@ collections:
     order:
       - daily-puzzle.md
       - competition-reference.md
+      - hand-gesture-game-with-colored-gloves.md
       - adversarial-drawing-app.md
       - scoreboard-app.md
       - ladybug-lang.md
