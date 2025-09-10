@@ -20,13 +20,13 @@ The application we created contains three mini-games, each showcasing a differen
 
 Apple Catch is the simplest minigame. It involves a player holding one hand in front of the camera and moving it around. The position of the hand controls the position of a basket on the screen. The player has to catch as many apples in the basket as possible without missing one.
 
-![Apple Catch game screenshot](/assets/img/projects/colored-gloves/apple-catch.png)
+![Apple Catch game screenshot](/assets/img/projects/colored-gloves/apple-catch.jpg)
 
 ## Pick 'n Slot
 
 The Pick 'n Slot game showcases the detection of gestures and detection of hand rotation. Like Apple Catch, this is a solo game in which the player has to move and rotate different shapes into their corresponding holes on the screen. Moving a shape is done by pinching a hand while hovering over a shape, then dragging it.
 
-![Apple Catch game screenshot](/assets/img/projects/colored-gloves/pick-n-slot.png)
+![Apple Catch game screenshot](/assets/img/projects/colored-gloves/pick-n-slot.jpg)
 
 ## Platformer
 
