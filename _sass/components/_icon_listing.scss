@@ -16,10 +16,9 @@ ul.icon-listing {
         height: 3em;
         margin: .4em;
 
-        & > img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
+        & > i {
+            font-size: 2.5em;
+            color: color-mix(in srgb, var(--accent-color), black 30%);
         }
     }
 }

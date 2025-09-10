@@ -2,9 +2,8 @@
     {% for milestone in include.milestones reversed %}
         <div class="milestone {% if milestone.major %}milestone-major{% endif %}">
             <div class="left">
-                {% unless forloop.first %}<div class="line-top"></div>{% endunless %}
                 <div class="icon"><span class="material-symbols-outlined">{{ milestone.icon | default: "circle" }}</span></div>
-                {% unless forloop.last %}<div class="line-bottom"></div>{% endunless %}
+                {% unless forloop.last %}<div class="line"></div>{% endunless %}
             </div>
             <div class="right">
                 <h3 class="title">{{ milestone.title | escape | default: "Milestone" }}</h3>

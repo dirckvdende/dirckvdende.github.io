@@ -4,48 +4,89 @@ title: About Me
 permalink: /me/
 technologies:
     regular:
-        - python
-        - cplusplus
-        - bash
-        - ubuntu
-        - git
-        - github
-        - html5
-        - javascript
-        - css3
-        - latex
-        - markdown
-        - numpy
-        - vscode
+        - name: Python
+          icon: devicon-python-plain
+        - name: C++
+          icon: devicon-cplusplus-plain
+        - name: Bash
+          icon: devicon-bash-plain
+        - name: Ubuntu
+          icon: devicon-ubuntu-plain
+        - name: Git
+          icon: devicon-git-plain
+        - name: GitHub
+          icon: devicon-github-original
+        - name: HTML
+          icon: devicon-html5-plain
+        - name: JavaScript
+          icon: devicon-javascript-plain
+        - name: TypeScript
+          icon: devicon-typescript-plain
+        - name: CSS
+          icon: devicon-css3-plain
+        - name: LaTeX
+          icon: devicon-latex-original
+        - name: Markdown
+          icon: devicon-markdown-original
+        - name: NumPy
+          icon: devicon-numpy-plain
+        - name: Visual Studio Code
+          icon: devicon-vscode-plain
     other:
-        - c
-        - godot
-        - jquery
-        - raspberrypi
-        - jupyter
-        - docker
-        - matplotlib
-        - tensorflow
-        - keras
-        - csharp
-        - haskell
-        - visualstudio
-        - scikitlearn
-        - jekyll
-        - matlab
-        - flask
-        - mysql
-        - rstudio
-        - pandas
-        - sqlite
-        - julia
-        - php
-        - unity
-        - blender
-        - opencv
+        - name: C
+          icon: devicon-c-original
+        - name: Godot
+          icon: devicon-godot-plain
+        - name: jQuery
+          icon: devicon-jquery-plain
+        - name: Raspberry Pi
+          icon: devicon-raspberrypi-plain
+        - name: Jupyter Notebooks
+          icon: devicon-jupyter-plain
+        - name: Docker
+          icon: devicon-docker-plain
+        - name: Matplotlib
+          icon: devicon-matplotlib-plain
+        - name: TensorFlow
+          icon: devicon-tensorflow-original
+        - name: Keras
+          icon: devicon-keras-plain
+        - name: C#
+          icon: devicon-csharp-plain
+        - name: Haskell
+          icon: devicon-haskell-plain
+        - name: Visual Studio
+          icon: devicon-visualstudio-plain
+        - name: scikit-learn
+          icon: devicon-scikitlearn-plain
+        - name: Jekyll
+          icon: devicon-jekyll-plain
+        - name: MATLAB
+          icon: devicon-matlab-plain
+        - name: Flask
+          icon: devicon-flask-original
+        - name: MySQL
+          icon: devicon-mysql-original
+        - name: R/RStudio
+          icon: devicon-rstudio-plain
+        - name: Pandas
+          icon: devicon-pandas-plain
+        - name: SQLite
+          icon: devicon-sqlite-plain
+        - name: Julia
+          icon: devicon-julia-plain
+        - name: PHP
+          icon: devicon-php-plain
+        - name: Unity
+          icon: devicon-unity-plain
+        - name: Blender
+          icon: devicon-blender-original
+        - name: OpenCV
+          icon: devicon-opencv-plain
 accent_color: "#3f8de0"
 front_image: /assets/img/nwerc-2024.jpg
 thumbnail: /assets/img/profile-picture_800.jpg
+head: <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 ---
 
 Hi! I'm Dirck. I'm a recent Computer Science Master graduate from Leiden University. I love solving (and creating) puzzles. For university and my personal projects I often use Python, C++, and TypeScript, though I've worked with much more.
@@ -88,16 +129,16 @@ I've competed in the BAPC and NWERC programming competitions in 2022, 2023, and 
 I've listed some of the technologies I use on a regular basis:
 
 <ul class="icon-listing">
-    {%- for name in page.technologies.regular -%}
-        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/{{name | escape}}/{{name | escape}}-original.svg" title="{{ name | escape }}" alt="{{ name | escape }}"></li>
+    {%- for technology in page.technologies.regular -%}
+        <li><i class="{{ technology.icon }}" title="{{ technology.name | escape }}"></i></li>
     {%- endfor -%}
 </ul>
 
 Stuff I've worked with in the past includes:
 
 <ul class="icon-listing">
-    {%- for name in page.technologies.other -%}
-        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/{{name | escape}}/{{name | escape}}-original.svg" title="{{ name | escape }}" alt="{{ name | escape }}"></li>
+    {%- for technology in page.technologies.other -%}
+        <li><i class="{{ technology.icon }}" title="{{ technology.name | escape }}"></i></li>
     {%- endfor -%}
 </ul>
 
