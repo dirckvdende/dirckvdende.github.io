@@ -1,0 +1,20 @@
+<div class="timeline">
+    {% for milestone in include.milestones reversed %}
+        <div class="milestone {% if milestone.major %}milestone-major{% endif %}">
+            <div class="left">
+                {% unless forloop.first %}<div class="line-top"></div>{% endunless %}
+                <div class="icon"><span class="material-symbols-outlined">{{ milestone.icon | default: "circle" }}</span></div>
+                {% unless forloop.last %}<div class="line-bottom"></div>{% endunless %}
+            </div>
+            <div class="right">
+                <h3 class="title">{{ milestone.title | escape | default: "Milestone" }}</h3>
+                {% if milestone.description %}
+                    <p class="description">{{ milestone.description }}</p>
+                {% endif %}
+                {% if milestone.date %}
+                    <p class="date">{{ milestone.date | date: "%B %Y" }}{% if milestone.end_date %}&nbsp;&mdash;&nbsp;{{milestone.end_date | date: date_format }}{% endif %}</p>
+                {% endif %}
+            </div>
+        </div>
+    {% endfor %}
+</div>

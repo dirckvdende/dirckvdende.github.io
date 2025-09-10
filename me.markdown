@@ -103,24 +103,4 @@ Stuff I've worked with in the past includes:
 
 ## Timeline
 
-<div class="milestones" style="--accent-color: {{ page.accent_color }};">
-    {%- for milestone in site.data.milestones reversed -%}
-        {%- assign date_format = "%B %Y" -%}
-        {%- if milestone.major -%}
-        <div class="milestone milestone-major">
-        {%- else -%}
-        <div class="milestone">
-        {%- endif -%}
-            <div class="milestone-text">
-                <h2 class="milestone-title">{{ milestone.title | escape }}</h2>
-                <p>{{ milestone.description }}</p>
-            </div>
-            <div class="milestone-meta"><span>{{ milestone.date | date: date_format }}{%- if milestone.end_date -%}&nbsp;&mdash;&nbsp;{{milestone.end_date | date: date_format }}{%- endif -%}</span></div>
-            {%- if milestone.major -%}
-                <div class="timepoint-major"></div>
-            {%- else -%}
-                <div class="timepoint-minor"></div>
-            {%- endif -%}
-        </div>
-    {%- endfor -%}
-</div>
+{% include timeline.html milestones=site.data.milestones %}
