@@ -24,17 +24,25 @@ technologies:
           icon: devicon-typescript-plain
         - name: CSS
           icon: devicon-css3-plain
+        - name: Sass
+          icon: devicon-sass-original
         - name: LaTeX
           icon: devicon-latex-original
         - name: Markdown
           icon: devicon-markdown-original
-        - name: NumPy
-          icon: devicon-numpy-plain
         - name: Visual Studio Code
           icon: devicon-vscode-plain
     other:
         - name: C
           icon: devicon-c-original
+        - name: Java
+          icon: devicon-java-plain
+        - name: C#
+          icon: devicon-csharp-plain
+        - name: npm
+          icon: devicon-npm-original-wordmark
+        - name: NumPy
+          icon: devicon-numpy-plain
         - name: Godot
           icon: devicon-godot-plain
         - name: jQuery
@@ -51,8 +59,6 @@ technologies:
           icon: devicon-tensorflow-original
         - name: Keras
           icon: devicon-keras-plain
-        - name: C#
-          icon: devicon-csharp-plain
         - name: Haskell
           icon: devicon-haskell-plain
         - name: Visual Studio
@@ -67,7 +73,9 @@ technologies:
           icon: devicon-flask-original
         - name: MySQL
           icon: devicon-mysql-original
-        - name: R/RStudio
+        - name: R
+          icon: devicon-r-plain
+        - name: RStudio
           icon: devicon-rstudio-plain
         - name: Pandas
           icon: devicon-pandas-plain
@@ -83,6 +91,14 @@ technologies:
           icon: devicon-blender-original
         - name: OpenCV
           icon: devicon-opencv-plain
+        - name: Apache HTTP Server
+          icon: devicon-apache-plain
+        - name: Maven
+          icon: devicon-maven-plain
+        - name: MonoGame
+          icon: devicon-monogame-original
+        - name: PyPI
+          icon: devicon-pypi-plain
 accent_color: "#3f8de0"
 front_image: /assets/img/nwerc-2024.jpg
 thumbnail: /assets/img/profile-picture_800.jpg
