@@ -43,6 +43,7 @@ collections:
       - competition-reference.md
       - hand-gesture-game-with-colored-gloves.md
       - adversarial-drawing-app.md
+      - maze-challenge.md
       - scoreboard-app.md
       - ladybug-lang.md
       - image-stacker.md
