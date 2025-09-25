@@ -1,12 +1,7 @@
 ---
 layout: project
 title: Daily Puzzle
-front_image:
-  - url: /assets/img/projects/daily-puzzle_300.jpg
-  - url: /assets/img/projects/daily-puzzle_600.jpg
-    scale: 2
-  - url: /assets/img/projects/daily-puzzle_1200.jpg
-    scale: 4
+front_image: /assets/img/projects/daily-puzzle.jpg
 accent_color: "#8b43c0"
 tags:
   - Puzzle
