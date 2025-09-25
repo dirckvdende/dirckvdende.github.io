@@ -50,12 +50,12 @@
 
 - title: Bachelor Computer Science
   date: 2023-07-31
-  description: Graduated summa cum laude for a Bachelor in Computer Science at Leiden University.
+  description: Graduated summa cum laude for a Bachelor in Computer Science at Leiden University. My thesis was on partial differential equations and analog computers. <a href="/research/bachelor-thesis">Read more</a>
   major: true
   icon: license
 - title: Bachelor Mathematics
   date: 2023-07-31
-  description: Graduated cum laude for a Bachelor in Mathematics at Leiden University.
+  description: Graduated cum laude for a Bachelor in Mathematics at Leiden University. My thesis was on partial differential equations and analog computers. <a href="/research/bachelor-thesis">Read more</a>
   major: true
   icon: license
 
@@ -118,3 +118,9 @@
   end_date: 2025-06-30
   description: Job as a student assistant for the first year Bachelor course "Algorithms" at the Leiden Institute of Advanced Computer Science at Leiden University.
   icon: work
+
+- title: Master Computer Science
+  date: 2025-07-31
+  description: I'm waiting on a confirmation from the university, but I pass all requirements to graduate summa cum laude for a Master in Computer Science at Leiden University. My thesis was on using weighted model counting to perform quantum computations. <a href="/research/master-thesis">Read more</a>
+  major: true
+  icon: license
