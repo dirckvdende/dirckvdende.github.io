@@ -1,9 +1,9 @@
 
 - text: About Me
-  url: /me
+  url: /me/
 - text: Theses
-  url: /research
+  url: /research/
 - text: Projects
-  url: /projects
+  url: /projects/
 - text: Blog
-  url: /blog
+  url: /blog/

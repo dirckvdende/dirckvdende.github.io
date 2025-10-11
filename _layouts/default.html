@@ -24,6 +24,7 @@
         <meta property="og:image" content="{{ page.thumbnail }}">
     {% endif %}
     {{ page.head | default: '' }}
+    <!-- Redirect pages that have a .html extension to ones without it -->
 </head>
 <body>
     {% include header.html %}

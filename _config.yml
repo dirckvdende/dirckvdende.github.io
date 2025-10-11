@@ -31,13 +31,13 @@ collections_dir: collections
 collections:
   research:
     output: true
-    permalink: /research/:name
+    permalink: /research/:name/
     order:
       - bachelor-thesis.md
       - master-thesis.md
   projects:
     output: true
-    permalink: /projects/:name
+    permalink: /projects/:name/
     order:
       - daily-puzzle.md
       - competition-reference.md
@@ -50,7 +50,7 @@ collections:
       - layout-image.md
   posts:
     output: true
-    permalink: /blog/:title
+    permalink: /blog/:title/
 
 defaults:
   - scope:

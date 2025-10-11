@@ -115,9 +115,9 @@ Hi! I'm Dirck. I'm a recent Computer Science Master graduate from Leiden Univers
 
 ## Education
 
-For my master's I followed the "Foundations of Computing" track, which focuses on theoretical Computer Science and is very math-heavy. I also followed some courses on AI and machine learning. My master's thesis is on weighted model counting and quantum computing. Read more about it [here](/research/master-thesis).
+For my master's I followed the "Foundations of Computing" track, which focuses on theoretical Computer Science and is very math-heavy. I also followed some courses on AI and machine learning. My master's thesis is on weighted model counting and quantum computing. Read more about it [here](/research/master-thesis/).
 
-I completed two bachelor's degrees at Leiden University in 2023, one in Mathematics and one in Computer Science. I did a joint thesis on partial differential equations and analog computers. Read more about this thesis [here](/research/bachelor-thesis).
+I completed two bachelor's degrees at Leiden University in 2023, one in Mathematics and one in Computer Science. I did a joint thesis on partial differential equations and analog computers. Read more about this thesis [here](/research/bachelor-thesis/).
 
 ## Work experience
 
@@ -138,7 +138,7 @@ During my time at Leiden University, I've been a student assistant for courses f
 
 ## Programming Competitions
 
-I've competed in the BAPC and NWERC programming competitions in 2022, 2023, and 2024. In each year my team won the BAPC preliminary round in Leiden. I created a reference document for my team to use between the 2022 and 2023 competitions. You can read more about this document and my participation in programming competitions [here](/projects/competition-reference).
+I've competed in the BAPC and NWERC programming competitions in 2022, 2023, and 2024. In each year my team won the BAPC preliminary round in Leiden. I created a reference document for my team to use between the 2022 and 2023 competitions. You can read more about this document and my participation in programming competitions [here](/projects/competition-reference/).
 
 ## Stuff I've used
 

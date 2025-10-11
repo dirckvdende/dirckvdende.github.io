@@ -31,7 +31,7 @@ layout: default
             {% include project_card.html page=page %}
         {% endfor %}
         <div class="view-more">
-            <a href="{{ '/projects' | relative_url }}">
+            <a href="{{ '/projects/' | relative_url }}">
                 <span class="icon material-symbols-outlined">add</span>
                 <span class="text">View all projects</span>
             </a>
@@ -43,7 +43,7 @@ layout: default
             {% include blog_card.html post=post %}
         {% endfor %}
         <div class="view-more">
-            <a href="{{ '/blog' | relative_url }}">
+            <a href="{{ '/blog/' | relative_url }}">
                 <span class="icon material-symbols-outlined">add</span>
                 <span class="text">View all posts</span>
             </a>
