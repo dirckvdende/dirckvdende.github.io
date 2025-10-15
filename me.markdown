@@ -39,6 +39,10 @@ technologies:
           icon: devicon-java-plain
         - name: C#
           icon: devicon-csharp-plain
+        - name: Vue.js
+          icon: devicon-vuejs-plain
+        - name: Nuxt
+          icon: devicon-nuxt-original
         - name: npm
           icon: devicon-npm-original-wordmark
         - name: NumPy
@@ -55,6 +59,8 @@ technologies:
           icon: devicon-docker-plain
         - name: Matplotlib
           icon: devicon-matplotlib-plain
+        - name: React
+          icon: devicon-react-original
         - name: TensorFlow
           icon: devicon-tensorflow-original
         - name: Keras

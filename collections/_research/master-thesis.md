@@ -10,7 +10,7 @@ I finished my master in Computer Science at Leiden University by doing a thesis 
 
 *The thesis has not yet been added to the LIACS thesis repository. Once this is the case a link to the full thesis will be added here.*
 
-My supervisors and I also wrote a paper based on the thesis. It can be found here:
+My supervisors and I also wrote a paper based on the thesis. Click below to find it:
 
 {% include center-button.html href="https://inspirehep.net/literature/2964963" text="Paper: Quantum Physics using Weighted Model Counting" icon="link" %}
 
