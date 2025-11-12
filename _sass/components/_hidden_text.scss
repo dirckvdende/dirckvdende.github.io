@@ -1,0 +1,12 @@
+
+.hidden-text {
+    background-color: #222;
+    color: transparent;
+    cursor: pointer;
+    user-select: none;
+}
+
+.hidden-text-unhidden {
+    background-color: #5555;
+    color: inherit;
+}
