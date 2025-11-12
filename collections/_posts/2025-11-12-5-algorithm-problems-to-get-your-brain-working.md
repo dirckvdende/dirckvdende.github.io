@@ -12,9 +12,9 @@ accent_color: "#4ec7adff"
 
 Given is the maze below. Find a path from start to finish that minimizes the number of left turns you take. You're not allowed to turn around on the spot, but you're allowed to visit the same square multiple times.
 
-The maze can be downloaded as a <a href="{{ '/assets/code/5-algorithm-problems-to-get-your-brain-working/problem-3-data.txt' | relative_url }}" download>text file</a>. Keep in mind that you start on the left of the bottom row and end on the right of the top row.
+The maze can be downloaded as a <a href="{{ '/assets/code/5-algorithm-problems-to-get-your-brain-working/fewest-left-turns/data.txt' | relative_url }}" download>text file</a>. Keep in mind that you start on the left of the bottom row and end on the right of the top row.
 
-![Maze with start and finish](/assets/code/5-algorithm-problems-to-get-your-brain-working/problem-3-small.png)
+![Maze with start and finish](/assets/code/5-algorithm-problems-to-get-your-brain-working/fewest-left-turns/image-small.png)
 
 ## Answers
 
