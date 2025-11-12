@@ -10,7 +10,6 @@ a = np.array([
     [0, 1, 1, 1, 0, 0],
     [0, 0, 1, 0, 3, 0],
 ])
-print(np.linalg.det(a))
 b = np.array([8, 7, 13, 12, 17, 13])
 x = np.linalg.solve(a, b)
 print("Apple =", x[5])
