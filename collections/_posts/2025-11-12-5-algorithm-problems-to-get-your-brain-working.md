@@ -46,3 +46,5 @@ Click the boxes below to reveal the answers of the problems. Detailed explanatio
 Weighing Fruit: {% include hidden_text.html id="weighing-fruit-hidden" text="The apple weighs 4 kg. The other fruits have the following weights: Lemon = 2 kg, Coconut = 10 kg, Banana = 3 kg, Grape = 1 kg, Apple = 2 kg" %}<br>
 Fewest Left Turns: {% include hidden_text.html id="fewest-left-turns-hidden" text="11 left turns" %}<br>
 One Billion Coins: {% include hidden_text.html id="one-billion-coins-hidden" text="37.22801307691707... %" %}<br>
+
+Found an error? Let me know on [LinkedIn](https://www.linkedin.com/in/dirck).
