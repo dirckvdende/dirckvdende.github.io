@@ -4,15 +4,26 @@ title: "5 Algorithm Problems to Get Your Brain Working"
 date: 2025-11-12 11:00:00 +0200
 tags: Game Strategy Simulation
 accent_color: "#4ec7adff"
-# front_image: /assets/code/exploring-flip-7-strategies/flip_7.jpg
-# thumbnail: /assets/code/exploring-flip-7-strategies/flip_7.jpg
+front_image: /assets/code/5-algorithm-problems-to-get-your-brain-working/puzzle-pieces.jpg
+thumbnail: /assets/code/5-algorithm-problems-to-get-your-brain-working/puzzle-pieces.jpg
 ---
+
+Do you want a brain workout? Look no further. I've created five algorithmic puzzles for you to solve using your reasoning and programming skills. At the bottom of the page you'll find answers so you can check your own solutions. You can use the internet if you want, but it may be more fun to try it with as little help as possible! All problems can be solved by writing code that runs in less than one minute on any modern computer.
 
 ## Weighing Fruit - ★
 
 Find out what the weight of an apple (🍎) is using the formulas below. There is exactly one possible solution.
 
-![Maze with start and finish](/assets/code/5-algorithm-problems-to-get-your-brain-working/weighing-fruit/image-small.png)
+$$
+    {\Large \begin{aligned}
+        🍊🍊🍉 &= 8 \text{ kg} \\
+        🍊🍉🍇 &= 7 \text{ kg} \\
+        🍊🥥🍇 &= 13 \text{ kg} \\
+        🍉🍌🍌🍎 &= 12 \text{ kg} \\
+        🍉🥥🍌 &= 17 \text{ kg} \\
+        🍇🍇🍇🍎 &= 5 \text{ kg}
+    \end{aligned}}
+$$
 
 ## Fewest Left Turns - ★★
 
