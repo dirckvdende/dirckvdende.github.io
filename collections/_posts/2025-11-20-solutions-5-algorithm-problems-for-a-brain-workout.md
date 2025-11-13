@@ -92,3 +92,38 @@ First, determine the distance from every firefighter to every fire. For every fi
 To determine the lowest maximum distance, we can do a binary search. Now we need to answer the question "Is possible to match firefighers with fires such that all distances are less than $D$?". We can answer this by using the graph we made, and removing all edges with a weight higher than $D$. If this new graph has a [perfect matching](https://en.wikipedia.org/wiki/Perfect_matching), we can match the firefighters with fires. Since this graph is bipartite, this can be checked efficiently (see also [this Wikipedia page](https://en.wikipedia.org/wiki/Hopcroft%E2%80%93Karp_algorithm)).
 
 **Complexity:** $O(kn + k^2\sqrt{k}\log n)$, where $k$ is the number of firefighters/fires and $n$ is the number of squares in the maze.
+
+## One Billion Coins - ★★★★
+
+In this problem we need to calculate the probability of getting 30 heads in a row when tossing a billion coins. We can model this as an [absorbing Markov chain](https://en.wikipedia.org/wiki/Absorbing_Markov_chain) with 31 states. Each state represents the number of heads in a row we've seen at this point. For example, if we have the sequence HTTHTHHH, we would be in the state corresponding with having seen three heads. If we have a sequence ending in tails, we are in the state corresponding with zero heads. For every state there are two transitions:
+
+1. There is a 50% probability that we throw tails next, which means we go back to state zero.
+2. There is a 50% probability that we throw heads next. If we are in state $n$, we'll go to state $n + 1$.
+
+The exception to this is state 30, which we'll never leave, because once we've seen 30 heads in a row it doesn't matter what happens next. After a billion iterations of the Markov chain, we want to know the probability of being in state 30.
+
+The transitions of the Markov chain can be written as a $31 \times 31$ matrix:
+
+$$
+    P = \begin{pmatrix}
+        \frac12 & \frac12 & \frac12 & \dots & \frac12 & \frac12 & 0 \\
+        \frac12 & 0 & 0 & \dots & 0 & 0 & 0 \\
+        0 & \frac12 & 0 & \dots & 0 & 0 & 0 \\
+        \vdots & \vdots & \vdots & \ddots & \vdots & \vdots & \vdots \\
+        0 & 0 & 0 & \dots & 0 & 0 & 0 \\
+        0 & 0 & 0 & \dots & \frac12 & 0 & 0 \\
+        0 & 0 & 0 & \dots & 0 & \frac12 & 1
+    \end{pmatrix}
+$$
+
+To find the probability of ending up in state 30 after a billion iterations, we want to know the last entry in the following vector (note that we start in state 0):
+
+$$
+    P^{10^9}\begin{pmatrix}
+        1 \\ 0 \\ 0 \\ \vdots \\ 0
+    \end{pmatrix}
+$$
+
+The matrix $P^{10^9}$ can be determined in logarithmic time by using [exponentiation by squaring](https://en.wikipedia.org/wiki/Exponentiation_by_squaring). The NumPy matrix class already implements this. The probability we're looking for is in the bottom left corner of this matrix, which turns out to be 37.228...%.
+
+**Complexity:** $O(n^3 \log m)$, where $n$ is the number of heads we need to get in a row and $m$ is the total number of throws.
