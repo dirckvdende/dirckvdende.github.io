@@ -68,9 +68,13 @@ while denom % 5 == 0:
 # coprime), which means n is a divisor of denom
 t = phi(denom)
 lo = t
+print("phi(reduced denom) =", t)
+print("factors(phi(reduced denom)) =", prime_factors(t))
+c = 0
 for div in divisors(t):
     if pow(10, div, denom) == 1:
         lo = min(lo, div)
-print("phi(reduced denom) =", t)
+    c += 1
+print("number of divisors =", c)
 print("repeating digits length =", lo)
 # print(len(fraction_digits(enum, denom).split("(")[1]) - 1)

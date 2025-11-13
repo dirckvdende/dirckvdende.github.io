@@ -127,3 +127,86 @@ $$
 The matrix $P^{10^9}$ can be determined in logarithmic time by using [exponentiation by squaring](https://en.wikipedia.org/wiki/Exponentiation_by_squaring). The NumPy matrix class already implements this. The probability we're looking for is in the bottom left corner of this matrix, which turns out to be 37.228...%.
 
 **Complexity:** $O(n^3 \log m)$, where $n$ is the number of heads we need to get in a row and $m$ is the total number of throws.
+
+## Repeating Digits - ★★★★★
+
+The problem is to find the length of the repeating digits in the decimal expansion of the following fraction:
+
+$$
+    \begin{aligned}
+        \frac{1\ 213\ 432\ 333\ 743\ 539\ 155}{5\ 923\ 746\ 191\ 783\ 711\ 543}
+    \end{aligned}
+$$
+
+I will give you the answer first, which is 2,518,577,681,506,866. Clearly, we can't simply generate the digits of the fraction and detect when they're repeating. However, it is useful to look at how these digits can be generated for smaller fractions. Suppose we want to calculate the decimal expansion of $\frac17$. We'll perform [long division](https://en.wikipedia.org/wiki/Long_division#Method):
+
+1. First check how many times 7 fits in 1. This is zero (remainder 1), so we start with **0.**
+2. Multiply 1 by 10 to get 10. 7 fits in 10 once (remainder 3), so the next digit is **1**
+3. Multiply 3 by 10 to get 30. 7 fits in 30 four times (remainder 2), so the next digit is **4**
+4. Multiply 2 by 10 to get 20. 7 fits in 20 twice (remainder 6), so the next digit is **2**
+5. ...
+
+We can continue this procedure indefinitely. At every step we take the remainder of the previous division, multiply it by 10, check how many times 7 (the denominator of the fraction) fits in this number. This will be the next digit. Written out in code we can generate the digits as follows:
+
+```py
+enum, denom = 1, 7
+remainder = enum
+while remainder > 0:
+    remainder *= 10
+    print("Next digit =", remainder // denom)
+    remainder %= denom
+```
+
+In the case of $\frac17$ this procedure will continue forever. For fractions like $\frac14$ the process will stop when the remainder is zero. The digits loop when the remainder is a number we've already seen before.
+
+At every iteration of the loop we assentially perform the following operation on the remainder $r$ given the denominator $d$:
+
+$$
+    r \rightarrow 10 r \mod d
+$$
+
+Looping $n$ times can be written as
+
+$$
+    r \rightarrow 10^n r \mod d
+$$
+
+Remember we want to find the moment the remainder loops, which happens when
+
+$$
+    r \equiv 10^n r \mod d
+$$
+
+In our case 10 and $d$ are coprime (the denominator is not divisible by 2 or 5), which means the only way this equality can hold is if
+
+$$
+    10^n \equiv 1 \mod d
+$$
+
+In other words, the solution will be the lowest $n > 0$ for which the above equality holds. We already know that this answer will be very large, so iterating over $n$ is not an option. We do, however, have a good starting point: [Euler's theorem](https://en.wikipedia.org/wiki/Euler%27s_theorem). Since 10 and $d$ are coprime, we have
+
+$$
+    10^{\varphi(d)} \equiv 1 \mod d
+$$
+
+Where $\varphi(d)$ is [Euler's totient function](https://en.wikipedia.org/wiki/Euler%27s_totient_function), which can be calculated quickly.
+
+$$
+    \phi(d) = 5\ 077\ 452\ 605\ 917\ 841\ 856
+$$
+
+We don't necessarily know if $\varphi(d)$ is the lowest number for which the equality holds. However, we do know that the lowest number will be a divisor of $\varphi(d)$, which means we can find the answer by checking all divisors. A naive method would be to iterate over all numbers lower than $\varphi(d)$ and check if they're divisors, but this is too slow. Even the smarter method of checking numbers up to $\sqrt{\varphi(d)}$ fails here because the number is too large. To find the divisors quickly, factorize $\phi(d)$ into primes:
+
+$$
+    \phi(d) = 2^6 \cdot 3^4 \cdot 7^2 \cdot 71 \cdot 577 \cdot 5\ 407 \cdot 90\ 239
+$$
+
+To find all divisors, determine all subsets (with duplicates) of prime factors and multiply the factors per subset. There are $7 \cdot 5 \cdot 3 \cdot 2 \cdot 2 \cdot 2 \cdot 2 = 1\ 680$ such subsets. Checking all of them yields that the lowest divisor for which $10^n \equiv 1 \mod d$ holds is
+
+$$
+    2\ 518\ 577\ 681\ 506\ 866
+$$
+
+This is the final answer.
+
+Found any mistakes or have comments? Contact me on [LinkedIn](https://www.linkedin.com/in/dirck).
