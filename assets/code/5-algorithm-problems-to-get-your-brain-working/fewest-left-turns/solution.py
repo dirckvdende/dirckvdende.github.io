@@ -8,7 +8,7 @@ CELL_SIZE = 20
 MAZE_SIZE = 41
 DRAW_COLOR = (34, 34, 34, 255)
 BG_COLOR = (255, 255, 255, 255)
-PATH_COLOR = (245, 188, 66, 255)
+PATH_COLOR = (78, 199, 173, 255)
 
 # directions: 0 = up, 1 = right, 2 = down, 3 = left
 
