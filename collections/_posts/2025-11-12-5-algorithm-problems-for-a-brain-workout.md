@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "5 Algorithm Problems to Get Your Brain Working"
+title: "5 Algorithm Problems for a Brain Workout"
 date: 2025-11-12 11:00:00 +0200
 tags: Game Strategy Simulation
 accent_color: "#4ec7adff"
@@ -35,7 +35,7 @@ The maze can be downloaded as a <a href="{{ '/assets/code/5-algorithm-problems-t
 
 ## Putting Out the Fire - ★★★
 
-There are 60 firefighters in a building with 60 fires (see the visualization below). At every water drop icon there's a firefighter. Each firefighter is carrying enough water with them to put out exactly one fire. Each firefighter also moves exactly one grid square per second (vertically or horizontally, not diagonally). When a firefighter reaches a fire, they put it out instantly. By assigning the firefighters to the fires, what's the minimum amount of time it will take for them to put out all of the fires?
+There are 60 firefighters in a building with 60 fires (see the visualization below). At every water drop icon there's a firefighter. Each firefighter is carrying enough water with them to put out exactly one fire. Each firefighter also moves exactly one grid square per minute (vertically or horizontally, not diagonally). When a firefighter reaches a fire, they put it out instantly. By assigning the firefighters to the fires, what's the minimum amount of time it will take for them to put out all of the fires?
 
 All firefighters work fully independently. They don't have to wait on each other, and they can occupy the same spot at the same time.
 
@@ -55,6 +55,7 @@ Click the boxes below to reveal the answers of the problems. Detailed explanatio
 
 Weighing Fruit: {% include hidden_text.html id="weighing-fruit-hidden" text="The apple weighs 2 kg. The other fruits have the following weights: Lemon = 2 kg, Melon = 4 kg, Coconut = 10 kg, Banana = 3 kg, Grape = 1 kg" %}<br>
 Fewest Left Turns: {% include hidden_text.html id="fewest-left-turns-hidden" text="11 left turns" %}<br>
+Putting Out the Fire: {% include hidden_text.html id="putting-out-the-fire-hidden" text="7 minutes" %}<br>
 One Billion Coins: {% include hidden_text.html id="one-billion-coins-hidden" text="37.22801307691707... %" %}<br>
 
 Found an error? Let me know on [LinkedIn](https://www.linkedin.com/in/dirck).
