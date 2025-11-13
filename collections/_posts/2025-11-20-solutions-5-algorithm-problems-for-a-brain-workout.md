@@ -74,3 +74,21 @@ print("[Lemon, Melon, Coconut, Banana, Grape, Apple] =", x)
 ```
 
 Note: Obviously, the weights of the fruits are not realistic :)
+
+**Complexity:** $O(n^3)$, where $n$ is the number of different fruits (better when using a better matrix inversion algorithm).
+
+## Fewest Left Turns - ★★
+
+This problem asked to find the route from the start to the end of a maze using as few left turns as possible. Note that we can model the maze as a graph with connections between adjacent squares. To keep track of our current orientation (and with that whether we're turning left or not), we copy the graph 4 times, each representing a different direction that we're currently facing (up, down, left, right). Then we connect between the 4 graphs depending on which way we turn, and if we turn left the length of the edge will be 1, otherwise it will be 0. Now we can run [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm) on this new graph to find the shortest route, the length of which will be the number of left turns taken. This turns out to be 11.
+
+**Complexity:** $O(n \log n)$, where $n$ is the number of squares in the maze. An $O(n)$ solution is possible.
+
+## Putting Out the Fire - ★★★
+
+The problem asks to match firefighters with fires, such that the maximum distance between any firefighter and their fire is minimized. We can solve this in two steps.
+
+First, determine the distance from every firefighter to every fire. For every firefighter this can be done using a breath first search. This way, the distances to all of the fires can be determined at once. Use these distances to create a weighted bipartite graph. Each firefighter is connected to every fire through an edge with a weight equal to the distance between the firefighter and the fire.
+
+To determine the lowest maximum distance, we can do a binary search. Now we need to answer the question "Is possible to match firefighers with fires such that all distances are less than $D$?". We can answer this by using the graph we made, and removing all edges with a weight higher than $D$. If this new graph has a [perfect matching](https://en.wikipedia.org/wiki/Perfect_matching), we can match the firefighters with fires. Since this graph is bipartite, this can be checked efficiently (see also [this Wikipedia page](https://en.wikipedia.org/wiki/Hopcroft%E2%80%93Karp_algorithm)).
+
+**Complexity:** $O(kn + k^2\sqrt{k}\log n)$, where $k$ is the number of firefighters/fires and $n$ is the number of squares in the maze.
