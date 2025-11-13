@@ -49,6 +49,26 @@ Suppose you toss a billion (1,000,000,000) coins in sequence, with a 50/50 chanc
 
 Note that the probability of two heads in a row when tossing three coins is 3/8, since there are three combinations where two heads land in a row: HHH, HHT, THH.
 
+## Repeating Digits - ★★★★★
+
+Find the length of the repeating digits when writing out the following fraction in decimal:
+
+$$
+    \begin{aligned}
+        \frac{1\ 213\ 432\ 333\ 743\ 539\ 155}{5\ 923\ 746\ 191\ 783\ 711\ 543}
+    \end{aligned}
+$$
+
+To clarify this, consider the following examples:
+
+$$
+    \begin{aligned}
+        \frac13 = 0.33333\dots \qquad \frac 17 = 0.14285714285714\dots \qquad \frac 1{36} = 0.0277777\dots
+    \end{aligned}
+$$
+
+The repeating part of $\frac13$ is $3$, which has a length of $1$. The repeating part of $\frac17$ is $142857$, which has length $6$. The fraction $\frac1{36}$ has repeating part $7$, which has a length of $1$. Note that any multiple of this length is also a repeating part, so you need to find the minimum repeating length.
+
 ## Answers
 
 Click the boxes below to reveal the answers of the problems. Detailed explanations will be in a separate blog post next week.
@@ -57,5 +77,6 @@ Weighing Fruit: {% include hidden_text.html id="weighing-fruit-hidden" text="The
 Fewest Left Turns: {% include hidden_text.html id="fewest-left-turns-hidden" text="11 left turns" %}<br>
 Putting Out the Fire: {% include hidden_text.html id="putting-out-the-fire-hidden" text="7 minutes" %}<br>
 One Billion Coins: {% include hidden_text.html id="one-billion-coins-hidden" text="37.22801307691707... %" %}<br>
+Repeating Digits: {% include hidden_text.html id="repeating-digits-hidden" text="The length of the repeating sequence is 2,518,577,681,506,866 digits" %}
 
 Found an error? Let me know on [LinkedIn](https://www.linkedin.com/in/dirck).
