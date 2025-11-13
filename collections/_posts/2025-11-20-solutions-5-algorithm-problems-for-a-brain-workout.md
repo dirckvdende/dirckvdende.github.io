@@ -29,7 +29,7 @@ $$
     \end{aligned}}
 $$
 
-The only problem that can be reasonably solved without programming. It is possible to reason what the weights of all of the fruits are as follows:
+This the only problem that can be reasonably solved without programming. It is possible to reason what the weights of all of the fruits are as follows:
 
 1. Using the third and last equation, we can reason that one lemon weighs the same as two blueberries, since the rest of the equation on the left and right is the same.
 2. We can similarly determine that a lemon weighs 1 kg more than a blueberry, using the first two equations.
@@ -95,12 +95,12 @@ To determine the lowest maximum distance, we can do a binary search. Now we need
 
 ## One Billion Coins - ★★★★
 
-In this problem we need to calculate the probability of getting 30 heads in a row when tossing a billion coins. We can model this as an [absorbing Markov chain](https://en.wikipedia.org/wiki/Absorbing_Markov_chain) with 31 states. Each state represents the number of heads in a row we've seen at this point. For example, if we have the sequence HTTHTHHH, we would be in the state corresponding with having seen three heads. If we have a sequence ending in tails, we are in the state corresponding with zero heads. For every state there are two transitions:
+In this problem we need to calculate the probability of getting 30 heads in a row when tossing a billion coins. We can model this as an [absorbing Markov chain](https://en.wikipedia.org/wiki/Absorbing_Markov_chain) with 31 states. Each state represents the number of heads in a row we've seen at this point. For example, if we have the sequence HTTHTHHH, we would be in state 3 (for having seen 3 heads in a row). If we have a sequence ending in tails, we are in state 0. For every state there are two transitions:
 
-1. There is a 50% probability that we throw tails next, which means we go back to state zero.
+1. There is a 50% probability that we throw tails next, which means we go back to state 0.
 2. There is a 50% probability that we throw heads next. If we are in state $n$, we'll go to state $n + 1$.
 
-The exception to this is state 30, which we'll never leave, because once we've seen 30 heads in a row it doesn't matter what happens next. After a billion iterations of the Markov chain, we want to know the probability of being in state 30.
+The exception to this is state 30, which we'll never leave, because once we've seen 30 heads in a row it doesn't matter what happens next. We want to know the probability of being in state 30 after a billion iterations of the Markov chain.
 
 The transitions of the Markov chain can be written as a $31 \times 31$ matrix:
 
@@ -124,7 +124,7 @@ $$
     \end{pmatrix}
 $$
 
-The matrix $P^{10^9}$ can be determined in logarithmic time by using [exponentiation by squaring](https://en.wikipedia.org/wiki/Exponentiation_by_squaring). The NumPy matrix class already implements this. The probability we're looking for is in the bottom left corner of this matrix, which turns out to be 37.228...%.
+The matrix $P^{10^9}$ can be calculated in logarithmic time by using [exponentiation by squaring](https://en.wikipedia.org/wiki/Exponentiation_by_squaring). The NumPy matrix class already implements this. The probability we're looking for is in the bottom left corner of this matrix, which turns out to be 37.228...%.
 
 **Complexity:** $O(n^3 \log m)$, where $n$ is the number of heads we need to get in a row and $m$ is the total number of throws.
 
