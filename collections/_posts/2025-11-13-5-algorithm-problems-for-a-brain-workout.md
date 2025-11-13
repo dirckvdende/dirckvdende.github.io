@@ -8,7 +8,7 @@ front_image: /assets/code/5-algorithm-problems-to-get-your-brain-working/puzzle-
 thumbnail: /assets/code/5-algorithm-problems-to-get-your-brain-working/puzzle-pieces.jpg
 ---
 
-Do you want a brain workout? Look no further. I've created five algorithmic puzzles for you to solve using your reasoning and programming skills. At the bottom of the page you'll find answers so you can check your own solutions. You can use the internet if you want, but it may be more fun to try it with as little help as possible! All problems can be solved by writing code that runs in less than one minute on any modern computer.
+Do you want a brain workout? Look no further. I've created five algorithmic puzzles for you to solve using your reasoning and programming skills. At the bottom of the page you'll find answers so you can check your own solutions. I encourage you to try to solve these problems without using the internet, but for the harder problems this may be needed to look up what techniques to use. All problems can be solved by writing code that runs in less than one minute on any modern computer.
 
 ## Weighing Fruit - ★
 
