@@ -42,7 +42,18 @@ The only problem that can be reasonably solved without programming. It is possib
 Solving this problem (or a larger variant) can be automated by writing it as a system of linear equations:
 
 $$
-
+    \begin{pmatrix}
+        2 & 1 & 0 & 0 & 0 & 0 \\
+        1 & 1 & 0 & 0 & 1 & 0 \\
+        1 & 0 & 1 & 0 & 1 & 0 \\
+        0 & 1 & 0 & 2 & 0 & 1 \\
+        0 & 1 & 1 & 1 & 0 & 0 \\
+        0 & 0 & 1 & 0 & 3 & 0
+    \end{pmatrix} \begin{pmatrix}
+        Lemon \\ Melon \\ Coconut \\ Banana \\ Grape \\ Apple
+    \end{pmatrix} = \begin{pmatrix}
+        8 \\ 7 \\ 13 \\ 12 \\ 17 \\ 13
+    \end{pmatrix}
 $$
 
 Then the weights of the fruits can be found by multiplying the vector on the right with the inverse of the matrix on the left. I used [NumPy](https://numpy.org/) for this:
