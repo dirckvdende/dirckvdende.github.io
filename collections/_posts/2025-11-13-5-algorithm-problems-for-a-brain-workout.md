@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "5 Algorithm Problems for a Brain Workout"
-date: 2025-11-12 11:00:00 +0200
-tags: Game Strategy Simulation
+date: 2025-11-13 11:00:00 +0200
+tags: Algorithms Puzzles Math
 accent_color: "#4ec7adff"
 front_image: /assets/code/5-algorithm-problems-to-get-your-brain-working/puzzle-pieces.jpg
 thumbnail: /assets/code/5-algorithm-problems-to-get-your-brain-working/puzzle-pieces.jpg
