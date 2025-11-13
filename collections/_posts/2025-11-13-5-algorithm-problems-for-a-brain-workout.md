@@ -8,7 +8,9 @@ front_image: /assets/code/5-algorithm-problems-to-get-your-brain-working/puzzle-
 thumbnail: /assets/code/5-algorithm-problems-to-get-your-brain-working/puzzle-pieces.jpg
 ---
 
-Do you want a brain workout? Look no further. I've created five algorithmic puzzles for you to solve using your reasoning and programming skills. At the bottom of the page you'll find answers so you can check your own solutions. I encourage you to try to solve these problems without using the internet, but for the harder problems this may be needed to look up what techniques to use. All problems can be solved by writing code that runs in less than one minute on any modern computer.
+Do you want a brain workout? Look no further. I've created five algorithmic puzzles for you to solve using your reasoning and programming skills. At the bottom of the page you'll find answers so you can check your solutions.
+
+I encourage you to try to solve these problems without using the internet, but for the harder problems this may be needed to look up techniques. All problems can be solved by writing code that runs in less than one minute on any modern computer.
 
 ## Weighing Fruit - ★
 
@@ -45,7 +47,7 @@ The map can be downloaded as a <a href="{{ '/assets/code/5-algorithm-problems-to
 
 ## One Billion Coins - ★★★★
 
-Suppose you toss a billion (1,000,000,000) coins in sequence, with a 50/50 chance of it landing on heads/tails. What is the chance the coins will land on heads 30 times in a row, at some point during all of your throws?
+Suppose you toss a billion (1,000,000,000) coins in sequence, with a 50/50 chance of any coin landing on heads/tails. What is the chance the coins will land on heads 30 times in a row, at some point during all of your throws?
 
 Note that the probability of two heads in a row when tossing three coins is 3/8, since there are three combinations where two heads land in a row: HHH, HHT, THH.
 
