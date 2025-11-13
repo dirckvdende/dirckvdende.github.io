@@ -63,7 +63,9 @@ To clarify this, consider the following examples:
 
 $$
     \begin{aligned}
-        \frac13 = 0.33333\dots \qquad \frac 17 = 0.14285714285714\dots \qquad \frac 1{36} = 0.0277777\dots
+        \frac13 &= 0.33333\dots \\
+        \frac 17 &= 0.14285714285714\dots \\
+        \frac 1{36} &= 0.0277777\dots
     \end{aligned}
 $$
 
