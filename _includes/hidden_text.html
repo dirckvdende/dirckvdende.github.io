@@ -1,0 +1,10 @@
+{%- assign text = include.text -%}
+{%- assign id = include.id -%}
+<span data-hidden-text="{{ id }}" class="hidden-text">{{ text }}</span><script>
+    {
+        const elt = document.querySelector("[data-hidden-text={{ id }}]")
+        elt.addEventListener("click", function () {
+            return elt.classList.toggle("hidden-text-unhidden")
+        })
+    }
+</script>
