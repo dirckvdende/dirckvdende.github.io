@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[SOLUTIONS] 5 Algorithm Problems for a Brain Workout"
-date: 2025-11-20 15:00:00 +0200
+date: 2025-11-20 9:00:00 +0200
 tags: Algorithms Puzzles Math Solutions
 accent_color: "#4ec7adff"
 front_image: /assets/code/5-algorithm-problems-to-get-your-brain-working/puzzle-pieces.jpg
