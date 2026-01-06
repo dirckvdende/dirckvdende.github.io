@@ -2,5 +2,9 @@
 layout: home
 title: Dirck van den Ende
 thumbnail: /assets/img/profile-picture_800.jpg
-description: Hi, I'm Dirck! I'm a recent Computer Science Master graduate from Leiden University. On this website I put some of the projects I've worked on, both for uni and outside of it. I love solving (and creating) puzzles. I occasianally write blogs here as well :)
+description: >-
+  Hi, I'm Dirck! I'm a Computer Science graduate from Leiden University. On this
+  website I place some of the projects I've worked on. I love solving (and
+  creating) puzzles. I occasially write blogs about interesting stuff here as
+  well :)
 ---
