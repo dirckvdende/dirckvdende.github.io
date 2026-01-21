@@ -39,6 +39,7 @@ collections:
     output: true
     permalink: /projects/:name/
     order:
+      - gravity-sim.md
       - daily-puzzle.md
       - competition-reference.md
       - hand-gesture-game-with-colored-gloves.md
