@@ -5,8 +5,10 @@ front_image: /assets/img/projects/gravity-sim/gravity-sim-banner.jpg
 thumbnail: /assets/img/projects/gravity-sim/gravity-sim-thumb.jpg
 accent_color: "#3739b1"
 tags:
-  - Simulation
   - Physics
+  - Vue.js
+  - Rust
+  - WebGL
   - Web app
 ---
 
