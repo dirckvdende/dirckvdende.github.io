@@ -4,6 +4,7 @@
 #include "player.h"
 #include "strategy.h"
 #include <stdexcept>
+#include <iostream>
 
 Game::Game() :
     current_player(0),
@@ -29,6 +30,7 @@ void Game::play_round(int start_player) {
     state.add_scores();
     state.clear_round();
     round_ended = false;
+    stats.rounds_done++;
 }
 
 void Game::play_turn() {
@@ -50,6 +52,10 @@ void Game::play_turn() {
 
 const GameState &Game::game_state() const {
     return state;
+}
+
+const GameStats &Game::game_stats() const {
+    return stats;
 }
 
 int Game::player_count() const {
@@ -113,14 +119,13 @@ void Game::flip(Player *player) {
             flip_three(target);
         }
     }
-    if (player->has_won_round())
+    if (player->has_won_round()) {
+        stats.round_wins++;
         round_ended = true;
+    }
 }
 
 void Game::flip_three(Player *target) {
-    for (int i = 0; i < 3 && target->active; i++) {
-        if (round_ended)
-            return;
+    for (int i = 0; i < 3 && target->active && !round_ended; i++)
         flip(target);
-    }
 }

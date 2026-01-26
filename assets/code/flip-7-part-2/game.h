@@ -3,6 +3,7 @@
 
 #include <vector>
 #include "game_state.h"
+#include "game_stats.h"
 #include "strategy.h"
 
 /**
@@ -51,6 +52,12 @@ public:
     const GameState &game_state() const;
 
     /**
+     * Get statistics of the game
+     * @returns The stats of the game
+     */
+    const GameStats &game_stats() const;
+
+    /**
      * Number of players in the game
      * @returns The number of players
      */
@@ -60,6 +67,8 @@ private:
 
     // Current state of the game
     GameState state;
+    // Game statistics
+    GameStats stats;
     // Strategies of the different players. This will have the same length as
     // state.players
     std::vector<Strategy *> strategies;

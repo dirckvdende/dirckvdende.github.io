@@ -11,5 +11,6 @@ int main() {
     game.add_player(&strategy);
     game.play_game();
     std::cout << game.game_state().string() << std::endl;
+    std::cout << game.game_stats().string() << std::endl;
     return 0;
 }
