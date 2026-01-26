@@ -13,7 +13,7 @@ bool PlayUntilScoreStrategy::should_pass(
     const Player *player
 ) {
     (void)game_state;
-    return player->hand_score() >= target_score;
+    return player->hand_score() >= target_score || player->has_second_chance;
 }
 
 const Player *PlayUntilScoreStrategy::flip_three_target(

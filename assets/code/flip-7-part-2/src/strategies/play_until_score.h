@@ -8,7 +8,8 @@
 
 /**
  * Strategy where the player keeps drawing until they reach a given target score
- * in their hand.
+ * in their hand. The player also keeps drawing when they have a second chance
+ * card
  * 
  * Flip 3 cards are played on the other player with the highest score, or the
  * current player if there are no other active players

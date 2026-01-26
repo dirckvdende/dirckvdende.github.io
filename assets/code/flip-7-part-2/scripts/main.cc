@@ -1,7 +1,7 @@
 
-#include "experiment.h"
-#include "strategies/draw_till_bust.h"
-#include "strategies/play_until_score.h"
+#include "../src/experiment.h"
+#include "../src/strategies/draw_till_bust.h"
+#include "../src/strategies/play_until_score.h"
 #include <iostream>
 #include <limits>
 

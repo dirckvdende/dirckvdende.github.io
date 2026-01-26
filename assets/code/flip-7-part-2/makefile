@@ -2,17 +2,20 @@
 cc = g++
 cflags = -g -std=c++17 -Wall -Wextra -Wpedantic
 
-cfiles = $(subst ./,,$(shell find . -name "*.cc"))
-hfiles = $(subst ./,,$(shell find . -name "*.h"))
-ofiles = $(addprefix build/,$(cfiles:.cc=.o))
+cfiles = $(shell find src -name "*.cc")
+hfiles = $(shell find src -name "*.h")
+ofiles = $(subst src/,build/src/,$(cfiles:.cc=.o))
 dfiles = $(ofiles:.o=.d)
 
-subfolders = $(foreach folder,$(subst ./,,$(shell find . -type d)),$(if $(findstring build,$(folder)),,$(folder)))
-buildfolders = $(addprefix build/,$(subfolders)) build
+scripts = $(shell find scripts -name "*.cc")
+scriptbuilds = $(subst scripts/,build/scripts/,$(scripts:.cc=))
+
+subfolders = $(shell find src -type d)
+buildfolders = $(addprefix build/,$(subfolders)) build build/scripts
 
 .PHONY: all clean
 
-all: build/main
+all: $(scriptbuilds)
 
 clean:
 	rm -rf build
@@ -20,10 +23,11 @@ clean:
 $(buildfolders):
 	mkdir -p $@
 
-build/main: $(ofiles) | $(buildfolders)
-	$(cc) $(cflags) -o $@ $(ofiles)
+build/scripts/%: scripts/%.cc $(ofiles)
+	$(cc) $(cflags) -MMD -MP -o $@.o -c $<
+	$(cc) $(cflags) -o $@ $(ofiles) $@.o
 
 -include $(dfiles)
 
-build/%.o: %.cc build | $(buildfolders)
+build/%.o: %.cc | $(buildfolders)
 	$(cc) $(cflags) -MMD -MP -o $@ -c $<
