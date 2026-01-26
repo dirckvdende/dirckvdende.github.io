@@ -5,6 +5,7 @@
 #include "strategy.h"
 #include <stdexcept>
 #include <iostream>
+#include <random>
 
 Game::Game() :
     current_player(0),
@@ -16,8 +17,17 @@ void Game::add_player(Strategy *strategy) {
 }
 
 void Game::play_game() {
-    while (!state.has_finished())
-        play_round();
+    // Generate random starting player
+    std::random_device rd;
+    std::mt19937 g(rd());
+    std::uniform_int_distribution<std::mt19937::result_type> dist(0,
+        player_count() - 1);
+    int start_player = dist(g);
+    while (!state.has_finished()) {
+        play_round(start_player);
+        // To make it more fair, rotate starting player every round
+        start_player = (start_player + 1) % player_count();
+    }
 }
 
 void Game::play_round(int start_player) {

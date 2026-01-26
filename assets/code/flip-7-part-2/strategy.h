@@ -3,6 +3,7 @@
 
 #include "game_state.h"
 #include "player.h"
+#include <string>
 
 /**
  * Flip 7 strategy
@@ -59,5 +60,11 @@ public:
     virtual const Player *second_chance_target(
         const GameState *game_state,
         const Player *player) = 0;
+
+    /**
+     * The name of the strategy
+     * @return The strategy name as a string
+     */
+    virtual std::string name() const = 0;
 
 };

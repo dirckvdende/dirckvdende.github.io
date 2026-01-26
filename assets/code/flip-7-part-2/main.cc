@@ -1,16 +1,15 @@
 
 #include <iostream>
-#include "game.h"
+#include "experiment.h"
 #include "strategies/draw_till_bust.h"
 
 int main() {
-    Game game;
+    Experiment experiment;
     DrawTillBustStrategy strategy;
-    game.add_player(&strategy);
-    game.add_player(&strategy);
-    game.add_player(&strategy);
-    game.play_game();
-    std::cout << game.game_state().string() << std::endl;
-    std::cout << game.game_stats().string() << std::endl;
+    experiment.add_player(&strategy);
+    experiment.add_player(&strategy);
+    experiment.add_player(&strategy);
+    experiment.simulate_games(1000);
+    experiment.print_results();
     return 0;
 }

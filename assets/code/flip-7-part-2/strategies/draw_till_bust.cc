@@ -3,6 +3,7 @@
 #include "../game_state.h"
 #include "../player.h"
 #include <limits>
+#include <string>
 
 bool DrawTillBustStrategy::should_pass(
     const GameState *game_state,
@@ -38,10 +39,15 @@ const Player *DrawTillBustStrategy::second_chance_target(
     int lowest_score = std::numeric_limits<int>::max();
     const Player *lowest_player = nullptr;
     for (const Player &player : game_state->players) {
-        if (player.score < lowest_score) {
+        if (player.score < lowest_score && player.active &&
+        !player.has_second_chance) {
             lowest_score = player.score;
             lowest_player = &player;
         }
     }
     return lowest_player;
+}
+
+std::string DrawTillBustStrategy::name() const {
+    return "DrawTillBust";
 }
