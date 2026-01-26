@@ -26,6 +26,9 @@ class PlayUntilScoreStrategy : public Strategy {
 
 public:
 
+    // Target score after which the player should pass
+    int target_score;
+
     /**
      * Constructor
      * @param target_score Target score after which to pass
@@ -51,9 +54,6 @@ public:
     virtual std::string name() const final;
 
 private:
-    
-    // Target score after which the player should pass
-    int target_score;
 
     /**
      * Find the best player to play a flip 3 or freeze card on, which is the

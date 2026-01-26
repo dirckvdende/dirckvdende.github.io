@@ -34,6 +34,11 @@ public:
      */
     void print_results() const;
 
+    /**
+     * Get the number of wins of all players
+     */
+    const std::vector<int> &get_wins() const;
+
 private:
 
     // Strategies of the players

@@ -49,6 +49,10 @@ void Experiment::print_results() const {
     }
 }
 
+const std::vector<int> &Experiment::get_wins() const {
+    return wins;
+}
+
 std::pair<std::vector<Strategy *>, std::vector<int>>
 Experiment::shufflePlayers() const {
     std::vector<Strategy *> shuffled = strategies;
