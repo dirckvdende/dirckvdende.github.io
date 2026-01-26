@@ -13,6 +13,11 @@ class Strategy {
 public:
 
     /**
+     * Destructor
+     */
+    virtual ~Strategy();
+
+    /**
      * Determine whether a player should pass
      * @param game_state The current game state
      * @param player The player to determine the action for. It is this player's

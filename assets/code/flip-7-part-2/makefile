@@ -13,7 +13,6 @@ buildfolders = $(addprefix build/,$(subfolders)) build
 .PHONY: all clean
 
 all: build/main
-	$(cc) $(cflags) -o build/main $(ofiles)
 
 clean:
 	rm -rf build
