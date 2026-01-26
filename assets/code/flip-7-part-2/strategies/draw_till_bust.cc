@@ -8,6 +8,8 @@ bool DrawTillBustStrategy::should_pass(
     const GameState *game_state,
     const Player *player
 ) {
+    (void)game_state;
+    (void)player;
     return false;
 }
 
@@ -15,6 +17,7 @@ const Player *DrawTillBustStrategy::flip_three_target(
     const GameState *game_state,
     const Player *player
 ) {
+    (void)game_state;
     return player;
 }
 
@@ -22,6 +25,7 @@ const Player *DrawTillBustStrategy::freeze_target(
     const GameState *game_state,
     const Player *player
 ) {
+    (void)game_state;
     return player;
 }
 

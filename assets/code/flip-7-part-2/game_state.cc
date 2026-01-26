@@ -22,7 +22,7 @@ bool GameState::has_active_players() const {
 int GameState::winner() const {
     int max_score = 199;
     int max_player = -1;
-    for (int i = 0; i < players.size(); i++) {
+    for (int i = 0; i < (int)players.size(); i++) {
         if (players[i].score > max_score) {
             max_score = players[i].score;
             max_player = i;
