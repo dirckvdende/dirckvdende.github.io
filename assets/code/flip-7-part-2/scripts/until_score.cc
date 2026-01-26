@@ -4,7 +4,7 @@
 #include <iostream>
 #include <random>
 
-constexpr int max_target = 50;
+constexpr int max_target = 59;
 constexpr int runs_per_target = 10000;
 
 int main() {
@@ -12,6 +12,7 @@ int main() {
     std::mt19937 g(rd());
     std::uniform_int_distribution<std::mt19937::result_type> dist(1,
         max_target);
+    std::vector<int> as_vector;
     for (int i = 1; i <= 50; i++) {
         Experiment experiment;
         PlayUntilScoreStrategy base(i);
@@ -25,6 +26,11 @@ int main() {
         }
         std::cout << "Games won with target score " << i << ": " <<
             (i < 10 ? " " : "") << experiment.get_wins()[0] << std::endl;
+        as_vector.push_back(experiment.get_wins()[0]);
     }
+    std::cout << "[";
+    for (const int &v : as_vector)
+        std::cout << v << ", ";
+    std::cout << "]" << std::endl;
     return 0;
 }
