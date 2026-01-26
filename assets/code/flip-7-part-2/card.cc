@@ -21,6 +21,7 @@ std::string Card::string() const {
         case FREEZE:
             return "FR";
     }
+    return "";
 }
 
 bool Card::is_action() const {

@@ -2,6 +2,7 @@
 #pragma once
 
 #include "card.h"
+#include <string>
 #include <vector>
 
 /**
@@ -16,8 +17,8 @@ struct Player {
     // the player's cards if they have passed. This does not include action
     // cards
     std::vector<Card> hand;
-    // Whether the player has stopped this round (either passed or busted)
-    bool stopped;
+    // Whether the player is still active this round (hasn't passed or busted)
+    bool active;
     // Whether the player has a second chance card (NOTE: According to the
     // rules, the player can only have one)
     bool has_second_chance;
@@ -33,7 +34,7 @@ struct Player {
     void add_score();
 
     /**
-     * Clear the player's hand, stopped boolean and second chance
+     * Clear the player's hand, active boolean and second chance
      * @returns List of cards that should be put on the discard pile
      */
     std::vector<Card> clear_round();
@@ -45,7 +46,7 @@ struct Player {
 
     /**
      * Add a card to the player's hand, or let the player bust. If the player
-     * busts their hand is cleared and the stopped variable is set
+     * busts their hand is cleared and the active variable is unset
      * @param card The card to draw. Must not be an action card
      * @returns List of cards that should be put on the discard pile
      * @throws An error if the card is an action card or the player has already
@@ -58,5 +59,26 @@ struct Player {
      * @returns The value of the player's hand
      */
     int hand_score() const;
+
+    /**
+     * Check if the player has enough different number cards to win the round
+     * @returns Whether the player has won the round
+     */
+    bool has_won_round() const;
+
+    /**
+     * String representation of the player
+     * @returns The string
+     */
+    std::string string() const;
+
+private:
+
+    /**
+     * Check if a given card will make the player bust
+     * @param card The card to check for
+     * @returns Whether the card will make the player bust
+     */
+    bool card_is_bust(const Card &card) const;
 
 };
