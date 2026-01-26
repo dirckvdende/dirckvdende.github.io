@@ -11,6 +11,8 @@
  */
 class DrawTillBustStrategy : public Strategy {
 
+public:
+
     virtual bool should_pass(
         const GameState *game_state,
         const Player *player) final;

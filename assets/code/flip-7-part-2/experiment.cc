@@ -1,8 +1,11 @@
 
 #include "experiment.h"
 #include "game.h"
-#include <stdexcept>
 #include <iostream>
+#include <stdexcept>
+#include <utility>
+#include <vector>
+#include <random>
 
 Experiment::Experiment() {}
 
@@ -14,15 +17,17 @@ void Experiment::add_player(Strategy *strategy) {
 void Experiment::simulate_games(int count) {
     if (strategies.size() == 0)
         throw std::runtime_error("Cannot simulate games with zero players");
+    // TODO: Shuffle player order each game
     for (int i = 0; i < count; i++) {
+        auto [shuffledStrategies, shuffledIndices] = shufflePlayers();
         Game game;
-        for (Strategy *strategy : strategies)
+        for (Strategy *strategy : shuffledStrategies)
             game.add_player(strategy);
         game.play_game();
         int winner = game.game_state().winner();
         if (winner == -1)
             throw std::runtime_error("Error: finished game early");
-        wins[winner]++;
+        wins[shuffledIndices[winner]]++;
     }
 }
 
@@ -42,4 +47,22 @@ void Experiment::print_results() const {
             name.insert(name.size(), 24u - name.size(), ' ');
         std::cout << "    " << name << " " << wins[i] << std::endl;
     }
+}
+
+std::pair<std::vector<Strategy *>, std::vector<int>>
+Experiment::shufflePlayers() const {
+    std::vector<Strategy *> shuffled = strategies;
+    std::vector<int> indices;
+    for (int i = 0; i < (int)shuffled.size(); i++)
+        indices.push_back(i);
+    std::random_device rd;
+    std::mt19937 g(rd());
+    // Fisher-Yates shuffle
+    for (int i = shuffled.size() - 1; i > 0; i--) {
+        std::uniform_int_distribution<std::mt19937::result_type> dist(0, i);
+        int j = dist(g);
+        std::swap(shuffled[i], shuffled[j]);
+        std::swap(indices[i], indices[j]);
+    }
+    return { shuffled, indices };
 }

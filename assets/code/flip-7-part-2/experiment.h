@@ -3,6 +3,7 @@
 
 #include "strategy.h"
 #include <vector>
+#include <utility>
 
 /**
  * Used to run a batch of games with the same player strategies
@@ -39,5 +40,13 @@ private:
     std::vector<Strategy *> strategies;
     // Win counts of the players
     std::vector<int> wins;
+
+    /**
+     * Shuffle the list of players
+     * @returns A vector with strategies that is a shuffled version of the
+     * strategies property, and a vector of indices that point back to the
+     * indices in the strategies property
+     */
+    std::pair<std::vector<Strategy *>, std::vector<int>> shufflePlayers() const;
 
 };
