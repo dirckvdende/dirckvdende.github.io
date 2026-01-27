@@ -17,13 +17,25 @@ head: <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         position: relative;
     }
 
+    @media screen and (max-width: 500px) {
+        .chart {
+            aspect-ratio: 3 / 2;
+        }
+    }
+
     .chart > canvas {
         position: absolute;
     }
 </style>
 
 <script>
-    Chart.defaults.font.size = 10
+    function setChartFont() {
+        Chart.defaults.font.size = window.innerWidth <= 500 ? 9 : 12
+        Chart.defaults.font.family = "'Ubuntu', sans-serif"
+    }
+
+    setChartFont()
+    window.addEventListener("resize", setChartFont)
 </script>
 
 hufiwehg fweh xwefhx nxf sdlxnj fhix qweio hxfjnk asdxnb fiuhx a kxfe nxuiah xifudsh fxkfj xbenqfhgx ghix fb jkdasx bhjxfashui xf huixwe hxufh xakhxf axg huie fxh uaixef hiujkx
@@ -43,8 +55,9 @@ new Chart(document.getElementById("chart1"), {
         labels: data.map((_, index) => index + 1),
         datasets: [{
             label: "Number of games won",
-            data,
             borderColor: "#cd2a9c",
+            backgroundColor: "#cd2a9c",
+            data,
         }]
     },
     options: {
