@@ -32,8 +32,8 @@ public:
     void discard(const Card &card);
 
     /**
-     * Size of the draw pile. This can be zero if the discard pile needs to be
-     * reshuffled!
+     * Size of the draw pile. This should never be zero, as the discard pile is
+     * reshuffled when the draw pile is empty
      * @returns The size of the draw pile
      */
     int size() const;
@@ -43,6 +43,12 @@ public:
      * @return The discard pile size
      */
     int discard_size() const;
+
+    /**
+     * Get the list of cards that are currently in the draw pile
+     * @return The cards that are left, in a random order
+     */
+    std::vector<Card> cards_left() const;
 
 private:
 

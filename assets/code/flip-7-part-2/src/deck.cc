@@ -1,8 +1,11 @@
 
+#include "card.h"
 #include "deck.h"
+#include "util.h"
 #include <algorithm>
 #include <random>
 #include <stdexcept>
+#include <vector>
 
 CardDeck::CardDeck() {
     // Add the cards to the discard pile so shuffle() can put them on the draw
@@ -24,11 +27,11 @@ CardDeck::CardDeck() {
 
 Card CardDeck::draw() {
     if (draw_pile.empty())
-        shuffle();
-    if (draw_pile.empty())
         throw std::runtime_error("Cannot draw from empty pile");
     Card card = draw_pile.back();
     draw_pile.pop_back();
+    if (draw_pile.empty())
+        shuffle();
     return card;
 }
 
@@ -37,9 +40,7 @@ void CardDeck::discard(const Card &card) {
 }
 
 void CardDeck::shuffle() {
-    std::random_device rd;
-    std::mt19937 g(rd());
-    std::shuffle(discard_pile.begin(), discard_pile.end(), g);
+    shuffle_vector(discard_pile);
     draw_pile.insert(draw_pile.begin(), discard_pile.begin(),
         discard_pile.end());
 }
@@ -50,4 +51,10 @@ int CardDeck::size() const {
 
 int CardDeck::discard_size() const {
     return discard_pile.size();
+}
+
+std::vector<Card> CardDeck::cards_left() const {
+    std::vector<Card> cards = draw_pile;
+    shuffle_vector(cards);
+    return cards;
 }

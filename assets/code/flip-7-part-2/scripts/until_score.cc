@@ -4,8 +4,8 @@
 #include <iostream>
 #include <random>
 
-constexpr int max_target = 59;
-constexpr int runs_per_target = 10000;
+constexpr int max_target = 50;
+constexpr int runs_per_target = 100'000;
 
 int main() {
     std::random_device rd;
@@ -13,7 +13,7 @@ int main() {
     std::uniform_int_distribution<std::mt19937::result_type> dist(1,
         max_target);
     std::vector<int> as_vector;
-    for (int i = 1; i <= 50; i++) {
+    for (int i = 1; i <= max_target; i++) {
         Experiment experiment;
         PlayUntilScoreStrategy base(i);
         PlayUntilScoreStrategy opp1(1), opp2(1), opp3(1);

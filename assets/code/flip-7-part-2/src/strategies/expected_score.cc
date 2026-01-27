@@ -1,47 +1,57 @@
 
-#include "play_until_score.h"
+#include "expected_score.h"
 #include "../game_state.h"
 #include "../player.h"
+#include "../card.h"
 #include <limits>
 #include <string>
 
-PlayUntilScoreStrategy::PlayUntilScoreStrategy(int target_score) :
-    target_score(target_score) {}
-
-bool PlayUntilScoreStrategy::should_pass(
+bool ExpectedScoreStrategy::should_pass(
     const GameState *game_state,
     const Player *player
 ) {
-    (void)game_state;
-    return player->hand_score() >= target_score && !player->has_second_chance;
+    if (player->has_second_chance)
+        return false;
+    std::vector<Card> cards_left = game_state->deck.cards_left();
+    int total = 0;
+    int count = 0;
+    for (const Card &card : cards_left) {
+        if (card.is_action())
+            continue;
+        Player player_copy = *player;
+        player_copy.draw_card(card);
+        total += player_copy.hand_score();
+        count++;
+    }
+    return player->hand_score() > (double)total / (double)count;
 }
 
-const Player *PlayUntilScoreStrategy::flip_three_target(
+const Player *ExpectedScoreStrategy::flip_three_target(
     const GameState *game_state,
     const Player *player
 ) {
     return highest_player_target(game_state, player);
 }
 
-const Player *PlayUntilScoreStrategy::freeze_target(
+const Player *ExpectedScoreStrategy::freeze_target(
     const GameState *game_state,
     const Player *player
 ) {
     return highest_player_target(game_state, player);
 }
 
-const Player *PlayUntilScoreStrategy::second_chance_target(
+const Player *ExpectedScoreStrategy::second_chance_target(
     const GameState *game_state,
     const Player *player
 ) {
     return lowest_player_target(game_state, player);
 }
 
-std::string PlayUntilScoreStrategy::name() const {
-    return "PlayUntilScore(" + std::to_string(target_score) + ")";
+std::string ExpectedScoreStrategy::name() const {
+    return "ExpectedScore";
 }
 
-const Player *PlayUntilScoreStrategy::highest_player_target(
+const Player *ExpectedScoreStrategy::highest_player_target(
     const GameState *game_state,
     const Player *player
 ) const {
@@ -58,7 +68,7 @@ const Player *PlayUntilScoreStrategy::highest_player_target(
     return highest_player;
 }
 
-const Player *PlayUntilScoreStrategy::lowest_player_target(
+const Player *ExpectedScoreStrategy::lowest_player_target(
     const GameState *game_state,
     const Player *player
 ) const {
@@ -75,4 +85,3 @@ const Player *PlayUntilScoreStrategy::lowest_player_target(
     }
     return lowest_player;
 }
-
