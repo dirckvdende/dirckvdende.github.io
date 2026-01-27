@@ -8,7 +8,7 @@
 
 PlayUntilScoreWithTargetStrategy::PlayUntilScoreWithTargetStrategy(
     int target_score,
-    Strategy *target_player
+    std::string target_player
 ) : target_score(target_score),
     target_player(target_player) {}
 
@@ -43,7 +43,7 @@ const Player *PlayUntilScoreWithTargetStrategy::second_chance_target(
 
 std::string PlayUntilScoreWithTargetStrategy::name() const {
     return "PlayUntilScore(" + std::to_string(target_score) + ", target = "
-        + std::to_string(target_player) + ")";
+        + target_player + ")";
 }
 
 const Player *PlayUntilScoreWithTargetStrategy::highest_player_target(
@@ -52,9 +52,8 @@ const Player *PlayUntilScoreWithTargetStrategy::highest_player_target(
 ) const {
     // If possible, give it to the target player
     for (const Player &player : game_state->players)
-        if (player)
-    if (game_state->players[target_player].active)
-        return &game_state->players[target_player];
+        if (player.name == target_player && player.active)
+            return &player;
     int highest_score = -1;
     const Player *highest_player = nullptr;
     for (const Player &player : game_state->players) {
@@ -78,14 +77,16 @@ const Player *PlayUntilScoreWithTargetStrategy::lowest_player_target(
     const Player *lowest_player = nullptr;
     for (const Player &player : game_state->players) {
         if (player.score < lowest_score && player.active &&
-        !player.has_second_chance) {
+        !player.has_second_chance && player.name != target_player) {
             lowest_score = player.score;
             lowest_player = &player;
         }
     }
     // Have to give it to the target player
-    if (lowest_player == nullptr)
-        return &game_state->players[target_player];
+    if (lowest_player == nullptr) 
+        for (const Player &player : game_state->players)
+            if (player.name == target_player && player.active)
+                return &player;
     return lowest_player;
 }
 

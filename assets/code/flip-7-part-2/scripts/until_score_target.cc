@@ -6,8 +6,8 @@
 int main() {
     Experiment experiment;
     PlayUntilScoreStrategy playUntilScore(25);
-    PlayUntilScoreWithTargetStrategy playUntilScoreTarget(25, 0);
-    experiment.add_player(&playUntilScore);
+    PlayUntilScoreWithTargetStrategy playUntilScoreTarget(25, "target");
+    experiment.add_player(&playUntilScore, "target");
     experiment.add_player(&playUntilScoreTarget);
     experiment.add_player(&playUntilScoreTarget);
     experiment.add_player(&playUntilScoreTarget);

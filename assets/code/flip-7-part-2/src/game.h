@@ -1,10 +1,11 @@
 
 #pragma once
 
-#include <vector>
 #include "game_state.h"
 #include "game_stats.h"
 #include "strategy.h"
+#include <string>
+#include <vector>
 
 /**
  * A Flip 7 game with players with varying strategies
@@ -21,8 +22,9 @@ public:
     /**
      * Add a player to the game with the given strategy
      * @param strategy The player's strategy
+     * @param name (optional) name of the player
      */
-    void add_player(Strategy *strategy);
+    void add_player(Strategy *strategy, std::string name = "");
 
     /**
      * Play the game until a player wins

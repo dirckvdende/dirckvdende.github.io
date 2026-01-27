@@ -17,17 +17,17 @@ public:
 
     // Target score after which the player should pass
     int target_score;
-    // Strategy that the target player uses
-    Strategy *target_player;
+    // Name of the player to target
+    std::string target_player;
 
     /**
      * Constructor
      * @param target_score Target score after which to pass
-     * @param target_player Strategy that the target player uses
+     * @param target_player Name of the player to target
      */
     PlayUntilScoreWithTargetStrategy(
         int target_score,
-        Strategy *target_player);
+        std::string target_player);
 
     virtual bool should_pass(
         const GameState *game_state,

@@ -233,4 +233,44 @@ new Chart(document.getElementById("chart4"), {
 
 ## Interlude: Targeting a Player
 
-I was curious about the effect the action cards actually have on the game, so I simulated games where three opponents would always target one opponent with flip 3 and freeze cards.
+I was curious about the effect the action cards actually have on the game, so I simulated games where three opponents would always target one opponent with flip 3 and freeze cards. It turns out this has quite a significant effect. In a game with four players, the player who was targeted won a little over half as many games as the other players.
+
+I think this highlights a big part of the game we haven't discussed yet: the psychology of the other players. Players may give you flip 3 and freeze cards when you attack them, or they'll just take different actions than would be optimal. After all, it's about having fun playing a game, not perfecting a strategy :)
+
+<div class="chart"><canvas id="chart5"></canvas></div>
+
+<script>
+const chart5data = [156768, 281270, 280688, 281274]
+new Chart(document.getElementById("chart5"), {
+    type: "bar",
+    data: {
+        labels: ["Draw Till 25 (targeted)", "Draw Till 25", "Draw Till 25", "Draw Till 25"],
+        datasets: [{
+            label: "Number of games won",
+            borderColor: ["#cd2a9c", "#d663b4", "#d663b4", "#d663b4"],
+            backgroundColor: ["#cd2a9c", "#d663b4", "#d663b4", "#d663b4"],
+            data: chart5data,
+        }]
+    },
+    options: {
+        maintainAspectRatio: false,
+        plugins: {
+            legend: { display: false },
+        },
+        scales: {
+            x: {
+                title: {
+                    display: true,
+                    text: "Strategy",
+                }
+            },
+            y: {
+                title: {
+                    display: true,
+                    text: "Games won (out of 1,000,000)",
+                }
+            },
+        }
+    },
+})
+</script>

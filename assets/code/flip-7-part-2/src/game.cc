@@ -6,13 +6,17 @@
 #include <stdexcept>
 #include <iostream>
 #include <random>
+#include <string>
+#include <vector>
 
 Game::Game() :
     current_player(0),
     round_ended(false) {}
 
-void Game::add_player(Strategy *strategy) {
-    state.players.push_back(Player());
+void Game::add_player(Strategy *strategy, std::string name) {
+    Player player;
+    player.name = name;
+    state.players.push_back(player);
     strategies.push_back(strategy);
 }
 

@@ -9,8 +9,9 @@
 
 Experiment::Experiment() {}
 
-void Experiment::add_player(Strategy *strategy) {
+void Experiment::add_player(Strategy *strategy, std::string name) {
     strategies.push_back(strategy);
+    names.push_back(name);
     wins.push_back(0);
 }
 
@@ -21,8 +22,8 @@ void Experiment::simulate_games(int count) {
     for (int i = 0; i < count; i++) {
         auto [shuffledStrategies, shuffledIndices] = shufflePlayers();
         Game game;
-        for (Strategy *strategy : shuffledStrategies)
-            game.add_player(strategy);
+        for (int i = 0; i < (int)shuffledStrategies.size(); i++)
+            game.add_player(shuffledStrategies[i], names[shuffledIndices[i]]);
         game.play_game();
         int winner = game.game_state().winner();
         if (winner == -1)
@@ -42,7 +43,8 @@ void Experiment::print_results() const {
     std::cout << "Games won by players (" << games_played << " total):"
         << std::endl;
     for (int i = 0; i < (int)wins.size(); i++) {
-        std::string name = strategies[i]->name();
+        std::string name = strategies[i]->name() + (names[i].empty() ? "" :
+            " (" + names[i] + ")");
         if (name.size() < 24u)
             name.insert(name.size(), 24u - name.size(), ' ');
         std::cout << "    " << name << " " << wins[i] << std::endl;

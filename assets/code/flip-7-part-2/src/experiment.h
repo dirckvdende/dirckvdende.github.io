@@ -20,8 +20,9 @@ public:
     /**
      * Add a player with a given strategy to the experiment
      * @param strategy The strategy of the player
+     * @param name (optional) name of the player
      */
-    void add_player(Strategy *strategy);
+    void add_player(Strategy *strategy, std::string name = "");
 
     /**
      * Simulate a given number of games
@@ -45,6 +46,8 @@ private:
     std::vector<Strategy *> strategies;
     // Win counts of the players
     std::vector<int> wins;
+    // Player names
+    std::vector<std::string> names;
 
     /**
      * Shuffle the list of players

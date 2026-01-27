@@ -22,6 +22,8 @@ struct Player {
     // Whether the player has a second chance card (NOTE: According to the
     // rules, the player can only have one)
     bool has_second_chance;
+    // Name of the player
+    std::string name;
 
     /**
      * Constructor
