@@ -13,7 +13,7 @@ int main() {
     experiment.add_player(&drawTillBust);
     experiment.add_player(&playUntilScore);
     experiment.add_player(&playUntilScore);
-    experiment.simulate_games(1'0'000);
+    experiment.simulate_games(1'000'000);
     experiment.print_results();
     return 0;
 }

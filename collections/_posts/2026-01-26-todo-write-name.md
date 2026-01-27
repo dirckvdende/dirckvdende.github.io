@@ -274,3 +274,107 @@ new Chart(document.getElementById("chart5"), {
     },
 })
 </script>
+
+## Tuning the Strategy
+
+I've tried many other strategies: Counting the number of high cards, estimating the expected score with simpler formulas, etc. None of them seemed to work any better than the "draw till 25" strategy (with the difference to the leader taken into account). That's why we'll now tune this strategy with some extra rules that should be easy to apply.
+
+### Giving the Flip 3 Card to Yourself
+
+If you get a flip 3 card at the start of the game, it may be beneficial to give it to yourself. The chance of busting at this point is still quite low, and this way you increase your score before someone freezes you!
+
+...
+
+...
+
+...
+
+<div class="chart"><canvas id="chart6"></canvas></div>
+
+<script>
+const chart6data = [276685, 245910, 243638, 233767]
+new Chart(document.getElementById("chart6"), {
+    type: "bar",
+    data: {
+        labels: ["Expected Score", "Draw Till 25 + Tuned (1)", "Draw Till 25 + Delta", "Draw Till 25"],
+        datasets: [{
+            label: "Number of games won",
+            borderColor: ["#cd2a9c", "#d663b4", "#df91c7", "#e4a7d2"],
+            backgroundColor: ["#cd2a9c", "#d663b4", "#df91c7", "#e4a7d2"],
+            data: chart6data,
+        }]
+    },
+    options: {
+        maintainAspectRatio: false,
+        plugins: {
+            legend: { display: false },
+        },
+        scales: {
+            x: {
+                title: {
+                    display: true,
+                    text: "Strategy",
+                }
+            },
+            y: {
+                title: {
+                    display: true,
+                    text: "Games won (out of 1,000,000)",
+                }
+            },
+        }
+    },
+})
+</script>
+
+### The Endgame
+
+There is also an edge case where you definitely want to draw past your target score: when the game is about the end and you're behind. When another player has more than 200 points (including the current hand), it's pretty certain the game will end soon. The only way you can win now is to keep drawing card until you're ahead.
+
+...
+
+...
+
+...
+
+<div class="chart"><canvas id="chart7"></canvas></div>
+
+<script>
+const chart7data = [264197, 282998, 231065, 221740]
+new Chart(document.getElementById("chart7"), {
+    type: "bar",
+    data: {
+        labels: ["Expected Score", "Draw Till 25 + Tuned (2)", "Draw Till 25 + Delta", "Draw Till 25"],
+        datasets: [{
+            label: "Number of games won",
+            borderColor: ["#cd2a9c", "#d663b4", "#df91c7", "#e4a7d2"],
+            backgroundColor: ["#cd2a9c", "#d663b4", "#df91c7", "#e4a7d2"],
+            data: chart7data,
+        }]
+    },
+    options: {
+        maintainAspectRatio: false,
+        plugins: {
+            legend: { display: false },
+        },
+        scales: {
+            x: {
+                title: {
+                    display: true,
+                    text: "Strategy",
+                }
+            },
+            y: {
+                title: {
+                    display: true,
+                    text: "Games won (out of 1,000,000)",
+                }
+            },
+        }
+    },
+})
+</script>
+
+## Conclusion
+
+...
