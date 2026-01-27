@@ -141,17 +141,17 @@ This is a bit difficult, so we'll explore some alternatives, and see how they pe
 
 A strategy I've seen used in practise a lot is to draw more or fewer cards based on the scores of your opponents. If the leader is very far ahead, it may be beneficial to draw more cards to try to catch up. What we'll try next is based on that.
 
-Instead of always targeting a score of 25, we'll add some offset based on how far ahead the leading opponent is (or behind, if you're leading). We'll add some fixed amount $\delta$ to the target score for each point the opponent is ahead. The formula for determining the new target score is then
+Instead of always targeting a score of 25, we'll add some offset based on how far ahead the leading opponent is (or behind, if you're leading). We'll add some fixed amount $\delta$ to the target score for each point the opponent is ahead. The formula for determining the new target score $T$, given the best opponent score $BS$ and our score $OS$, is
 
 $$
-    TargetScore = 25 + \delta \times (BestOpponentScore - OurScore)
+    T = 25 + \delta \times (BS - OS)
 $$
 
 Now the question is: Which value of $\delta$ works best? Letting a player with differing values of $\delta$ play against players who simply target a score of 25 gave the results shown in the chart below.
 
 If you look carefully, you can see the peak (i.e. the optimal strategy) is around 0.1. So using a value of 0.1 for delta work *slightly* better than simply targeting 25.
 
-This is a lot of math, so let me summarize: A good strategy is to stop drawing cards after reaching a score of 25 plus 10% of the difference between the score of your best opponent and your own score. If the you're the leader, this the difference is subtracted.
+This is a lot of math, so let me summarize: A good strategy is to stop drawing cards after reaching a score of 25 plus 10% of the difference between the score of your best opponent and your own score. If you're the leader, this difference is subtracted.
 
 <div class="chart"><canvas id="chart3"></canvas></div>
 
@@ -230,3 +230,7 @@ new Chart(document.getElementById("chart4"), {
     },
 })
 </script>
+
+## Interlude: Targeting a Player
+
+I was curious about the effect the action cards actually have on the game, so I simulated games where three opponents would always target one opponent with flip 3 and freeze cards.
