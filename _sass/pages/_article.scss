@@ -109,7 +109,10 @@
             } 
         }
 
-        p > a {
+        p > a,
+        p > i > a,
+        p > b > a,
+        p > em > a {
             color: color-mix(in srgb, var(--accent-color), white 20%);
 
             &:hover, &:focus {
@@ -126,6 +129,10 @@
             max-width: 100%;
             display: block;
             max-height: 30em;
+        }
+
+        ul {
+            list-style: "–   ";
         }
     }
 }
