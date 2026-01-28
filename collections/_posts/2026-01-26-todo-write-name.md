@@ -1,8 +1,7 @@
 ---
 layout: post
 title: Simulating Millions of Flip 7 Games to Find the Best Strategy
-# TODO: Update
-date: 2026-01-26 00:00:00 +0100
+date: 2026-01-28 09:00:00 +0100
 tags: Game Strategy Simulation
 accent_color: "#cd2a9c"
 front_image: /assets/code/flip-7-part-2/flip_7.jpg
