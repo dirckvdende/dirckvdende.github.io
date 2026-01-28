@@ -374,7 +374,7 @@ At this point, we've found a pretty good strategy. Of course, better strategies 
 
 To summarize, a pretty good strategy in Flip 7 is the following:
 
-- While drawing, calculate the value of $25 + 0.1 \times (S_o - S)$, where $S_o$ is the score of the highest opponent, and $S$ is our own score. If your current hand score is higher than this value, stop drawing.
+- While drawing, calculate the value of $25 + 0.1 \times (S_o - S)$, where $S_o$ is the (total) score of the highest opponent, and $S$ is our own score. If your current hand score is higher than this value, stop drawing.
 - There is one exception to this rule: When another player's combined score (their already acquired score plus their hand score) is higher than 200, and higher than yours, keep drawing.
 - When you receive a Second Chance card and you already have one, give it to the player with the lowest score.
 - Give Freeze cards to the player with the highest score.
