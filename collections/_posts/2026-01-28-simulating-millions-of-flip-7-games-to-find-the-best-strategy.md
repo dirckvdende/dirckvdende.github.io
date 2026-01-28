@@ -382,4 +382,6 @@ To summarize, a pretty good strategy in Flip 7 is the following:
 
 Another big factor that can come into play is how other people play. For example, if one of your opponents always gives Flip 3 cards to the people giving them Flip 3 cards, you may not want to target that player &mdash; even if they're in the lead. On the other hand, some players may not be very good at the game and therefore not worth targeting either. The psychology of your opponents can play a crucial role in your victory! Just remember to have fun every now and then too...
 
+Oh and by the way: There's an [expansion](https://www.youtube.com/watch?v=5aKmiqpM9lE) of Flip 7 planned! It looks like I may have to do some more analysis later.
+
 *Note: All of the code I used to generate the statistics in this post are available on [GitHub](https://github.com/dirckvdende/dirckvdende.github.io/tree/main/assets/code/flip-7-part-2).*
