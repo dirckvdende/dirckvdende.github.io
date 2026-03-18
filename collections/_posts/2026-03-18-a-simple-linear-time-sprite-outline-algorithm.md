@@ -1,14 +1,14 @@
 ---
 layout: post
 title: A Simple Linear-Time Sprite Outline Algorithm
-date: 2026-03-18 21:00:00 +0100
+date: 2026-03-18 22:00:00 +0100
 tags:
   - Image Processing
   - Algorithms
   - Graphics
 accent_color: "#dc9212"
-front_image: /assets/code/sprite-outline-algorithm/thumb.jpg
-thumbnail: /assets/code/sprite-outline-algorithm/thumb.jpg
+front_image: /assets/code/sprite-outline-algorithm/noise.jpg
+thumbnail: /assets/code/sprite-outline-algorithm/noise.jpg
 ---
 
 For a project I'm working on, I needed something very simple: A way to draw an outline around a sprite. To my surprise, I couldn't find much information on simple techniques to do this. Hence, here is the solution I went with. :)
