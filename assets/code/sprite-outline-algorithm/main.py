@@ -78,20 +78,20 @@ with Image.open("sprite.png") as sprite:
 
 # Octagon
 with Image.open("sprite.png") as sprite:
-    side_length = OUTLINE_WIDTH / 2 * math.sin(math.pi / 8)
-    diagonal_length = side_length / math.sqrt(2)
+    side_length = OUTLINE_WIDTH * math.sin(math.pi / 8)
+    diagonal_length = 2 * OUTLINE_WIDTH * math.sin(math.pi / 8) / math.sqrt(2)
     sprite = sprite.convert("RGBA")
     # First apply 8 neighbours
     flood_fill(
         sprite,
         lambda x, y: [(x - 1, y), (x + 1, y), (x, y - 1), (x, y + 1),
             (x + 1, y + 1), (x - 1, y + 1), (x + 1, y - 1), (x - 1, y - 1)],
-        math.ceil(side_length)
+        round(side_length)
     )
     # First apply 4 neighbours
     flood_fill(
         sprite,
         lambda x, y: [(x - 1, y), (x + 1, y), (x, y - 1), (x, y + 1)],
-        math.ceil(diagonal_length)
+        round(diagonal_length)
     )
     sprite.save("octagon.png")
