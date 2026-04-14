@@ -66,6 +66,10 @@ default_accent_color: "#e6e6e6"
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-redirect-from
+
+whitelist:
+  - jekyll-redirect-from
 
 # exclude build assets
 exclude:

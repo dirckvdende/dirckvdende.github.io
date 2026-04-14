@@ -7,6 +7,8 @@ tags:
 accent_color: "#5eb277"
 front_image: /assets/img/puzzle-piece.png
 thumbnail: /assets/img/puzzle-piece.png
+redirect_from:
+  - /p/1/
 ---
 
 Hello World! This is an article lorem ipujf iohf uxhweuixf hekj xhfsduihx sdhjkx bdsjxkf  hbsdxf
