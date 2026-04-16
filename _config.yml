@@ -74,6 +74,7 @@ whitelist:
 # exclude build assets
 exclude:
   - "**/build/**"
+  - "/assets/**/env"
 
 # Exclude from processing.
 # The following items will not be processed, by default.
