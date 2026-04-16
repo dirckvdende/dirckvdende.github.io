@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Puzzle #1: Stacking Tiles"
-date: 2026-04-12 22:00:00 +0100
+date: 2026-04-16 19:30:00 +0200
 tags:
   - Puzzle
 accent_color: "#5eb277"
@@ -11,7 +11,11 @@ redirect_from:
   - /p/1/
 ---
 
-Hello World! This is an article lorem ipujf iohf uxhweuixf hekj xhfsduihx sdhjkx bdsjxkf  hbsdxf
+I thought I would make a small puzzle to share, so here it is: Place the colored pieces on the grid such that all tiles with a number are covered by exactly that many pieces. Pieces may be rotated, but not mirrored. Pieces may not be partially outside the grid. Pieces cannot be duplicated. There may be multiple solutions.
 
-{% assign printable_url = "/assets/puzzles/1/page.html" | relative_url %}
-{% include center-button.html href=printable_url text="Printable version" icon="link" %}
+![Puzzle image](/assets/puzzles/1/puzzle.png)
+
+If you'd like to download or print the puzzle. I've made the puzzle available as a PDF:
+
+{% assign printable_url = "/assets/puzzles/1/page.pdf" | relative_url %}
+{% include center-button.html href=printable_url text="Download as PDF" icon="download" download="" %}
