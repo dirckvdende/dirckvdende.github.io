@@ -17,5 +17,5 @@ I thought I would make a small puzzle to share, so here it is: Place the colored
 
 If you'd like to download or print the puzzle. I've made the puzzle available as a PDF:
 
-{% assign printable_url = "/assets/puzzles/1/page.pdf" | relative_url %}
+{% assign printable_url = "/assets/puzzles/1/puzzle.pdf" | relative_url %}
 {% include center-button.html href=printable_url text="Download as PDF" icon="download" download="" %}
