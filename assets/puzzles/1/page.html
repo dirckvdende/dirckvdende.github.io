@@ -87,7 +87,7 @@
         }
 
         .image {
-            width: 60%;
+            flex-shrink: 0;
         }
 
         .small-image-container {
@@ -105,20 +105,67 @@
         }
 
         .tiles-image {
-            width: 100%;
+            flex-shrink: 0;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <span class="head">Puzzle #1</span>
+        <span class="head">Puzzle</span>
         <p class="description">
-            Place the tiles on the grid such that all tiles with a number are covered by exactly that many tiles. Tiles may be rotated, but not mirrored. Tiles cannot be duplicated. There can be multiple solutions.
+            Place the colored pieces on the grid such that all tiles with a number are covered by exactly that many pieces. Pieces may be rotated, but not mirrored. Pieces may not be partially outside the grid. Pieces cannot be duplicated. There may be multiple solutions.
         </p>
         <div class="columns">
             <div class="column">
+                <!-- unit size: 16px -->
                 <div class="column-content">
-                    <svg viewBox="-1 -1 6 6" xmlns="http://www.w3.org/2000/svg" class="image">
+                    <svg viewBox="-1 -1 6 6" xmlns="http://www.w3.org/2000/svg" class="image" width="150px">
+                        <rect x="0" y="0" id="square" width="1" height="1" fill="transparent" stroke="black" stroke-width="0.05" />
+                        <use href="#square" x="1" y="0" />
+                        <use href="#square" x="2" y="0" />
+                        <use href="#square" x="3" y="0" />
+                        <use href="#square" x="0" y="1" />
+                        <use href="#square" x="1" y="1" />
+                        <use href="#square" x="2" y="1" />
+                        <use href="#square" x="3" y="1" />
+                        <use href="#square" x="0" y="2" />
+                        <use href="#square" x="1" y="2" />
+                        <use href="#square" x="2" y="2" />
+                        <use href="#square" x="0" y="3" />
+                        <use href="#square" x="1" y="3" />
+
+                        <text x="0" y="3" dx=".3" dy=".75" style="font-size: .6px;">1</text>
+                        <text x="1" y="2" dx=".3" dy=".75" style="font-size: .6px;">2</text>
+                        <text x="2" y="1" dx=".3" dy=".75" style="font-size: .6px;">2</text>
+                        <text x="3" y="0" dx=".3" dy=".75" style="font-size: .6px;">1</text>
+                    </svg>
+                    <svg viewBox="-1 -1 10 4" xmlns="http://www.w3.org/2000/svg" class="tiles-image" width="250px">
+                        <use href="#square-2" x="0" y="0" fill="SeaGreen" />
+                        <use href="#square-2" x="0" y="1" fill="SeaGreen" />
+                        <use href="#square-2" x="1" y="0" fill="SeaGreen" />
+                        <use href="#square-2" x="1" y="1" fill="SeaGreen" />
+
+                        <use href="#square-2" x="3" y="0" fill="orange" />
+                        <use href="#square-2" x="3" y="1" fill="orange" />
+                        <use href="#square-2" x="4" y="0" fill="orange" />
+                        <use href="#square-2" x="4" y="1" fill="orange" />
+
+                        <use href="#square-2" x="6" y="0" fill="RoyalBlue" />
+                        <use href="#square-2" x="6" y="1" fill="RoyalBlue" />
+                        <use href="#square-2" x="7" y="0" fill="RoyalBlue" />
+                        <use href="#square-2" x="7" y="1" fill="RoyalBlue" />
+                    </svg>
+                </div>
+                <div class="column-footer">
+                    <span class="material-symbols-outlined star-fill">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                </div>
+            </div>
+            <div class="column">
+                <div class="column-content">
+                    <!-- unit size: 25px -->
+                    <svg viewBox="-1 -1 6 6" xmlns="http://www.w3.org/2000/svg" class="image" width="150px">
                         <rect x="0" y="0" id="square" width="1" height="1" fill="transparent" stroke="black" stroke-width="0.05" />
                         <use href="#square" x="1" y="0" />
                         <use href="#square" x="2" y="0" />
@@ -141,7 +188,7 @@
                         <text x="2" y="1" dx=".3" dy=".75" style="font-size: .6px;">2</text>
                         <text x="3" y="2" dx=".3" dy=".75" style="font-size: .6px;">1</text>
                     </svg>
-                    <svg viewBox="-1 -1 11 4" xmlns="http://www.w3.org/2000/svg" class="tiles-image">
+                    <svg viewBox="-1 -1 11 4" xmlns="http://www.w3.org/2000/svg" class="tiles-image" width="275px">
                         <rect x="0" y="0" id="square-2" width="1" height="1" stroke="black" stroke-width="0.05" />
                         <use href="#square-2" x="0" y="0" fill="SeaGreen" />
                         <use href="#square-2" x="1" y="0" fill="SeaGreen" />
@@ -158,60 +205,14 @@
                 </div>
                 <div class="column-footer">
                     <span class="material-symbols-outlined star-fill">star</span>
-                    <span class="material-symbols-outlined">star</span>
-                    <span class="material-symbols-outlined">star</span>
-                </div>
-            </div>
-            <div class="column">
-                <div class="column-content">
-                    <svg viewBox="-1 -1 7 7" xmlns="http://www.w3.org/2000/svg" class="image">
-                        <rect x="0" y="0" id="square" width="1" height="1" fill="transparent" stroke="black" stroke-width="0.05" />
-                        <use href="#square" x="1" y="0" />
-                        <use href="#square" x="2" y="0" />
-                        <use href="#square" x="3" y="0" />
-                        <use href="#square" x="4" y="0" />
-                        <use href="#square" x="0" y="1" />
-                        <use href="#square" x="1" y="1" />
-                        <use href="#square" x="2" y="1" />
-                        <use href="#square" x="3" y="1" />
-                        <use href="#square" x="4" y="1" />
-                        <use href="#square" x="0" y="2" />
-                        <use href="#square" x="1" y="2" />
-                        <use href="#square" x="2" y="2" />
-                        <use href="#square" x="3" y="2" />
-                        <use href="#square" x="4" y="2" />
-                        <use href="#square" x="0" y="3" />
-                        <use href="#square" x="1" y="3" />
-                        <use href="#square" x="2" y="3" />
-                        <use href="#square" x="3" y="3" />
-                        <use href="#square" x="4" y="3" />
-                        <use href="#square" x="0" y="4" />
-                        <use href="#square" x="1" y="4" />
-                        <use href="#square" x="2" y="4" />
-                        <use href="#square" x="3" y="4" />
-                        <use href="#square" x="4" y="4" />
-                    </svg>
-                    <svg viewBox="-1 -1 12 5" xmlns="http://www.w3.org/2000/svg" class="tiles-image" style="height: 6em;">
-                        <use href="#square-2" x="0" y="0" fill="SeaGreen" />
-                        <use href="#square-2" x="0" y="1" fill="SeaGreen" />
-                        <use href="#square-2" x="0" y="2" fill="SeaGreen" />
-                        <use href="#square-2" x="1" y="0" fill="SeaGreen" />
-                        <use href="#square-2" x="1" y="1" fill="SeaGreen" />
-                        <use href="#square-2" x="1" y="2" fill="SeaGreen" />
-                        <use href="#square-2" x="2" y="0" fill="SeaGreen" />
-                        <use href="#square-2" x="2" y="1" fill="SeaGreen" />
-                        <use href="#square-2" x="2" y="2" fill="SeaGreen" />
-                    </svg>
-                </div>
-                <div class="column-footer">
-                    <span class="material-symbols-outlined star-fill">star</span>
                     <span class="material-symbols-outlined star-fill">star</span>
                     <span class="material-symbols-outlined">star</span>
                 </div>
             </div>
             <div class="column">
                 <div class="column-content">
-                    <svg viewBox="-1 -1 9 9" xmlns="http://www.w3.org/2000/svg" class="image">
+                    <!-- unit size: 16px -->
+                    <svg viewBox="-1 -.5 9 8" xmlns="http://www.w3.org/2000/svg" class="image" width="144px">
                         <rect x="0" y="0" id="square" width="1" height="1" fill="transparent" stroke="black" stroke-width="0.05" />
                         <use href="#square" x="1" y="0" />
                         <use href="#square" x="2" y="0" />
@@ -255,7 +256,7 @@
                         <text x="0" y="6" dx=".3" dy=".75" style="font-size: .6px;">1</text>
                         <text x="4" y="2" dx=".3" dy=".75" style="font-size: .6px;">1</text>
                     </svg>
-                    <svg viewBox="-1 -1 12 9" xmlns="http://www.w3.org/2000/svg" class="tiles-image" style="height: 6em;">
+                    <svg viewBox="-1 -.5 13 8" xmlns="http://www.w3.org/2000/svg" class="tiles-image" width="208px">
                         <use href="#square-2" x="0" y="0" fill="SeaGreen" />
                         <use href="#square-2" x="0" y="1" fill="SeaGreen" />
                         <use href="#square-2" x="1" y="1" fill="SeaGreen" />
