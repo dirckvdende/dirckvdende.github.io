@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle #1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400..600,0..1,0" />
+    <style>
+        body {
+            margin: 0;
+            font-family: "Lato", sans-serif;
+            font-weight: 600;
+            font-size: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+        }
+
+        .head {
+            padding: .5em 1em;
+            border-radius: 10em;
+            background-color: #5eb277;
+            color: white;
+            margin-top: 1.5em;
+        }
+
+        .description {
+            width: 30em;
+            font-weight: 400;
+            font-size: .8em;
+            margin: 1.4em 0;
+        }
+
+        .footnote {
+            width: 30em;
+            font-weight: 400;
+            font-size: .65em;
+            color: grey;
+            margin-top: 2em;
+            text-align: center;
+        }
+
+        .columns {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .column {
+            width: 14em;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .column + .column {
+            border-left: .1em solid #e2e2e2;
+        }
+
+        .column-content {
+            width: 100%;
+            height: 15em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .column-footer {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .star-fill {
+            font-variation-settings: "FILL" 1;
+        }
+
+        .image {
+            flex-shrink: 0;
+        }
+
+        .small-image-container {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .small-image-container > svg {
+            width: 4em;
+            height: 4em;
+        }
+
+        .tiles-image {
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span class="head">Puzzle</span>
+        <p class="description">
+            Place the colored pieces on the grid such that all tiles with a number are covered by exactly that many pieces. Pieces may be rotated, but not mirrored. Pieces may not be partially outside the grid. Pieces cannot be duplicated. There may be multiple solutions.
+        </p>
+        <div class="columns">
+            <div class="column">
+                <!-- unit size: 16px -->
+                <div class="column-content">
+                    <svg viewBox="-1 -1 6 6" xmlns="http://www.w3.org/2000/svg" class="image" width="150px">
+                        <rect x="0" y="0" id="square" width="1" height="1" fill="transparent" stroke="black" stroke-width="0.05" />
+                        <use href="#square" x="1" y="0" />
+                        <use href="#square" x="2" y="0" />
+                        <use href="#square" x="3" y="0" />
+                        <use href="#square" x="0" y="1" />
+                        <use href="#square" x="1" y="1" />
+                        <use href="#square" x="2" y="1" />
+                        <use href="#square" x="3" y="1" />
+                        <use href="#square" x="0" y="2" />
+                        <use href="#square" x="1" y="2" />
+                        <use href="#square" x="2" y="2" />
+                        <use href="#square" x="0" y="3" />
+                        <use href="#square" x="1" y="3" />
+
+                        <text x="0" y="3" dx=".3" dy=".75" style="font-size: .6px;">1</text>
+                        <text x="1" y="2" dx=".3" dy=".75" style="font-size: .6px;">2</text>
+                        <text x="2" y="1" dx=".3" dy=".75" style="font-size: .6px;">2</text>
+                        <text x="3" y="0" dx=".3" dy=".75" style="font-size: .6px;">1</text>
+                    </svg>
+                    <svg viewBox="-1 -1 10 4" xmlns="http://www.w3.org/2000/svg" class="tiles-image" width="250px">
+                        <use href="#square-2" x="0" y="0" fill="SeaGreen" />
+                        <use href="#square-2" x="0" y="1" fill="SeaGreen" />
+                        <use href="#square-2" x="1" y="0" fill="SeaGreen" />
+                        <use href="#square-2" x="1" y="1" fill="SeaGreen" />
+
+                        <use href="#square-2" x="3" y="0" fill="orange" />
+                        <use href="#square-2" x="3" y="1" fill="orange" />
+                        <use href="#square-2" x="4" y="0" fill="orange" />
+                        <use href="#square-2" x="4" y="1" fill="orange" />
+
+                        <use href="#square-2" x="6" y="0" fill="RoyalBlue" />
+                        <use href="#square-2" x="6" y="1" fill="RoyalBlue" />
+                        <use href="#square-2" x="7" y="0" fill="RoyalBlue" />
+                        <use href="#square-2" x="7" y="1" fill="RoyalBlue" />
+                    </svg>
+                </div>
+                <div class="column-footer">
+                    <span class="material-symbols-outlined star-fill">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                </div>
+            </div>
+            <div class="column">
+                <div class="column-content">
+                    <!-- unit size: 25px -->
+                    <svg viewBox="-1 -1 6 6" xmlns="http://www.w3.org/2000/svg" class="image" width="150px">
+                        <rect x="0" y="0" id="square" width="1" height="1" fill="transparent" stroke="black" stroke-width="0.05" />
+                        <use href="#square" x="1" y="0" />
+                        <use href="#square" x="2" y="0" />
+                        <use href="#square" x="3" y="0" />
+                        <use href="#square" x="0" y="1" />
+                        <use href="#square" x="1" y="1" />
+                        <use href="#square" x="2" y="1" />
+                        <use href="#square" x="3" y="1" />
+                        <use href="#square" x="0" y="2" />
+                        <use href="#square" x="1" y="2" />
+                        <use href="#square" x="2" y="2" />
+                        <use href="#square" x="3" y="2" />
+                        <use href="#square" x="0" y="3" />
+                        <use href="#square" x="1" y="3" />
+                        <use href="#square" x="2" y="3" />
+                        <use href="#square" x="3" y="3" />
+                        <text x="2" y="2" dx=".3" dy=".75" style="font-size: .6px;">3</text>
+                        <text x="1" y="1" dx=".3" dy=".75" style="font-size: .6px;">1</text>
+                        <text x="1" y="2" dx=".3" dy=".75" style="font-size: .6px;">0</text>
+                        <text x="2" y="1" dx=".3" dy=".75" style="font-size: .6px;">2</text>
+                        <text x="3" y="2" dx=".3" dy=".75" style="font-size: .6px;">1</text>
+                    </svg>
+                    <svg viewBox="-1 -1 11 4" xmlns="http://www.w3.org/2000/svg" class="tiles-image" width="275px">
+                        <rect x="0" y="0" id="square-2" width="1" height="1" stroke="black" stroke-width="0.05" />
+                        <use href="#square-2" x="0" y="0" fill="SeaGreen" />
+                        <use href="#square-2" x="1" y="0" fill="SeaGreen" />
+                        <use href="#square-2" x="1" y="1" fill="SeaGreen" />
+                        <use href="#square-2" x="2" y="1" fill="SeaGreen" />
+                        <use href="#square-2" x="4" y="0" fill="orange" />
+                        <use href="#square-2" x="5" y="0" fill="orange" />
+                        <use href="#square-2" x="4" y="1" fill="orange" />
+                        <use href="#square-2" x="8" y="1" fill="orange" />
+                        <use href="#square-2" x="7" y="0" fill="RoyalBlue" />
+                        <use href="#square-2" x="7" y="1" fill="RoyalBlue" />
+                        <use href="#square-2" x="8" y="1" fill="RoyalBlue" />
+                    </svg>
+                </div>
+                <div class="column-footer">
+                    <span class="material-symbols-outlined star-fill">star</span>
+                    <span class="material-symbols-outlined star-fill">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                </div>
+            </div>
+            <div class="column">
+                <div class="column-content">
+                    <!-- unit size: 16px -->
+                    <svg viewBox="-1 -.5 9 8" xmlns="http://www.w3.org/2000/svg" class="image" width="144px">
+                        <rect x="0" y="0" id="square" width="1" height="1" fill="transparent" stroke="black" stroke-width="0.05" />
+                        <use href="#square" x="1" y="0" />
+                        <use href="#square" x="2" y="0" />
+                        <use href="#square" x="3" y="0" />
+                        <use href="#square" x="4" y="0" />
+                        <use href="#square" x="5" y="0" />
+                        <use href="#square" x="6" y="0" />
+                        <use href="#square" x="6" y="1" />
+                        <use href="#square" x="6" y="2" />
+                        <use href="#square" x="6" y="3" />
+                        <use href="#square" x="6" y="4" />
+                        <use href="#square" x="6" y="5" />
+                        <use href="#square" x="6" y="6" />
+                        <use href="#square" x="5" y="6" />
+                        <use href="#square" x="4" y="6" />
+                        <use href="#square" x="3" y="6" />
+                        <use href="#square" x="2" y="6" />
+                        <use href="#square" x="1" y="6" />
+                        <use href="#square" x="0" y="6" />
+                        <use href="#square" x="0" y="5" />
+                        <use href="#square" x="0" y="4" />
+                        <use href="#square" x="0" y="3" />
+                        <use href="#square" x="0" y="2" />
+                        <use href="#square" x="1" y="2" />
+                        <use href="#square" x="2" y="2" />
+                        <use href="#square" x="3" y="2" />
+                        <use href="#square" x="4" y="2" />
+                        <use href="#square" x="4" y="3" />
+                        <use href="#square" x="4" y="4" />
+                        <use href="#square" x="3" y="4" />
+                        <use href="#square" x="2" y="4" />
+                        <text x="3" y="4" dx=".3" dy=".75" style="font-size: .6px;">2</text>
+                        <text x="3" y="0" dx=".3" dy=".75" style="font-size: .6px;">2</text>
+                        <text x="4" y="0" dx=".3" dy=".75" style="font-size: .6px;">3</text>
+                        <text x="6" y="4" dx=".3" dy=".75" style="font-size: .6px;">0</text>
+                        <text x="4" y="6" dx=".3" dy=".75" style="font-size: .6px;">0</text>
+                        <text x="6" y="6" dx=".3" dy=".75" style="font-size: .6px;">1</text>
+                        <text x="6" y="0" dx=".3" dy=".75" style="font-size: .6px;">1</text>
+                        <text x="1" y="0" dx=".3" dy=".75" style="font-size: .6px;">1</text>
+                        <text x="0" y="2" dx=".3" dy=".75" style="font-size: .6px;">1</text>
+                        <text x="0" y="6" dx=".3" dy=".75" style="font-size: .6px;">1</text>
+                        <text x="4" y="2" dx=".3" dy=".75" style="font-size: .6px;">1</text>
+                    </svg>
+                    <svg viewBox="-1 -.5 13 8" xmlns="http://www.w3.org/2000/svg" class="tiles-image" width="208px">
+                        <use href="#square-2" x="0" y="0" fill="SeaGreen" />
+                        <use href="#square-2" x="0" y="1" fill="SeaGreen" />
+                        <use href="#square-2" x="1" y="1" fill="SeaGreen" />
+                        <use href="#square-2" x="3" y="0" fill="OrangeRed" />
+                        <use href="#square-2" x="4" y="0" fill="OrangeRed" />
+                        <use href="#square-2" x="5" y="0" fill="OrangeRed" />
+                        <use href="#square-2" x="7" y="0" fill="RoyalBlue" />
+                        <use href="#square-2" x="8" y="0" fill="RoyalBlue" />
+                        <use href="#square-2" x="9" y="0" fill="RoyalBlue" />
+                        <use href="#square-2" x="10" y="0" fill="RoyalBlue" />
+                        <use href="#square-2" x="3" y="2" fill="orange" />
+                        <use href="#square-2" x="4" y="2" fill="orange" />
+                        <use href="#square-2" x="5" y="2" fill="orange" />
+                        <use href="#square-2" x="6" y="2" fill="orange" />
+                        <use href="#square-2" x="8" y="2" fill="LightGreen" />
+                        <use href="#square-2" x="9" y="2" fill="LightGreen" />
+                        <use href="#square-2" x="10" y="2" fill="LightGreen" />
+                        <use href="#square-2" x="0" y="4" fill="DarkOrchid" />
+                        <use href="#square-2" x="1" y="4" fill="DarkOrchid" />
+                        <use href="#square-2" x="2" y="4" fill="DarkOrchid" />
+                        <use href="#square-2" x="3" y="4" fill="DarkOrchid" />
+                        <use href="#square-2" x="5" y="4" fill="LightBlue" />
+                        <use href="#square-2" x="6" y="4" fill="LightBlue" />
+                        <use href="#square-2" x="7" y="4" fill="LightBlue" />
+                        <use href="#square-2" x="8" y="4" fill="LightBlue" />
+                        <use href="#square-2" x="10" y="5" fill="FireBrick" />
+                        <use href="#square-2" x="10" y="6" fill="FireBrick" />
+                        <use href="#square-2" x="9" y="6" fill="FireBrick" />
+                        <use href="#square-2" x="2" y="6" fill="Gold" />
+                        <use href="#square-2" x="3" y="6" fill="Gold" />
+                        <use href="#square-2" x="4" y="6" fill="Gold" />
+                        <use href="#square-2" x="5" y="6" fill="Gold" />
+                        <use href="#square-2" x="6" y="6" fill="Gold" />
+                        <use href="#square-2" x="7" y="6" fill="Gold" />
+                    </svg>
+                </div>
+                <div class="column-footer">
+                    <span class="material-symbols-outlined star-fill">star</span>
+                    <span class="material-symbols-outlined star-fill">star</span>
+                    <span class="material-symbols-outlined star-fill">star</span>
+                </div>
+            </div>
+        </div>
+        <div class="footnote">Download at: dirck.dev/p/1</div>
+    </div>
+</body>
+</html>
