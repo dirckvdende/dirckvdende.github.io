@@ -55,7 +55,7 @@
         }
 
         .column {
-            width: 14em;
+            width: 12em;
             flex-shrink: 0;
             display: flex;
             flex-direction: column;
@@ -68,7 +68,7 @@
 
         .column-content {
             width: 100%;
-            height: 15em;
+            height: 26em;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -88,6 +88,7 @@
 
         .image {
             flex-shrink: 0;
+            width: 230px;
         }
 
         .ants {
@@ -96,15 +97,17 @@
             flex-wrap: wrap;
             align-items: center;
             justify-content: center;
+            row-gap: 1em;
         }
 
         .ants > img {
-            width: 35px;
-            height: 35px;
+            width: 40px;
+            height: 40px;
+            margin-left: 5px;
         }
 
         .ants > svg {
-            height: 80px;
+            height: 75px;
         }
     </style>
 </head>
@@ -112,23 +115,22 @@
     <div class="container">
         <span class="head">Puzzle #2</span>
         <p class="description">
-            Suppose we have a collection of ants we know are all related to each other in some way. In our fictional universe, an ant shares exactly half of its genes with its parent (we will also pretend ants have one parent). Concretely this means that if the parent has some ordered list of genes, then each of its children has a list of genes that matches the parent genes at exactly half of the positions. For example, ATGGCG can be a parent of ATCTAG, but not of TACGGG.<br><br>
-            Place the ants in the family trees such that every ant is placed directly below an ant that shares exactly half of its genes.
+            Suppose we have a collection of ants we know are all related to each other in some way. In our fictional universe, each ant has 6 genes. Every ant shares exactly 3 genes with its parent (we'll also pretend ants have one parent). Specifically this means that if we have two ants with ordered lists of genes, then one ant can only be the parent of the other if these lists are equal at 3 positions. For example, ATGGCG can be a parent of ATCTAG, but not of TACGGG. Note that two ants that share 3 genes don't necessarily have to be parent and child.<br><br>
+            Place the ants on the family trees such that every ant is placed directly below an ant it shares exactly 3 genes with. There can be multiple solutions.
         </p>
         <div class="columns">
             <div class="column">
-                <!-- unit size: 16px -->
                 <div class="column-content">
-                    <svg viewBox="-3 -1 9 8.5" xmlns="http://www.w3.org/2000/svg" class="image" width="150px">
+                    <svg viewBox="-3 -1 9 8.5" xmlns="http://www.w3.org/2000/svg" class="image">
                         <rect x="0" y="0" id="box" width="3" height="2" fill="#ddd" stroke="black" stroke-width="0.1" rx="0.1" />
                         <use href="#box" x="2" y="3" />
                         <use href="#box" x="-2" y="3" />
-                        <line stroke="black" stroke-width="0.1" x1="1.5" y1="2" x2="1.5" y2="2.5" />
-                        <line stroke="black" stroke-width="0.1" x1="1.5" y1="2.5" x2="3.5" y2="2.5" />
-                        <line stroke="black" stroke-width="0.1" x1="3.5" y1="2.5" x2="3.5" y2="3" />
+                        <line stroke="black" stroke-width="0.1" stroke-linecap="round" x1="1.5" y1="2" x2="1.5" y2="2.5" />
+                        <line stroke="black" stroke-width="0.1" stroke-linecap="round" x1="1.5" y1="2.5" x2="3.5" y2="2.5" />
+                        <line stroke="black" stroke-width="0.1" stroke-linecap="round" x1="3.5" y1="2.5" x2="3.5" y2="3" />
 
-                        <line stroke="black" stroke-width="0.1" x1="1.5" y1="2.5" x2="-0.5" y2="2.5" />
-                        <line stroke="black" stroke-width="0.1" x1="-0.5" y1="2.5" x2="-0.5" y2="3" />
+                        <line stroke="black" stroke-width="0.1" stroke-linecap="round" x1="1.5" y1="2.5" x2="-0.5" y2="2.5" />
+                        <line stroke="black" stroke-width="0.1" stroke-linecap="round" x1="-0.5" y1="2.5" x2="-0.5" y2="3" />
                     </svg>
                     <div class="ants">
                         <img src="./ant.png" />
@@ -194,7 +196,138 @@
             </div>
             <div class="column">
                 <div class="column-content">
-                    
+                    <svg viewBox="-5 -1 11 14.5" xmlns="http://www.w3.org/2000/svg" class="image">
+                        <rect x="0" y="0" id="box" width="3" height="2" fill="#ddd" stroke="black" stroke-width="0.1" rx="0.1" />
+                        <use href="#box" x="2" y="3" />
+                        <use href="#box" x="-2" y="3" />
+                        <use href="#box" x="-2" y="6" />
+                        <use href="#box" x="-4" y="9" />
+                        <use href="#box" x="0" y="9" />
+                        <line stroke="black" stroke-width="0.1" stroke-linecap="round" x1="1.5" y1="2" x2="1.5" y2="2.5" />
+                        <line stroke="black" stroke-width="0.1" stroke-linecap="round" x1="1.5" y1="2.5" x2="3.5" y2="2.5" />
+                        <line stroke="black" stroke-width="0.1" stroke-linecap="round" x1="3.5" y1="2.5" x2="3.5" y2="3" />
+
+                        <line stroke="black" stroke-width="0.1" stroke-linecap="round" x1="1.5" y1="2.5" x2="-0.5" y2="2.5" />
+                        <line stroke="black" stroke-width="0.1" stroke-linecap="round" x1="-0.5" y1="2.5" x2="-0.5" y2="3" />
+
+                        <line stroke="black" stroke-width="0.1" stroke-linecap="round" x1="-0.5" y1="5" x2="-0.5" y2="6" />
+
+                        <line stroke="black" stroke-width="0.1" stroke-linecap="round" x1="-0.5" y1="8" x2="-0.5" y2="8.5" />
+                        <line stroke="black" stroke-width="0.1" stroke-linecap="round" x1="-0.5" y1="8.5" x2="1.5" y2="8.5" />
+                        <line stroke="black" stroke-width="0.1" stroke-linecap="round" x1="1.5" y1="8.5" x2="1.5" y2="9" />
+
+                        <line stroke="black" stroke-width="0.1" stroke-linecap="round" x1="-0.5" y1="8.5" x2="-2.5" y2="8.5" />
+                        <line stroke="black" stroke-width="0.1" stroke-linecap="round" x1="-2.5" y1="8.5" x2="-2.5" y2="9" />
+                    </svg>
+                    <div class="ants">
+                        <img src="./ant.png" />
+                        <svg viewBox="0 0 2.1 6" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0" y="0" width="1" height="6" fill="black" rx="0.5" />
+                            <rect x="0.1" y="0.5" width="0.8" height="1.5" fill="orange" rx="0.2" />
+                            <rect x="0.1" y="2.2" width="0.8" height="1.5" fill="OrangeRed" rx="0.2" />
+                            <rect x="0.1" y="3.9" width="0.8" height="1.5" fill="SeaGreen" rx="0.2" />
+                            <text x="0.5" y="0.5" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">C</text>
+                            <text x="0.5" y="2.2" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">A</text>
+                            <text x="0.5" y="3.9" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">T</text>
+                            <rect x="1.1" y="0" width="1" height="6" fill="black" rx="0.5" />
+                            <rect x="1.2" y="0.5" width="0.8" height="1.5" fill="orange" rx="0.2" />
+                            <rect x="1.2" y="2.2" width="0.8" height="1.5" fill="OrangeRed" rx="0.2" />
+                            <rect x="1.2" y="3.9" width="0.8" height="1.5" fill="SeaGreen" rx="0.2" />
+                            <text x="1.6" y="0.5" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">C</text>
+                            <text x="1.6" y="2.2" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">A</text>
+                            <text x="1.6" y="3.9" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">T</text>
+                        </svg>
+
+                        <img src="./ant.png" />
+                        <svg viewBox="0 0 2.1 6" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0" y="0" width="1" height="6" fill="black" rx="0.5" />
+                            <rect x="0.1" y="0.5" width="0.8" height="1.5" fill="orange" rx="0.2" />
+                            <rect x="0.1" y="2.2" width="0.8" height="1.5" fill="OrangeRed" rx="0.2" />
+                            <rect x="0.1" y="3.9" width="0.8" height="1.5" fill="SeaGreen" rx="0.2" />
+                            <text x="0.5" y="0.5" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">C</text>
+                            <text x="0.5" y="2.2" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">A</text>
+                            <text x="0.5" y="3.9" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">T</text>
+                            <rect x="1.1" y="0" width="1" height="6" fill="black" rx="0.5" />
+                            <rect x="1.2" y="0.5" width="0.8" height="1.5" fill="RoyalBlue" rx="0.2" />
+                            <rect x="1.2" y="2.2" width="0.8" height="1.5" fill="OrangeRed" rx="0.2" />
+                            <rect x="1.2" y="3.9" width="0.8" height="1.5" fill="OrangeRed" rx="0.2" />
+                            <text x="1.6" y="0.5" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">G</text>
+                            <text x="1.6" y="2.2" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">C</text>
+                            <text x="1.6" y="3.9" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">C</text>
+                        </svg>
+
+                        <img src="./ant.png" />
+                        <svg viewBox="0 0 2.1 6" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0" y="0" width="1" height="6" fill="black" rx="0.5" />
+                            <rect x="0.1" y="0.5" width="0.8" height="1.5" fill="orange" rx="0.2" />
+                            <rect x="0.1" y="2.2" width="0.8" height="1.5" fill="OrangeRed" rx="0.2" />
+                            <rect x="0.1" y="3.9" width="0.8" height="1.5" fill="SeaGreen" rx="0.2" />
+                            <text x="0.5" y="0.5" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">C</text>
+                            <text x="0.5" y="2.2" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">A</text>
+                            <text x="0.5" y="3.9" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">T</text>
+                            <rect x="1.1" y="0" width="1" height="6" fill="black" rx="0.5" />
+                            <rect x="1.2" y="0.5" width="0.8" height="1.5" fill="SeaGreen" rx="0.2" />
+                            <rect x="1.2" y="2.2" width="0.8" height="1.5" fill="RoyalBlue" rx="0.2" />
+                            <rect x="1.2" y="3.9" width="0.8" height="1.5" fill="OrangeRed" rx="0.2" />
+                            <text x="1.6" y="0.5" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">T</text>
+                            <text x="1.6" y="2.2" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">G</text>
+                            <text x="1.6" y="3.9" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">A</text>
+                        </svg>
+
+                        <img src="./ant.png" />
+                        <svg viewBox="0 0 2.1 6" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0" y="0" width="1" height="6" fill="black" rx="0.5" />
+                            <rect x="0.1" y="0.5" width="0.8" height="1.5" fill="SeaGreen" rx="0.2" />
+                            <rect x="0.1" y="2.2" width="0.8" height="1.5" fill="SeaGreen" rx="0.2" />
+                            <rect x="0.1" y="3.9" width="0.8" height="1.5" fill="OrangeRed" rx="0.2" />
+                            <text x="0.5" y="0.5" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">T</text>
+                            <text x="0.5" y="2.2" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">T</text>
+                            <text x="0.5" y="3.9" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">A</text>
+                            <rect x="1.1" y="0" width="1" height="6" fill="black" rx="0.5" />
+                            <rect x="1.2" y="0.5" width="0.8" height="1.5" fill="OrangeRed" rx="0.2" />
+                            <rect x="1.2" y="2.2" width="0.8" height="1.5" fill="OrangeRed" rx="0.2" />
+                            <rect x="1.2" y="3.9" width="0.8" height="1.5" fill="SeaGreen" rx="0.2" />
+                            <text x="1.6" y="0.5" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">A</text>
+                            <text x="1.6" y="2.2" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">A</text>
+                            <text x="1.6" y="3.9" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">T</text>
+                        </svg>
+
+                        <img src="./ant.png" />
+                        <svg viewBox="0 0 2.1 6" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0" y="0" width="1" height="6" fill="black" rx="0.5" />
+                            <rect x="0.1" y="0.5" width="0.8" height="1.5" fill="SeaGreen" rx="0.2" />
+                            <rect x="0.1" y="2.2" width="0.8" height="1.5" fill="SeaGreen" rx="0.2" />
+                            <rect x="0.1" y="3.9" width="0.8" height="1.5" fill="OrangeRed" rx="0.2" />
+                            <text x="0.5" y="0.5" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">T</text>
+                            <text x="0.5" y="2.2" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">T</text>
+                            <text x="0.5" y="3.9" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">A</text>
+                            <rect x="1.1" y="0" width="1" height="6" fill="black" rx="0.5" />
+                            <rect x="1.2" y="0.5" width="0.8" height="1.5" fill="RoyalBlue" rx="0.2" />
+                            <rect x="1.2" y="2.2" width="0.8" height="1.5" fill="RoyalBlue" rx="0.2" />
+                            <rect x="1.2" y="3.9" width="0.8" height="1.5" fill="OrangeRed" rx="0.2" />
+                            <text x="1.6" y="0.5" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">G</text>
+                            <text x="1.6" y="2.2" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">G</text>
+                            <text x="1.6" y="3.9" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">A</text>
+                        </svg>
+
+                        <img src="./ant.png" />
+                        <svg viewBox="0 0 2.1 6" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0" y="0" width="1" height="6" fill="black" rx="0.5" />
+                            <rect x="0.1" y="0.5" width="0.8" height="1.5" fill="RoyalBlue" rx="0.2" />
+                            <rect x="0.1" y="2.2" width="0.8" height="1.5" fill="RoyalBlue" rx="0.2" />
+                            <rect x="0.1" y="3.9" width="0.8" height="1.5" fill="OrangeRed" rx="0.2" />
+                            <text x="0.5" y="0.5" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">G</text>
+                            <text x="0.5" y="2.2" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">G</text>
+                            <text x="0.5" y="3.9" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">A</text>
+                            <rect x="1.1" y="0" width="1" height="6" fill="black" rx="0.5" />
+                            <rect x="1.2" y="0.5" width="0.8" height="1.5" fill="orange" rx="0.2" />
+                            <rect x="1.2" y="2.2" width="0.8" height="1.5" fill="OrangeRed" rx="0.2" />
+                            <rect x="1.2" y="3.9" width="0.8" height="1.5" fill="SeaGreen" rx="0.2" />
+                            <text x="1.6" y="0.5" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">C</text>
+                            <text x="1.6" y="2.2" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">A</text>
+                            <text x="1.6" y="3.9" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">T</text>
+                        </svg>
+                    </div>
                 </div>
                 <div class="column-footer">
                     <span class="material-symbols-outlined star-fill">star</span>
@@ -204,7 +337,176 @@
             </div>
             <div class="column">
                 <div class="column-content">
-                    
+                    <svg viewBox="-7 -1 15 14.5" xmlns="http://www.w3.org/2000/svg" class="image">
+                        <rect x="0" y="0" id="box" width="3" height="2" fill="#ddd" stroke="black" stroke-width="0.1" rx="0.1" />
+                        <use href="#box" x="-4" y="3" />
+                        <use href="#box" x="0" y="3" />
+                        <use href="#box" x="4" y="3" />
+                        <use href="#box" x="-6" y="6" />
+                        <use href="#box" x="-2" y="6" />
+                        <use href="#box" x="4" y="6" />
+                        <use href="#box" x="-2" y="9" />
+
+                        <line stroke="black" stroke-width="0.1" stroke-linecap="round" x1="1.5" y1="2" x2="1.5" y2="2.5" />
+                        <line stroke="black" stroke-width="0.1" stroke-linecap="round" x1="-2.5" y1="2.5" x2="5.5" y2="2.5" />
+                        <line stroke="black" stroke-width="0.1" stroke-linecap="round" x1="-2.5" y1="2.5" x2="-2.5" y2="3" />
+                        <line stroke="black" stroke-width="0.1" stroke-linecap="round" x1="1.5" y1="2.5" x2="1.5" y2="3" />
+                        <line stroke="black" stroke-width="0.1" stroke-linecap="round" x1="5.5" y1="2.5" x2="5.5" y2="3" />
+
+                        <line stroke="black" stroke-width="0.1" stroke-linecap="round" x1="-4.5" y1="5.5" x2="-0.5" y2="5.5" />
+                        <line stroke="black" stroke-width="0.1" stroke-linecap="round" x1="-2.5" y1="5" x2="-2.5" y2="5.5" />
+                        <line stroke="black" stroke-width="0.1" stroke-linecap="round" x1="-4.5" y1="5.5" x2="-4.5" y2="6" />
+                        <line stroke="black" stroke-width="0.1" stroke-linecap="round" x1="-0.5" y1="5.5" x2="-0.5" y2="6" />
+
+                        <line stroke="black" stroke-width="0.1" stroke-linecap="round" x1="5.5" y1="5" x2="5.5" y2="6" />
+
+                        <line stroke="black" stroke-width="0.1" stroke-linecap="round" x1="-0.5" y1="8" x2="-0.5" y2="9" />
+                    </svg>
+                    <div class="ants">
+                        <img src="./ant.png" />
+                        <svg viewBox="0 0 2.1 6" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0" y="0" width="1" height="6" fill="black" rx="0.5" />
+                            <rect x="0.1" y="0.5" width="0.8" height="1.5" fill="OrangeRed" rx="0.2" />
+                            <rect x="0.1" y="2.2" width="0.8" height="1.5" fill="orange" rx="0.2" />
+                            <rect x="0.1" y="3.9" width="0.8" height="1.5" fill="SeaGreen" rx="0.2" />
+                            <text x="0.5" y="0.5" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">A</text>
+                            <text x="0.5" y="2.2" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">C</text>
+                            <text x="0.5" y="3.9" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">T</text>
+                            <rect x="1.1" y="0" width="1" height="6" fill="black" rx="0.5" />
+                            <rect x="1.2" y="0.5" width="0.8" height="1.5" fill="SeaGreen" rx="0.2" />
+                            <rect x="1.2" y="2.2" width="0.8" height="1.5" fill="OrangeRed" rx="0.2" />
+                            <rect x="1.2" y="3.9" width="0.8" height="1.5" fill="OrangeRed" rx="0.2" />
+                            <text x="1.6" y="0.5" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">T</text>
+                            <text x="1.6" y="2.2" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">A</text>
+                            <text x="1.6" y="3.9" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">A</text>
+                        </svg>
+
+                        <img src="./ant.png" />
+                        <svg viewBox="0 0 2.1 6" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0" y="0" width="1" height="6" fill="black" rx="0.5" />
+                            <rect x="0.1" y="0.5" width="0.8" height="1.5" fill="RoyalBlue" rx="0.2" />
+                            <rect x="0.1" y="2.2" width="0.8" height="1.5" fill="RoyalBlue" rx="0.2" />
+                            <rect x="0.1" y="3.9" width="0.8" height="1.5" fill="SeaGreen" rx="0.2" />
+                            <text x="0.5" y="0.5" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">G</text>
+                            <text x="0.5" y="2.2" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">G</text>
+                            <text x="0.5" y="3.9" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">T</text>
+                            <rect x="1.1" y="0" width="1" height="6" fill="black" rx="0.5" />
+                            <rect x="1.2" y="0.5" width="0.8" height="1.5" fill="OrangeRed" rx="0.2" />
+                            <rect x="1.2" y="2.2" width="0.8" height="1.5" fill="RoyalBlue" rx="0.2" />
+                            <rect x="1.2" y="3.9" width="0.8" height="1.5" fill="RoyalBlue" rx="0.2" />
+                            <text x="1.6" y="0.5" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">A</text>
+                            <text x="1.6" y="2.2" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">G</text>
+                            <text x="1.6" y="3.9" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">G</text>
+                        </svg>
+
+                        <img src="./ant.png" />
+                        <svg viewBox="0 0 2.1 6" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0" y="0" width="1" height="6" fill="black" rx="0.5" />
+                            <rect x="0.1" y="0.5" width="0.8" height="1.5" fill="OrangeRed" rx="0.2" />
+                            <rect x="0.1" y="2.2" width="0.8" height="1.5" fill="RoyalBlue" rx="0.2" />
+                            <rect x="0.1" y="3.9" width="0.8" height="1.5" fill="RoyalBlue" rx="0.2" />
+                            <text x="0.5" y="0.5" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">A</text>
+                            <text x="0.5" y="2.2" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">G</text>
+                            <text x="0.5" y="3.9" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">G</text>
+                            <rect x="1.1" y="0" width="1" height="6" fill="black" rx="0.5" />
+                            <rect x="1.2" y="0.5" width="0.8" height="1.5" fill="SeaGreen" rx="0.2" />
+                            <rect x="1.2" y="2.2" width="0.8" height="1.5" fill="RoyalBlue" rx="0.2" />
+                            <rect x="1.2" y="3.9" width="0.8" height="1.5" fill="OrangeRed" rx="0.2" />
+                            <text x="1.6" y="0.5" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">T</text>
+                            <text x="1.6" y="2.2" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">G</text>
+                            <text x="1.6" y="3.9" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">A</text>
+                        </svg>
+
+                        <img src="./ant.png" />
+                        <svg viewBox="0 0 2.1 6" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0" y="0" width="1" height="6" fill="black" rx="0.5" />
+                            <rect x="0.1" y="0.5" width="0.8" height="1.5" fill="OrangeRed" rx="0.2" />
+                            <rect x="0.1" y="2.2" width="0.8" height="1.5" fill="orange" rx="0.2" />
+                            <rect x="0.1" y="3.9" width="0.8" height="1.5" fill="OrangeRed" rx="0.2" />
+                            <text x="0.5" y="0.5" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">A</text>
+                            <text x="0.5" y="2.2" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">C</text>
+                            <text x="0.5" y="3.9" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">A</text>
+                            <rect x="1.1" y="0" width="1" height="6" fill="black" rx="0.5" />
+                            <rect x="1.2" y="0.5" width="0.8" height="1.5" fill="SeaGreen" rx="0.2" />
+                            <rect x="1.2" y="2.2" width="0.8" height="1.5" fill="RoyalBlue" rx="0.2" />
+                            <rect x="1.2" y="3.9" width="0.8" height="1.5" fill="RoyalBlue" rx="0.2" />
+                            <text x="1.6" y="0.5" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">T</text>
+                            <text x="1.6" y="2.2" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">G</text>
+                            <text x="1.6" y="3.9" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">G</text>
+                        </svg>
+
+                        <img src="./ant.png" />
+                        <svg viewBox="0 0 2.1 6" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0" y="0" width="1" height="6" fill="black" rx="0.5" />
+                            <rect x="0.1" y="0.5" width="0.8" height="1.5" fill="RoyalBlue" rx="0.2" />
+                            <rect x="0.1" y="2.2" width="0.8" height="1.5" fill="OrangeRed" rx="0.2" />
+                            <rect x="0.1" y="3.9" width="0.8" height="1.5" fill="SeaGreen" rx="0.2" />
+                            <text x="0.5" y="0.5" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">G</text>
+                            <text x="0.5" y="2.2" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">A</text>
+                            <text x="0.5" y="3.9" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">T</text>
+                            <rect x="1.1" y="0" width="1" height="6" fill="black" rx="0.5" />
+                            <rect x="1.2" y="0.5" width="0.8" height="1.5" fill="SeaGreen" rx="0.2" />
+                            <rect x="1.2" y="2.2" width="0.8" height="1.5" fill="RoyalBlue" rx="0.2" />
+                            <rect x="1.2" y="3.9" width="0.8" height="1.5" fill="OrangeRed" rx="0.2" />
+                            <text x="1.6" y="0.5" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">T</text>
+                            <text x="1.6" y="2.2" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">G</text>
+                            <text x="1.6" y="3.9" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">A</text>
+                        </svg>
+
+                        <img src="./ant.png" />
+                        <svg viewBox="0 0 2.1 6" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0" y="0" width="1" height="6" fill="black" rx="0.5" />
+                            <rect x="0.1" y="0.5" width="0.8" height="1.5" fill="orange" rx="0.2" />
+                            <rect x="0.1" y="2.2" width="0.8" height="1.5" fill="RoyalBlue" rx="0.2" />
+                            <rect x="0.1" y="3.9" width="0.8" height="1.5" fill="SeaGreen" rx="0.2" />
+                            <text x="0.5" y="0.5" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">C</text>
+                            <text x="0.5" y="2.2" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">G</text>
+                            <text x="0.5" y="3.9" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">T</text>
+                            <rect x="1.1" y="0" width="1" height="6" fill="black" rx="0.5" />
+                            <rect x="1.2" y="0.5" width="0.8" height="1.5" fill="orange" rx="0.2" />
+                            <rect x="1.2" y="2.2" width="0.8" height="1.5" fill="orange" rx="0.2" />
+                            <rect x="1.2" y="3.9" width="0.8" height="1.5" fill="SeaGreen" rx="0.2" />
+                            <text x="1.6" y="0.5" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">C</text>
+                            <text x="1.6" y="2.2" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">C</text>
+                            <text x="1.6" y="3.9" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">T</text>
+                        </svg>
+
+                        <img src="./ant.png" />
+                        <svg viewBox="0 0 2.1 6" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0" y="0" width="1" height="6" fill="black" rx="0.5" />
+                            <rect x="0.1" y="0.5" width="0.8" height="1.5" fill="OrangeRed" rx="0.2" />
+                            <rect x="0.1" y="2.2" width="0.8" height="1.5" fill="RoyalBlue" rx="0.2" />
+                            <rect x="0.1" y="3.9" width="0.8" height="1.5" fill="SeaGreen" rx="0.2" />
+                            <text x="0.5" y="0.5" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">A</text>
+                            <text x="0.5" y="2.2" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">G</text>
+                            <text x="0.5" y="3.9" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">T</text>
+                            <rect x="1.1" y="0" width="1" height="6" fill="black" rx="0.5" />
+                            <rect x="1.2" y="0.5" width="0.8" height="1.5" fill="SeaGreen" rx="0.2" />
+                            <rect x="1.2" y="2.2" width="0.8" height="1.5" fill="RoyalBlue" rx="0.2" />
+                            <rect x="1.2" y="3.9" width="0.8" height="1.5" fill="SeaGreen" rx="0.2" />
+                            <text x="1.6" y="0.5" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">T</text>
+                            <text x="1.6" y="2.2" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">G</text>
+                            <text x="1.6" y="3.9" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">T</text>
+                        </svg>
+
+                        <img src="./ant.png" />
+                        <svg viewBox="0 0 2.1 6" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0" y="0" width="1" height="6" fill="black" rx="0.5" />
+                            <rect x="0.1" y="0.5" width="0.8" height="1.5" fill="OrangeRed" rx="0.2" />
+                            <rect x="0.1" y="2.2" width="0.8" height="1.5" fill="orange" rx="0.2" />
+                            <rect x="0.1" y="3.9" width="0.8" height="1.5" fill="OrangeRed" rx="0.2" />
+                            <text x="0.5" y="0.5" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">A</text>
+                            <text x="0.5" y="2.2" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">C</text>
+                            <text x="0.5" y="3.9" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">A</text>
+                            <rect x="1.1" y="0" width="1" height="6" fill="black" rx="0.5" />
+                            <rect x="1.2" y="0.5" width="0.8" height="1.5" fill="OrangeRed" rx="0.2" />
+                            <rect x="1.2" y="2.2" width="0.8" height="1.5" fill="orange" rx="0.2" />
+                            <rect x="1.2" y="3.9" width="0.8" height="1.5" fill="OrangeRed" rx="0.2" />
+                            <text x="1.6" y="0.5" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">A</text>
+                            <text x="1.6" y="2.2" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">C</text>
+                            <text x="1.6" y="3.9" dx="-.3" dy="1.05" style="font-size: .9px;" fill="white">A</text>
+                        </svg>
+                    </div>
                 </div>
                 <div class="column-footer">
                     <span class="material-symbols-outlined star-fill">star</span>
