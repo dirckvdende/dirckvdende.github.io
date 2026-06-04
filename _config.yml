@@ -40,10 +40,11 @@ collections:
     permalink: /projects/:name/
     order:
       - gravity-sim.md
-      - daily-puzzle.md
+      - no-mate.md
       - competition-reference.md
       - hand-gesture-game-with-colored-gloves.md
       - recipe-creator.md
+      - daily-puzzle.md
       - adversarial-drawing-app.md
       - maze-challenge.md
       - scoreboard-app.md
