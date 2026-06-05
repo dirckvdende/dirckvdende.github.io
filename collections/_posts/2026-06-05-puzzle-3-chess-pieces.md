@@ -19,7 +19,7 @@ For this puzzle you need to place the chess pieces on the squares such that no p
 
 These puzzles are part of a larger project called [No Mate: A Chess-Like Puzzle Game](/projects/no-mate/). An interactive version of the puzzles below it available in this web app. There are also many more puzzles available there!
 
-{% include center-button.html href="https://dirck.dev/no-mate/?filter=blog-post" text="Open interactive web app" icon="link" download="" %}
+{% include center-button.html href="https://dirck.dev/no-mate/?filter=blog-post" text="Open interactive web app" icon="link" %}
 
 ## Puzzle
 
