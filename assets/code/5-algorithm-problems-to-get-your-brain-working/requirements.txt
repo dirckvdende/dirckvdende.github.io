@@ -1,4 +1,4 @@
 igraph==1.0.0
 numpy==2.3.4
-pillow==12.2.0
+pillow==12.3.0
 texttable==1.7.0
