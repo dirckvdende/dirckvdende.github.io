@@ -46,8 +46,9 @@ collections:
       - recipe-creator.md
       - daily-puzzle.md
       - adversarial-drawing-app.md
-      - maze-challenge.md
       - scoreboard-app.md
+      - useful-new-tab.md
+      - maze-challenge.md
       - ladybug-lang.md
       - image-stacker.md
       - layout-image.md
