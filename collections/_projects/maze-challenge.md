@@ -2,7 +2,7 @@
 layout: project
 title: Minimum Memory Maze Challenge
 front_image: /assets/img/projects/maze-challenge.png
-accent_color: "#727272"
+accent_color: "#888"
 tags:
   - Challenge
   - Algorithm
