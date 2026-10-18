@@ -3,7 +3,7 @@ layout: project
 title: Useful New Tab
 front_image:
   - url: /assets/img/projects/useful-new-tab.png
-accent_color: "#ec2222"
+accent_color: "#e3354b"
 tags:
   - Chome Extension
   - Vue.js

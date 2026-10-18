@@ -7,6 +7,7 @@ accent_color: "#cfa321"
 tags:
   - Tool
   - Web app
+  - Vue.js
 ---
 
 A small app to keep track of player's points while playing board/card games, or any other type of game that requires keeping track of scores. Scores are automatically sorted and the history of scores can be viewed.
